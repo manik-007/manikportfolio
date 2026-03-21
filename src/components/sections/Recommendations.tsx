@@ -37,7 +37,7 @@ const RECS = [
 
 const Recommendations = () => (
   <section id="recommendations" className="py-12 md:py-16">
-    <div className="max-w-3xl mx-auto text-center">
+    <div className="text-center">
       <SectionHeading>recommendations</SectionHeading>
       <div className="space-y-10 text-left">
         {RECS.map((r) => (
