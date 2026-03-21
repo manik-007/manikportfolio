@@ -17,7 +17,7 @@ const CARDS = [
 ];
 
 const WhatIDo = () => (
-  <section id="whatido" className="py-20 md:py-28 px-6 border-t border-border bg-secondary">
+  <section id="whatido" className="py-20 md:py-28 px-6 border-t border-border bg-background">
     <div className="max-w-4xl mx-auto">
       <span className="text-xs font-sans font-medium tracking-widest text-muted-foreground uppercase">
         what i do

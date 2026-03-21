@@ -1,4 +1,5 @@
-import { Youtube } from "lucide-react";
+import { Youtube, ChevronDown } from "lucide-react";
+import { useState } from "react";
 import SectionHeading from "./SectionHeading";
 
 const PODCASTS = [
@@ -102,45 +103,62 @@ const PODCASTS = [
   },
 ];
 
-const Podcasts = () => (
-  <section id="podcasts" className="py-20 md:py-28 px-6 border-t border-border">
-    <div className="max-w-4xl mx-auto text-center">
-      <SectionHeading>podcasts</SectionHeading>
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {PODCASTS.map((p) => (
-          <div
-            key={p.youtube}
-            className="border border-border rounded-lg p-6 hover:shadow-md transition-shadow bg-card text-center"
-          >
-            <h3 className="font-serif text-base md:text-lg font-medium text-foreground mb-3 leading-snug">
-              {p.title}
-            </h3>
-            <p className="text-sm text-muted-foreground mb-1">
-              with{" "}
+const Podcasts = () => {
+  const [showAll, setShowAll] = useState(false);
+  const visible = showAll ? PODCASTS : PODCASTS.slice(0, 3);
+
+  return (
+    <section id="podcasts" className="py-20 md:py-28 px-6 border-t border-border">
+      <div className="max-w-4xl mx-auto text-center">
+        <SectionHeading>podcasts</SectionHeading>
+        <div className="space-y-4">
+          {visible.map((p) => (
+            <div
+              key={p.youtube}
+              className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 border-b border-border py-5 text-center md:text-left"
+            >
+              <div className="flex-1 min-w-0">
+                <h3 className="font-serif text-base md:text-lg font-medium text-foreground leading-snug">
+                  {p.title}
+                </h3>
+                <p className="text-sm text-muted-foreground mt-1">
+                  with{" "}
+                  <a
+                    href={p.guestLinkedIn}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-4 hover:text-foreground transition-colors"
+                  >
+                    {p.guest}
+                  </a>
+                  <span className="mx-2">·</span>
+                  {p.guestRole}
+                </p>
+              </div>
               <a
-                href={p.guestLinkedIn}
+                href={p.youtube}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="underline underline-offset-4 hover:text-foreground transition-colors"
+                className="shrink-0 inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-muted-foreground transition-colors"
               >
-                {p.guest}
+                <Youtube size={16} />
+                watch
               </a>
-            </p>
-            <p className="text-xs text-muted-foreground mb-5">{p.guestRole}</p>
-            <a
-              href={p.youtube}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-muted-foreground transition-colors"
-            >
-              <Youtube size={16} />
-              watch on youtube
-            </a>
-          </div>
-        ))}
+            </div>
+          ))}
+        </div>
+        {!showAll && PODCASTS.length > 3 && (
+          <button
+            onClick={() => setShowAll(true)}
+            className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors"
+          >
+            see all
+            <ChevronDown size={16} />
+          </button>
+        )}
       </div>
-    </div>
-  </section>
-);
+    </section>
+  );
+};
 
 export default Podcasts;
