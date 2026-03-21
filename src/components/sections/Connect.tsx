@@ -1,4 +1,4 @@
-import { Mail, Youtube, Instagram, Github, Linkedin, Twitter } from "lucide-react";
+import { Mail, Youtube, Instagram, Github, Linkedin, Twitter, MessageCircle, Send, Calendar } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
 const SOCIALS = [
@@ -7,6 +7,9 @@ const SOCIALS = [
   { icon: Twitter, href: "https://twitter.com/themanikdiaries", label: "X" },
   { icon: Linkedin, href: "https://www.linkedin.com/in/mrmanik/", label: "LinkedIn" },
   { icon: Github, href: "https://github.com/manik-007", label: "GitHub" },
+  { icon: MessageCircle, href: "https://discord.com/users/manik2619", label: "Discord" },
+  { icon: Send, href: "https://t.me/manik_explorer", label: "Telegram" },
+  { icon: Calendar, href: "https://calendly.com/manik_/discussion", label: "Calendly" },
 ];
 
 const Connect = () => (
