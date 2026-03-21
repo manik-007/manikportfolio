@@ -1,5 +1,6 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 
 const NAV_LINKS = [
   { label: "about", href: "#about" },
@@ -13,6 +14,18 @@ const NAV_LINKS = [
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    if (href.startsWith("#")) {
+      if (location.pathname !== "/") {
+        e.preventDefault();
+        navigate("/" + href);
+      }
+    }
+  };
+
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-5xl mx-auto flex items-center justify-center px-6 py-4">
@@ -21,6 +34,7 @@ const Nav = () => {
             <a
               key={l.href}
               href={l.href}
+              onClick={(e) => handleClick(e, l.href)}
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {l.label}
@@ -41,7 +55,10 @@ const Nav = () => {
             <a
               key={l.href}
               href={l.href}
-              onClick={() => setOpen(false)}
+              onClick={(e) => {
+                handleClick(e, l.href);
+                setOpen(false);
+              }}
               className="block text-sm text-muted-foreground hover:text-foreground transition-colors"
             >
               {l.label}
