@@ -161,7 +161,7 @@ const Hero = () => (
 
 // Section heading
 const SectionHeading = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-12 tracking-tight text-center">
+  <h2 className="font-serif text-5xl md:text-6xl font-semibold text-foreground mb-14 tracking-tight text-center">
     {children}
   </h2>
 );
