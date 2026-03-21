@@ -18,17 +18,22 @@ const Nav = () => {
   const navigate = useNavigate();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith("#")) {
+    if (href.startsWith("/")) {
+      e.preventDefault();
+      navigate(href);
+      setOpen(false);
+    } else if (href.startsWith("#")) {
       if (location.pathname !== "/") {
         e.preventDefault();
         navigate("/" + href);
       }
+      setOpen(false);
     }
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="max-w-5xl mx-auto flex items-center justify-center px-6 py-4">
+      <div className="max-w-5xl mx-auto flex items-center justify-end md:justify-center px-6 py-4">
         <div className="hidden md:flex items-center gap-8">
           {NAV_LINKS.map((l) => (
             <a

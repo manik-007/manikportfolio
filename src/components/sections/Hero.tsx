@@ -36,8 +36,6 @@ const Hero = () => (
             <a
               key={s.label}
               href={s.href}
-              target="_blank"
-              rel="noopener noreferrer"
               className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label={s.label}
             >
