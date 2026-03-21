@@ -46,11 +46,10 @@ const WorkExperience = () => (
           <p className="text-sm text-muted-foreground mt-1">
             {e.role} | {e.period} | {e.type}
           </p>
-          <ul className="mt-4 space-y-2">
+          <ul className="mt-4 space-y-2 list-disc list-outside pl-5">
             {e.bullets.map((b, i) => (
-              <li key={i} className="flex gap-3 text-sm text-foreground leading-relaxed">
-                <span className="text-muted-foreground mt-1.5 shrink-0">•</span>
-                <span>{b}</span>
+              <li key={i} className="text-sm text-foreground leading-relaxed">
+                {b}
               </li>
             ))}
           </ul>

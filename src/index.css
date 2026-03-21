@@ -101,11 +101,41 @@
 }
 
 @media print {
+  @page {
+    size: A4 portrait;
+    margin: 12mm 15mm;
+  }
   nav, footer, .print\:hidden {
     display: none !important;
   }
   body {
     print-color-adjust: exact;
     -webkit-print-color-adjust: exact;
+    font-size: 10px !important;
+    background: white !important;
+    color: black !important;
+  }
+  h2 {
+    font-size: 14px !important;
+  }
+  h3 {
+    font-size: 12px !important;
+  }
+  p, li, span {
+    font-size: 10px !important;
+    line-height: 1.4 !important;
+  }
+  section {
+    padding-top: 8px !important;
+    padding-bottom: 8px !important;
+  }
+  .space-y-10 > * + * {
+    margin-top: 12px !important;
+  }
+  .space-y-8 > * + * {
+    margin-top: 10px !important;
+  }
+  a[href]::after {
+    content: none !important;
   }
 }

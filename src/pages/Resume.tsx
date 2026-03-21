@@ -18,9 +18,9 @@ const Resume = () => {
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground print:bg-white print:text-black">
       <Nav />
-      <div className="pt-24 pb-12 px-6">
+      <div className="pt-24 pb-12 px-6 print:pt-0 print:pb-0 print:px-0">
         <div className="max-w-3xl mx-auto">
           <div className="flex justify-end mb-6 print:hidden">
             <Button variant="outline" size="sm" onClick={handlePrint} className="gap-2">
