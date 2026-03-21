@@ -3,11 +3,11 @@ import { useState } from "react";
 
 const NAV_LINKS = [
   { label: "about", href: "#about" },
-  { label: "what i do", href: "#whatido" },
   { label: "articles", href: "#articles" },
   { label: "podcasts", href: "#podcasts" },
   { label: "community", href: "#community" },
   { label: "wall of love", href: "#testimonials" },
+  { label: "resume", href: "/resume" },
   { label: "connect", href: "#connect" },
 ];
 
