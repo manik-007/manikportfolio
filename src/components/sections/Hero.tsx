@@ -1,0 +1,60 @@
+import { Youtube, Instagram, Github, Linkedin, Twitter } from "lucide-react";
+import profileImg from "@/assets/profile-bw.jpg";
+
+const SOCIALS = [
+  { icon: Youtube, href: "https://www.youtube.com/@themanikdiaries", label: "YouTube" },
+  { icon: Instagram, href: "https://instagram.com/manik.3000", label: "Instagram" },
+  { icon: Twitter, href: "https://twitter.com/themanikdiaries", label: "X" },
+  { icon: Linkedin, href: "https://www.linkedin.com/in/mrmanik/", label: "LinkedIn" },
+  { icon: Github, href: "https://github.com/manik-007", label: "GitHub" },
+];
+
+const HYPHENATES = ["builder", "creator", "educator", "podcaster", "public speaker", "leader", "writer", "traveller"];
+
+const Hero = () => (
+  <>
+    <section className="min-h-screen flex items-center justify-center px-6">
+      <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
+        <h1 className="font-serif text-7xl md:text-9xl font-bold tracking-tight text-foreground mb-6">
+          manik
+        </h1>
+        <p className="font-serif text-2xl md:text-3xl italic text-muted-foreground mb-8 max-w-2xl">
+          "i build for impact and bring people together."
+        </p>
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
+          {HYPHENATES.map((h, i) => (
+            <span
+              key={h}
+              className="text-sm font-sans font-medium tracking-widest text-muted-foreground"
+            >
+              {h}{i < HYPHENATES.length - 1 && <span className="ml-3 text-border">·</span>}
+            </span>
+          ))}
+        </div>
+        <div className="flex items-center justify-center gap-6">
+          {SOCIALS.map((s) => (
+            <a
+              key={s.label}
+              href={s.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-muted-foreground hover:text-foreground transition-colors"
+              aria-label={s.label}
+            >
+              <s.icon size={24} />
+            </a>
+          ))}
+        </div>
+      </div>
+    </section>
+    <section className="px-6 pb-24 md:pb-32">
+      <div className="max-w-5xl mx-auto flex justify-center">
+        <div className="w-[22rem] h-[22rem] md:w-[36rem] md:h-[36rem] overflow-hidden border border-border shadow-lg">
+          <img src={profileImg} alt="manik" className="w-full h-full object-cover" />
+        </div>
+      </div>
+    </section>
+  </>
+);
+
+export default Hero;
