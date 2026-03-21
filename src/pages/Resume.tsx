@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Nav from "@/components/sections/Nav";
 import Education from "@/components/sections/Education";
 import WorkExperience from "@/components/sections/WorkExperience";
