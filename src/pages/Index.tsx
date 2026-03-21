@@ -4,6 +4,7 @@ import About from "@/components/sections/About";
 import WhatIDo from "@/components/sections/WhatIDo";
 import Articles from "@/components/sections/Articles";
 import Podcasts from "@/components/sections/Podcasts";
+import Awards from "@/components/sections/Awards";
 import WallOfLove from "@/components/sections/WallOfLove";
 import Connect from "@/components/sections/Connect";
 import Footer from "@/components/sections/Footer";
@@ -16,6 +17,7 @@ const Index = () => (
     <WhatIDo />
     <Articles />
     <Podcasts />
+    <Awards />
     <WallOfLove />
     <Connect />
     <Footer />
