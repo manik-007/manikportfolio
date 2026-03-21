@@ -9,6 +9,10 @@ import { Printer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Resume = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const handlePrint = () => {
     window.print();
   };
