@@ -1,7 +1,7 @@
 import { ArrowUpRight, Mail, Youtube, Instagram, Github, Linkedin, Twitter, Menu, X } from "lucide-react";
 import { useState } from "react";
 import profileImg from "@/assets/profile-bw.jpg";
-import empowerherImg from "@/assets/empowerher.jpg";
+
 
 const NAV_LINKS = [
   { label: "articles", href: "#articles" },
