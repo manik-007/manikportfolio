@@ -117,23 +117,23 @@ const Hero = () => (
   <>
     <section className="min-h-screen flex items-center justify-center px-6">
       <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
-        <h1 className="font-serif text-5xl md:text-7xl font-bold tracking-tight text-foreground mb-4">
+        <h1 className="font-serif text-7xl md:text-9xl font-bold tracking-tight text-foreground mb-6">
           manik
         </h1>
-        <p className="font-serif text-xl md:text-2xl italic text-muted-foreground mb-6 max-w-lg">
+        <p className="font-serif text-2xl md:text-3xl italic text-muted-foreground mb-8 max-w-2xl">
           "i build for impact and bring people together."
         </p>
-        <div className="flex flex-wrap justify-center gap-2 mb-8">
+        <div className="flex flex-wrap justify-center gap-3 mb-10">
           {HYPHENATES.map((h, i) => (
             <span
               key={h}
-              className="text-xs font-sans font-medium tracking-widest text-muted-foreground"
+              className="text-sm font-sans font-medium tracking-widest text-muted-foreground"
             >
-              {h}{i < HYPHENATES.length - 1 && <span className="ml-2 text-border">·</span>}
+              {h}{i < HYPHENATES.length - 1 && <span className="ml-3 text-border">·</span>}
             </span>
           ))}
         </div>
-        <div className="flex items-center justify-center gap-4">
+        <div className="flex items-center justify-center gap-6">
           {SOCIALS.map((s) => (
             <a
               key={s.label}
@@ -143,15 +143,15 @@ const Hero = () => (
               className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label={s.label}
             >
-              <s.icon size={20} />
+              <s.icon size={24} />
             </a>
           ))}
         </div>
       </div>
     </section>
-    <section className="px-6 pb-20 md:pb-28">
+    <section className="px-6 pb-24 md:pb-32">
       <div className="max-w-5xl mx-auto flex justify-center">
-        <div className="w-80 h-80 md:w-[28rem] md:h-[28rem] overflow-hidden border border-border shadow-lg">
+        <div className="w-[22rem] h-[22rem] md:w-[36rem] md:h-[36rem] overflow-hidden border border-border shadow-lg">
           <img src={profileImg} alt="manik" className="w-full h-full object-cover" />
         </div>
       </div>
@@ -161,7 +161,7 @@ const Hero = () => (
 
 // Section heading
 const SectionHeading = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="font-serif text-4xl md:text-5xl font-semibold text-foreground mb-12 tracking-tight text-center">
+  <h2 className="font-serif text-5xl md:text-6xl font-semibold text-foreground mb-14 tracking-tight text-center">
     {children}
   </h2>
 );
