@@ -3,7 +3,7 @@ import SectionHeading from "./SectionHeading";
 const EXPERIENCE = [
   {
     company: "BlockOn Ventures",
-    role: "",
+    role: "business development manager",
     period: "sept 2025 – present",
     type: "contract | part-time | remote | malaysia",
     bullets: [
