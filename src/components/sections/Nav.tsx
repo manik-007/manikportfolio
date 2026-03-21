@@ -18,11 +18,16 @@ const Nav = () => {
   const navigate = useNavigate();
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
-    if (href.startsWith("#")) {
+    if (href.startsWith("/")) {
+      e.preventDefault();
+      navigate(href);
+      setOpen(false);
+    } else if (href.startsWith("#")) {
       if (location.pathname !== "/") {
         e.preventDefault();
         navigate("/" + href);
       }
+      setOpen(false);
     }
   };
 
