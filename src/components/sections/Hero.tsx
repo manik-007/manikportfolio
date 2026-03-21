@@ -13,25 +13,25 @@ const HYPHENATES = ["builder", "creator", "educator", "podcaster", "public speak
 
 const Hero = () => (
   <>
-    <section className="min-h-screen flex items-center justify-center px-6">
+    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6">
       <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
-        <h1 className="font-serif text-7xl md:text-9xl font-bold tracking-tight text-foreground mb-6">
+        <h1 className="font-serif text-5xl sm:text-7xl md:text-9xl font-bold tracking-tight text-foreground mb-4 sm:mb-6">
           manik
         </h1>
-        <p className="font-serif text-2xl md:text-3xl italic text-muted-foreground mb-8 max-w-2xl">
+        <p className="font-serif text-xl sm:text-2xl md:text-3xl italic text-muted-foreground mb-6 sm:mb-8 max-w-2xl px-2">
           "i build for impact and bring people together."
         </p>
-        <div className="flex flex-wrap justify-center gap-3 mb-10">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 px-2">
           {HYPHENATES.map((h, i) => (
             <span
               key={h}
-              className="text-sm font-sans font-medium tracking-widest text-muted-foreground"
+              className="text-xs sm:text-sm font-sans font-medium tracking-widest text-muted-foreground"
             >
-              {h}{i < HYPHENATES.length - 1 && <span className="ml-3 text-border">·</span>}
+              {h}{i < HYPHENATES.length - 1 && <span className="ml-2 sm:ml-3 text-border">·</span>}
             </span>
           ))}
         </div>
-        <div className="flex items-center justify-center gap-6">
+        <div className="flex items-center justify-center gap-4 sm:gap-6">
           {SOCIALS.map((s) => (
             <a
               key={s.label}
@@ -41,15 +41,15 @@ const Hero = () => (
               className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label={s.label}
             >
-              <s.icon size={24} />
+              <s.icon size={20} className="sm:w-6 sm:h-6" />
             </a>
           ))}
         </div>
       </div>
     </section>
-    <section className="px-6 pb-24 md:pb-32">
+    <section className="px-4 sm:px-6 pb-16 sm:pb-24 md:pb-32">
       <div className="max-w-5xl mx-auto flex justify-center">
-        <div className="w-[22rem] h-[22rem] md:w-[36rem] md:h-[36rem] overflow-hidden border border-border shadow-lg">
+        <div className="w-[18rem] h-[18rem] sm:w-[22rem] sm:h-[22rem] md:w-[36rem] md:h-[36rem] overflow-hidden border border-border shadow-lg">
           <img src={profileImg} alt="manik" className="w-full h-full object-cover" />
         </div>
       </div>

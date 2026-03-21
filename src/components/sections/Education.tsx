@@ -30,16 +30,22 @@ const Education = () => (
   <section id="education" className="py-20 md:py-28 px-6 border-t border-border">
     <div className="max-w-3xl mx-auto text-center">
       <SectionHeading>education</SectionHeading>
-      <div className="space-y-10 text-left">
-        {EDUCATION.map((e) => (
-          <div key={e.institution} className="border-l-2 border-border pl-6">
+      <div className="space-y-0 text-left">
+        {EDUCATION.map((e, i) => (
+          <div key={e.institution} className="relative pl-8 pb-10 last:pb-0">
+            {/* Timeline line */}
+            {i < EDUCATION.length - 1 && (
+              <div className="absolute left-[7px] top-3 bottom-0 w-px bg-border" />
+            )}
+            {/* Timeline dot */}
+            <div className="absolute left-0 top-[6px] w-[15px] h-[15px] rounded-full border-2 border-foreground bg-background" />
             <p className="text-xs font-sans font-medium tracking-widest text-muted-foreground uppercase">
               {e.period}
             </p>
-            <h3 className="font-serif text-xl md:text-2xl font-semibold text-foreground mt-1">
+            <h3 className="font-serif text-lg sm:text-xl md:text-2xl font-semibold text-foreground mt-1">
               {e.institution}
             </h3>
-            <p className="text-base text-muted-foreground mt-1">{e.program}</p>
+            <p className="text-sm sm:text-base text-muted-foreground mt-1">{e.program}</p>
             {e.detail && (
               <p className="text-sm font-medium text-foreground mt-1">{e.detail}</p>
             )}
