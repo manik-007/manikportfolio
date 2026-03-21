@@ -55,6 +55,105 @@ const COMMUNITY_ROLES = [
   },
 ];
 
+const VOLUNTEERING = [
+  {
+    org: "cncf jalandhar",
+    role: "organizer",
+    bullets: [
+      "organized \"introduction to cncf\" online panel discussion and \"introducing argo cd + getting involved\" featuring christian, head of community at akuity.",
+      "designed promotional posters and digital assets for events and speaker sessions to drive engagement and participation.",
+    ],
+  },
+  {
+    org: "google cloud",
+    role: "google cloud arcade facilitator",
+    bullets: [
+      "built and nurtured a community of 1200+ members, enrolling 550+ participants into the arcade program.",
+      "achieved the 2nd milestone and successfully completed the program, driving engagement and structured community growth.",
+    ],
+  },
+  {
+    org: "thm cgc",
+    role: "marketing",
+    bullets: [
+      "led event promotion, speaker outreach, and crafted effective social media strategies to grow chapter presence across platforms.",
+      "contributed to organizing key seminars including the inaugural seminar on cyber threat intelligence & ethical hacking and cyber101.",
+    ],
+  },
+  {
+    org: "tpg chandigarh",
+    role: "community lead",
+    bullets: [
+      "organized the starknet india roadshow, a 2-day in-person event hosted at antier solutions.",
+      "led end-to-end planning and execution of road to devcon at chandigarh university, achieving 110+ registrations and 70+ attendees.",
+      "managed the official twitter account, driving online engagement and community visibility.",
+    ],
+  },
+  {
+    org: "socrates global",
+    role: "partnerships lead",
+    bullets: [
+      "reached out to 60+ leads and pitched socrates global to potential partners and users.",
+      "contributed to the acquisition of 4,000+ unique users within 2 weeks through strategic outreach efforts.",
+    ],
+  },
+  {
+    org: "hack for bloom",
+    role: "partnerships lead",
+    bullets: [
+      "outreached to sponsors including hive, geeksforgeeks, outdefine, and hackquest for potential partnerships.",
+      "provided practical growth strategies to organize, scale, and strengthen the community structure.",
+      "curated a targeted list of sponsor leads to streamline outreach and partnership efforts.",
+    ],
+  },
+  {
+    org: "ibw",
+    role: "volunteer",
+    bullets: [
+      "actively participated in brainstorming and engaged in community & social posts.",
+    ],
+  },
+  {
+    org: "web3 conf goa",
+    role: "partnership team",
+    bullets: [
+      "outreached to 5+ potential sponsors to secure partnerships and support for community initiatives.",
+    ],
+  },
+  {
+    org: "hackarcode",
+    role: "partnership lead",
+    bullets: [
+      "outreached to 10+ potential sponsors to secure partnerships and support for community initiatives.",
+    ],
+  },
+  {
+    org: "kotlinconf",
+    role: "content writer",
+    bullets: [
+      "wrote social media content for kotlinconf, contributing to increased engagement and growth across platforms.",
+      "volunteered on-site, managing crowd flow, handling the community lounge, maintaining discipline, unpacking swag, and assisting attendees with navigation during the conference.",
+    ],
+  },
+];
+
+const RoleCard = ({ org, role, period, bullets }: { org: string; role: string; period?: string; bullets: string[] }) => (
+  <div>
+    <h3 className="font-serif text-xl sm:text-2xl font-bold text-foreground">{org}</h3>
+    <p className="text-sm text-muted-foreground mt-1">
+      {role}{period ? ` | ${period}` : ""}
+    </p>
+    <ul className="mt-4 space-y-2">
+      {bullets.map((b, i) => (
+        <li key={i} className="flex gap-3 text-sm text-foreground leading-relaxed">
+          <span className="text-muted-foreground mt-1.5 shrink-0">•</span>
+          <span>{b}</span>
+        </li>
+      ))}
+    </ul>
+  </div>
+);
+
 const CommunityPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -68,23 +167,17 @@ const CommunityPage = () => {
           <SectionHeading>community contributions</SectionHeading>
           <div className="space-y-10 mt-8">
             {COMMUNITY_ROLES.map((c) => (
-              <div key={c.org}>
-                <h3 className="font-serif text-xl sm:text-2xl font-bold text-foreground">
-                  {c.org}
-                </h3>
-                <p className="text-sm text-muted-foreground mt-1">
-                  {c.role} | {c.period}
-                </p>
-                <ul className="mt-4 space-y-2">
-                  {c.bullets.map((b, i) => (
-                    <li key={i} className="flex gap-3 text-sm text-foreground leading-relaxed">
-                      <span className="text-muted-foreground mt-1.5 shrink-0">•</span>
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
+              <RoleCard key={c.org} {...c} />
             ))}
+          </div>
+
+          <div className="mt-16">
+            <SectionHeading>volunteering</SectionHeading>
+            <div className="space-y-10 mt-8">
+              {VOLUNTEERING.map((v) => (
+                <RoleCard key={v.org} org={v.org} role={v.role} bullets={v.bullets} />
+              ))}
+            </div>
           </div>
         </div>
       </div>
