@@ -252,13 +252,6 @@ const Community = () => (
     <div className="max-w-3xl mx-auto text-center">
       <SectionHeading>community</SectionHeading>
       <div className="flex flex-col items-center gap-8">
-        <div className="rounded-lg overflow-hidden border border-border w-full max-w-md">
-          <img
-            src={empowerherImg}
-            alt="empowerher 2025"
-            className="w-full h-64 md:h-80 object-cover"
-          />
-        </div>
         <div>
           <span className="text-xs font-sans font-medium tracking-widest text-muted-foreground">
             organised
