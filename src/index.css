@@ -99,3 +99,13 @@
     scroll-behavior: smooth;
   }
 }
+
+@media print {
+  nav, footer, .print\:hidden {
+    display: none !important;
+  }
+  body {
+    print-color-adjust: exact;
+    -webkit-print-color-adjust: exact;
+  }
+}
