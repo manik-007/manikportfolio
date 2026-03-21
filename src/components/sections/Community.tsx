@@ -18,7 +18,7 @@ const Community = () => (
       <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
         a 4000-girl-strong movement across india, building a future where every girl in tech feels seen, supported, and unstoppable. glt is where ambition meets sisterhood.
       </p>
-      <div className="flex flex-wrap justify-center gap-12 mb-10">
+      <div className="flex flex-wrap justify-center gap-8 sm:gap-12 mb-10">
         {STATS.map((s) => (
           <div key={s.label}>
             <p className="font-serif text-2xl md:text-3xl font-bold text-foreground">{s.value}</p>
