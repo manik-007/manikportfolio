@@ -1,53 +1,35 @@
 
 
-# Manik's Portfolio Website
+## Plan: Fix Mobile Issues
 
-## Design Direction
-Following the editorial, minimal aesthetic of thecommunityman.com: serif typography (Playfair Display + Inter), warm off-white background (#fcfbf8), generous whitespace, smooth scroll, clean section dividers.
+### Problems Identified
 
-## Structure (Single-page, scroll-based)
+1. **Resume page not loading on mobile**: The resume route `/resume` likely fails on direct navigation or refresh because the server doesn't handle client-side routes. This is a known SPA issue — but since this is Vite with BrowserRouter, it should work in preview. More likely the issue is that mobile nav links for "resume" use `href="/resume"` which triggers a full page reload. Need to use `navigate()` for internal routes.
 
-### 1. Hero Section
-- Large serif heading: "Manik"
-- Tagline: "I build for impact and bring people together."
-- Multi-hyphenate labels: Builder. Creator. Educator. Podcaster. Public Speaker. Leader. Writer. Traveller.
-- Profile photo (uploaded image) with subtle styling
-- Social icons row (YouTube, Instagram, X, LinkedIn, GitHub)
+2. **Mobile menu button centered**: Line 31 in Nav.tsx uses `justify-center` — the hamburger button appears centered. Need `justify-end` on mobile.
 
-### 2. Articles Section
-- Section title in serif
-- 3 article cards with title + "Read on Medium" link
-- Clean, minimal card layout with hover effects
+3. **Social links opening in browser instead of app**: The social links use `target="_blank"` which forces browser. Need to use deep link / intent URLs for mobile apps.
 
-### 3. Podcasts Section
-- 2 podcast entries with episode name, guest name, guest LinkedIn link, YouTube link
-- Editorial card layout
+### Changes
 
-### 4. Meetups & Events Section
-- EmpowerHer 2025 card with description
-- Previously uploaded event image (Empower_Her_2.0_3.jpg)
+#### 1. Fix Nav.tsx — Menu button alignment + resume navigation
+- Change the nav container from `justify-center` to `justify-between` (or `justify-end` on mobile) so the hamburger menu appears top-right.
+- For the "resume" link (and any non-hash link), use `e.preventDefault()` + `navigate()` instead of default anchor behavior to avoid full page reloads that break SPA routing.
 
-### 5. Wall of Love (Testimonials)
-- 2 testimonial quotes with attribution
-- Large quotation marks, italic serif text
+#### 2. Fix Hero.tsx — Social deep links for mobile apps
+- Replace social URLs with intent-friendly URLs where possible:
+  - YouTube: `https://www.youtube.com/@themanikdiaries` (YouTube app intercepts this automatically)
+  - Instagram: `https://instagram.com/manik.3000` (Instagram app intercepts this)
+  - Twitter/X: `https://twitter.com/themanikdiaries` (X app intercepts this)
+  - LinkedIn: same URL (app intercepts)
+  - GitHub: same URL
+- Remove `target="_blank"` and `rel="noopener noreferrer"` — these force the browser. Without them, mobile OS will offer to open in the native app if installed.
 
-### 6. Connect Section
-- Email link + social links
-- Clean, centered layout
+#### 3. Resume page scroll fix
+- Add `window.scrollTo(0, 0)` on mount in Resume.tsx to ensure the page starts at top.
 
-### 7. Sticky Navigation
-- Minimal top nav with section links (smooth scroll)
-- Name on the left, nav links on the right
-
-## Technical Plan
-
-### Files to create/modify:
-1. **src/index.css** - Add custom CSS variables for warm palette, import Google Fonts (Playfair Display + Inter)
-2. **src/pages/Index.tsx** - Full single-page portfolio with all sections
-3. **Copy assets** - Profile photo + event image to src/assets/
-4. **tailwind.config.ts** - Add font families
-
-### Data approach:
-- All content hardcoded in Index.tsx (no backend needed)
-- External links open in new tabs
+### Files to Edit
+- `src/components/sections/Nav.tsx` — menu alignment + SPA navigation for internal routes
+- `src/components/sections/Hero.tsx` — remove `target="_blank"` to allow app deep linking
+- `src/pages/Resume.tsx` — scroll to top on mount
 
