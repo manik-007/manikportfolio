@@ -8,9 +8,32 @@ const NAV_LINKS = [
   { label: "Podcasts", href: "#podcasts" },
   { label: "Community", href: "/community" },
   { label: "Wall of Love", href: "#testimonials" },
+  { label: "Diary", href: "/diary" },
   { label: "Resume", href: "/resume" },
   { label: "Connect", href: "#connect" },
 ];
+
+const useIST = () => {
+  const [time, setTime] = useState("");
+  useEffect(() => {
+    const update = () => {
+      const now = new Date();
+      setTime(
+        now.toLocaleTimeString("en-IN", {
+          timeZone: "Asia/Kolkata",
+          hour: "2-digit",
+          minute: "2-digit",
+          second: "2-digit",
+          hour12: true,
+        })
+      );
+    };
+    update();
+    const id = setInterval(update, 1000);
+    return () => clearInterval(id);
+  }, []);
+  return time;
+};
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
@@ -22,6 +45,7 @@ const Nav = () => {
   });
   const location = useLocation();
   const navigate = useNavigate();
+  const istTime = useIST();
 
   useEffect(() => {
     if (dark) {
@@ -52,8 +76,11 @@ const Nav = () => {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
-      <div className="max-w-5xl mx-auto flex items-center justify-end md:justify-center px-6 py-4">
-        <div className="hidden md:flex items-center gap-8">
+      <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
+        <span className="hidden md:inline-block text-xs font-mono text-muted-foreground tracking-wide">
+          {istTime} IST
+        </span>
+        <div className="hidden md:flex items-center gap-6">
           {NAV_LINKS.map((l) => (
             <a
               key={l.href}
@@ -72,21 +99,26 @@ const Nav = () => {
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
         </div>
-        <div className="flex items-center gap-4 md:hidden">
-          <button
-            onClick={() => setDark(!dark)}
-            className="text-foreground"
-            aria-label="Toggle theme"
-          >
-            {dark ? <Sun size={20} /> : <Moon size={20} />}
-          </button>
-          <button
-            onClick={() => setOpen(!open)}
-            className="text-foreground"
-            aria-label="Toggle menu"
-          >
-            {open ? <X size={22} /> : <Menu size={22} />}
-          </button>
+        <div className="flex items-center gap-4 md:hidden w-full justify-between">
+          <span className="text-xs font-mono text-muted-foreground tracking-wide">
+            {istTime} IST
+          </span>
+          <div className="flex items-center gap-4">
+            <button
+              onClick={() => setDark(!dark)}
+              className="text-foreground"
+              aria-label="Toggle theme"
+            >
+              {dark ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
+            <button
+              onClick={() => setOpen(!open)}
+              className="text-foreground"
+              aria-label="Toggle menu"
+            >
+              {open ? <X size={22} /> : <Menu size={22} />}
+            </button>
+          </div>
         </div>
       </div>
       {open && (
