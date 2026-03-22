@@ -1,5 +1,5 @@
-import { Menu, X } from "lucide-react";
-import { useState } from "react";
+import { Menu, X, Sun, Moon } from "lucide-react";
+import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const NAV_LINKS = [
@@ -14,8 +14,22 @@ const NAV_LINKS = [
 
 const Nav = () => {
   const [open, setOpen] = useState(false);
+  const [dark, setDark] = useState(() => {
+    if (typeof window !== "undefined") {
+      return document.documentElement.classList.contains("dark");
+    }
+    return true;
+  });
   const location = useLocation();
   const navigate = useNavigate();
+
+  useEffect(() => {
+    if (dark) {
+      document.documentElement.classList.add("dark");
+    } else {
+      document.documentElement.classList.remove("dark");
+    }
+  }, [dark]);
 
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
     if (href.startsWith("/")) {
@@ -23,11 +37,16 @@ const Nav = () => {
       navigate(href);
       setOpen(false);
     } else if (href.startsWith("#")) {
-      if (location.pathname !== "/") {
-        e.preventDefault();
-        navigate("/" + href);
-      }
+      e.preventDefault();
       setOpen(false);
+      if (location.pathname !== "/") {
+        navigate("/" + href);
+      } else {
+        const el = document.querySelector(href);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }
     }
   };
 
@@ -45,14 +64,30 @@ const Nav = () => {
               {l.label}
             </a>
           ))}
+          <button
+            onClick={() => setDark(!dark)}
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Toggle theme"
+          >
+            {dark ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
         </div>
-        <button
-          onClick={() => setOpen(!open)}
-          className="md:hidden text-foreground"
-          aria-label="Toggle menu"
-        >
-          {open ? <X size={22} /> : <Menu size={22} />}
-        </button>
+        <div className="flex items-center gap-4 md:hidden">
+          <button
+            onClick={() => setDark(!dark)}
+            className="text-foreground"
+            aria-label="Toggle theme"
+          >
+            {dark ? <Sun size={20} /> : <Moon size={20} />}
+          </button>
+          <button
+            onClick={() => setOpen(!open)}
+            className="text-foreground"
+            aria-label="Toggle menu"
+          >
+            {open ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
       </div>
       {open && (
         <div className="md:hidden border-t border-border bg-background px-6 pb-4 pt-2 space-y-3">

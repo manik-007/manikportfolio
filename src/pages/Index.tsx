@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import Nav from "@/components/sections/Nav";
 import Hero from "@/components/sections/Hero";
 import About from "@/components/sections/About";
@@ -8,20 +10,38 @@ import Awards from "@/components/sections/Awards";
 import WallOfLove from "@/components/sections/WallOfLove";
 import Connect from "@/components/sections/Connect";
 import Footer from "@/components/sections/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 
-const Index = () => (
-  <div className="min-h-screen bg-background text-foreground">
-    <Nav />
-    <Hero />
-    <About />
-    <WhatIDo />
-    <Articles />
-    <Podcasts />
-    <Awards />
-    <WallOfLove />
-    <Connect />
-    <Footer />
-  </div>
-);
+const Index = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      // Small delay to let DOM render
+      setTimeout(() => {
+        const el = document.querySelector(location.hash);
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    }
+  }, [location]);
+
+  return (
+    <div className="min-h-screen bg-background text-foreground">
+      <Nav />
+      <Hero />
+      <About />
+      <WhatIDo />
+      <Articles />
+      <Podcasts />
+      <Awards />
+      <WallOfLove />
+      <Connect />
+      <Footer />
+      <ScrollToTop />
+    </div>
+  );
+};
 
 export default Index;
