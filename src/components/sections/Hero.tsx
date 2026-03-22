@@ -12,7 +12,7 @@ const SOCIALS = [
   { icon: Calendar, href: "https://calendly.com/manik_/discussion", label: "Calendly" },
 ];
 
-const HYPHENATES = ["Builder", "Creator", "Educator", "Podcaster", "Public Speaker", "Leader", "Writer", "Traveller"];
+const HYPHENATES = ["Builder", "Creator", "Educator", "Podcaster", "Public Speaker", "Leader", "Writer", "Traveller", "Engineer", "Mentor", "Changemaker"];
 
 const Hero = () => (
   <>
@@ -24,7 +24,7 @@ const Hero = () => (
         <p className="font-serif text-xl sm:text-2xl md:text-3xl italic text-muted-foreground mb-6 sm:mb-8 max-w-2xl px-2">
           "I build for impact and bring people together."
         </p>
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 px-2">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 px-2 max-w-xl">
           {HYPHENATES.map((h, i) => (
             <span
               key={h}
