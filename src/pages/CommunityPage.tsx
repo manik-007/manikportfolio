@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Youtube } from "lucide-react";
+import { Youtube, Twitter } from "lucide-react";
 import Nav from "@/components/sections/Nav";
 import Footer from "@/components/sections/Footer";
 import SectionHeading from "@/components/sections/SectionHeading";
@@ -136,6 +136,22 @@ const VOLUNTEERING = [
       "Volunteered on-site, managing crowd flow, handling the community lounge, maintaining discipline, unpacking swag, and assisting attendees with navigation during the conference.",
     ],
   },
+];
+
+const TWITTER_SPACES = [
+  { title: "How Humanizing Tech Made Me a Conference Speaker", link: "https://x.com/GirlLeadingTech/status/1973776234237575178", speakers: [{ name: "Diana Soyster", role: "Developer Advocate at Vonage", twitter: "https://x.com/dianasoyster" }] },
+  { title: "Rust as a Programming Language", link: "https://x.com/GirlLeadingTech/status/1973346885651013877", speakers: [{ name: "Francesco Ciulla", role: "Developer Advocate at Daily.Dev", twitter: "https://x.com/FrancescoCiull4" }] },
+  { title: "Role of Communities in Web3", link: "https://x.com/GirlLeadingTech/status/1973035390245409111", speakers: [{ name: "Matilde Silva", role: "Community Strategist Advisor at Her DAO", twitter: "https://x.com/WHTIFIGO" }] },
+  { title: "Career, Jobs & Placements", link: "https://x.com/GirlLeadingTech/status/1970460131466129730", speakers: [{ name: "SVS", role: "Tech Recruiter", twitter: "https://x.com/_svs_" }] },
+  { title: "Health and Tech", link: "https://x.com/GirlLeadingTech/status/1970090673547407665", speakers: [{ name: "Aditi Tiwari", role: "Founder at Sia Health", twitter: "https://x.com/Imaditi007" }] },
+  { title: "Career & Life Experiences", link: "https://x.com/GirlLeadingTech/status/1969785139535515740", speakers: [{ name: "Narayani Gurunathan", role: "Senior Talent Advisor", twitter: "https://x.com/Narayani07" }] },
+  { title: "Women in Tech", link: "https://x.com/GirlLeadingTech/status/1969416982111142252", speakers: [{ name: "Rudy", role: "Community Manager", twitter: "https://x.com/rudythetechy" }] },
+  { title: "Crypto, DevRel & Engineering", link: "https://x.com/GirlLeadingTech/status/1968983669608964196", speakers: [{ name: "Kanishk Khurana", role: "DevRel Engineer at Across Protocol", twitter: "https://x.com/kanishkkhurana" }] },
+  { title: "AMA with Ankush Dharkar", link: "https://x.com/realankush", speakers: [{ name: "Ankush Dharkar", role: "Founder at RealDevSquad", twitter: "https://x.com/realankush" }] },
+  { title: "Blockchain 101 & Community Management", link: "https://x.com/GirlLeadingTech/status/1967279353022263730", speakers: [{ name: "Rieselle Saure", role: "Lead Community Ambassador at Core DAO", twitter: "https://x.com/elleseir" }] },
+  { title: "Tech Trends with Ayush", link: "https://x.com/GirlLeadingTech/status/1967257007754473754", speakers: [{ name: "Ayush Chugh", role: "Founder at Ravix Studio", twitter: "https://x.com/aayushchugh" }] },
+  { title: "Is AI the Only End Game?", link: "https://x.com/GirlLeadingTech/status/1967241530168774664", speakers: [{ name: "Unnati Chhabra", role: "Data Scientist at Grid Dynamics", twitter: "https://x.com/Unnati_twts" }] },
+  { title: "How to Find Good Hackathons", link: "https://x.com/GirlLeadingTech/status/1966901850571239807", speakers: [{ name: "Manik", role: "Builder at Girls Leading Tech", twitter: "https://x.com/themanikdiaries" }] },
 ];
 
 const SESSIONS = [
@@ -320,6 +336,34 @@ const CommunityPage = () => {
             <div className="space-y-4 mt-8">
               {VOLUNTEERING.map((v) => (
                 <VolunteerCard key={v.org} {...v} />
+              ))}
+            </div>
+          </div>
+
+          <div className="mt-16">
+            <SectionHeading>Twitter Spaces — Hosted & Organised</SectionHeading>
+            <p className="text-sm text-muted-foreground text-center mb-8">{TWITTER_SPACES.length} Twitter Spaces on tech, careers, Web3, community building, and more.</p>
+            <div className="space-y-3">
+              {TWITTER_SPACES.map((space) => (
+                <a
+                  key={space.link}
+                  href={space.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 p-4 rounded-lg border border-border hover:border-primary/40 hover:bg-accent/40 transition-colors group block"
+                >
+                  <Twitter className="w-5 h-5 text-primary mt-1 shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <p className="font-semibold text-foreground group-hover:text-primary transition-colors">{space.title}</p>
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-sm text-muted-foreground">
+                      {space.speakers.map((sp) => (
+                        <span key={sp.name}>
+                          {sp.name}{sp.role ? ` · ${sp.role}` : ""}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </a>
               ))}
             </div>
           </div>
