@@ -15,9 +15,9 @@ const SOCIALS = [
 const Connect = () => (
   <section id="connect" className="py-20 md:py-28 px-6 border-t border-border">
     <div className="max-w-3xl mx-auto text-center">
-      <SectionHeading>let's connect</SectionHeading>
+      <SectionHeading>Let's Connect</SectionHeading>
       <p className="text-muted-foreground mb-8 max-w-md mx-auto leading-relaxed">
-        got an idea, a collaboration, or just want to say hello? i'd love to hear from you.
+        Got an idea, a collaboration, or just want to say hello? I'd love to hear from you.
       </p>
       <a
         href="mailto:manik.officialwork@gmail.com"

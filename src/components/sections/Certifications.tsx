@@ -2,7 +2,7 @@ import SectionHeading from "./SectionHeading";
 
 const CERTS = [
   {
-    category: "community",
+    category: "Community",
     items: [
       "Community Building & Management by The Community Collective",
       "Community Automation Course by The Community Collective",
@@ -11,7 +11,7 @@ const CERTS = [
     ],
   },
   {
-    category: "technical",
+    category: "Technical",
     items: [
       "Blockchain Fundamentals",
       "Full Stack Web Development by Apna College",
@@ -23,7 +23,7 @@ const CERTS = [
 
 const Certifications = () => (
   <section id="certifications" className="py-12 md:py-16">
-    <SectionHeading>certifications</SectionHeading>
+    <SectionHeading>Certifications</SectionHeading>
     <div className="space-y-8 mt-8">
       {CERTS.map((c) => (
         <div key={c.category}>

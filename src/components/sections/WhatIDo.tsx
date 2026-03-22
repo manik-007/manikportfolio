@@ -1,18 +1,18 @@
 const CARDS = [
   {
-    title: "build products",
+    title: "Build Products",
     description:
-      "i turn ideas into tangible products and experiences — from side projects to full-scale platforms that solve real problems for real people.",
+      "I turn ideas into tangible products and experiences — from side projects to full-scale platforms that solve real problems for real people.",
   },
   {
-    title: "grow communities",
+    title: "Grow Communities",
     description:
-      "i build tribes, not audiences. from zero to thousands — i create communities where people genuinely belong and grow together.",
+      "I build tribes, not audiences. From zero to thousands — I create communities where people genuinely belong and grow together.",
   },
   {
-    title: "create content",
+    title: "Create Content",
     description:
-      "writing on medium & linkedin, podcasting, and producing videos on youtube — sharing stories, ideas, and lessons along the way.",
+      "Writing on Medium & LinkedIn, podcasting, and producing videos on YouTube — sharing stories, ideas, and lessons along the way.",
   },
 ];
 
@@ -20,10 +20,10 @@ const WhatIDo = () => (
   <section id="whatido" className="py-20 md:py-28 px-6 border-t border-border bg-background">
     <div className="max-w-4xl mx-auto text-center">
       <span className="text-xs font-sans font-medium tracking-widest text-muted-foreground uppercase">
-        what i do
+        What I Do
       </span>
       <h2 className="font-serif text-4xl md:text-6xl font-bold text-foreground mt-4 mb-14 leading-tight">
-        building at the intersection of{" "}
+        Building at the intersection of{" "}
         <span className="italic text-foreground">
           people, products & purpose.
         </span>

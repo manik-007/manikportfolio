@@ -3,15 +3,15 @@ import SectionHeading from "./SectionHeading";
 
 const ARTICLES = [
   {
-    title: "top 5 books you should read if you are a college student",
+    title: "Top 5 Books You Should Read If You Are a College Student",
     link: "https://medium.com/@manik23265/top-5-books-you-should-read-if-you-are-a-college-student-099a134acacc",
   },
   {
-    title: "have you ever felt that you wasted your time?",
+    title: "Have You Ever Felt That You Wasted Your Time?",
     link: "https://medium.com/@manik23265/have-you-ever-felt-that-you-wasted-your-time-9b6ec3fec6c9",
   },
   {
-    title: "have you decided on your career path?",
+    title: "Have You Decided on Your Career Path?",
     link: "https://medium.com/@manik23265/have-you-decided-on-your-career-path-1909972cbd52",
   },
 ];
@@ -19,7 +19,7 @@ const ARTICLES = [
 const Articles = () => (
   <section id="articles" className="py-20 md:py-28 px-6 border-t border-border">
     <div className="max-w-3xl mx-auto text-center">
-      <SectionHeading>articles</SectionHeading>
+      <SectionHeading>Articles</SectionHeading>
       <div className="space-y-6">
         {ARTICLES.map((a) => (
           <a
@@ -39,14 +39,14 @@ const Articles = () => (
         ))}
       </div>
       <p className="mt-8 text-sm text-muted-foreground">
-        read more on{" "}
+        Read more on{" "}
         <a
           href="https://medium.com/@manik23265"
           target="_blank"
           rel="noopener noreferrer"
           className="underline underline-offset-4 hover:text-foreground transition-colors"
         >
-          medium
+          Medium
         </a>
       </p>
     </div>

@@ -1,8 +1,8 @@
 const Footer = () => (
   <footer className="border-t border-border py-8 px-6">
     <div className="max-w-5xl mx-auto flex flex-col items-center gap-4 text-xs text-muted-foreground text-center">
-      <p>© {new Date().getFullYear()} manik. all rights reserved.</p>
-      <p className="font-serif italic">built with ❤️</p>
+      <p>© {new Date().getFullYear()} Manik. All rights reserved.</p>
+      <p className="font-serif italic">Built with ❤️</p>
     </div>
   </footer>
 );
