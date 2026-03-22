@@ -2,15 +2,15 @@ import SectionHeading from "./SectionHeading";
 import { Award } from "lucide-react";
 
 const AWARDS = [
-  "cmx director of the month",
-  "cmx — most promising director debut",
-  "stem educator award winner",
+  "CMX Director of the Month",
+  "CMX — Most Promising Director Debut",
+  "STEM Educator Award Winner",
 ];
 
 const Awards = () => (
   <section id="awards" className="py-20 md:py-28 px-6 border-t border-border">
     <div className="max-w-3xl mx-auto text-center">
-      <SectionHeading>awards & honors</SectionHeading>
+      <SectionHeading>Awards & Honors</SectionHeading>
       <div className="flex flex-col items-center gap-4 mt-8">
         {AWARDS.map((a) => (
           <div key={a} className="flex items-center gap-3">
