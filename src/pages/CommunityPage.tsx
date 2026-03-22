@@ -138,6 +138,22 @@ const VOLUNTEERING = [
   },
 ];
 
+const TWITTER_SPACES = [
+  { title: "How Humanizing Tech Made Me a Conference Speaker", link: "https://x.com/GirlLeadingTech/status/1973776234237575178", speakers: [{ name: "Diana Soyster", role: "Developer Advocate at Vonage", twitter: "https://x.com/dianasoyster" }] },
+  { title: "Rust as a Programming Language", link: "https://x.com/GirlLeadingTech/status/1973346885651013877", speakers: [{ name: "Francesco Ciulla", role: "Developer Advocate at Daily.Dev", twitter: "https://x.com/FrancescoCiull4" }] },
+  { title: "Role of Communities in Web3", link: "https://x.com/GirlLeadingTech/status/1973035390245409111", speakers: [{ name: "Matilde Silva", role: "Community Strategist Advisor at Her DAO", twitter: "https://x.com/WHTIFIGO" }] },
+  { title: "Career, Jobs & Placements", link: "https://x.com/GirlLeadingTech/status/1970460131466129730", speakers: [{ name: "SVS", role: "Tech Recruiter", twitter: "https://x.com/_svs_" }] },
+  { title: "Health and Tech", link: "https://x.com/GirlLeadingTech/status/1970090673547407665", speakers: [{ name: "Aditi Tiwari", role: "Founder at Sia Health", twitter: "https://x.com/Imaditi007" }] },
+  { title: "Career & Life Experiences", link: "https://x.com/GirlLeadingTech/status/1969785139535515740", speakers: [{ name: "Narayani Gurunathan", role: "Senior Talent Advisor", twitter: "https://x.com/Narayani07" }] },
+  { title: "Women in Tech", link: "https://x.com/GirlLeadingTech/status/1969416982111142252", speakers: [{ name: "Rudy", role: "Community Manager", twitter: "https://x.com/rudythetechy" }] },
+  { title: "Crypto, DevRel & Engineering", link: "https://x.com/GirlLeadingTech/status/1968983669608964196", speakers: [{ name: "Kanishk Khurana", role: "DevRel Engineer at Across Protocol", twitter: "https://x.com/kanishkkhurana" }] },
+  { title: "AMA with Ankush Dharkar", link: "https://x.com/realankush", speakers: [{ name: "Ankush Dharkar", role: "Founder at RealDevSquad", twitter: "https://x.com/realankush" }] },
+  { title: "Blockchain 101 & Community Management", link: "https://x.com/GirlLeadingTech/status/1967279353022263730", speakers: [{ name: "Rieselle Saure", role: "Lead Community Ambassador at Core DAO", twitter: "https://x.com/elleseir" }] },
+  { title: "Tech Trends with Ayush", link: "https://x.com/GirlLeadingTech/status/1967257007754473754", speakers: [{ name: "Ayush Chugh", role: "Founder at Ravix Studio", twitter: "https://x.com/aayushchugh" }] },
+  { title: "Is AI the Only End Game?", link: "https://x.com/GirlLeadingTech/status/1967241530168774664", speakers: [{ name: "Unnati Chhabra", role: "Data Scientist at Grid Dynamics", twitter: "https://x.com/Unnati_twts" }] },
+  { title: "How to Find Good Hackathons", link: "https://x.com/GirlLeadingTech/status/1966901850571239807", speakers: [{ name: "Manik", role: "Builder at Girls Leading Tech", twitter: "https://x.com/themanikdiaries" }] },
+];
+
 const SESSIONS = [
   { title: "A Panel Discussion on Google WE Scholarship", link: "https://youtu.be/T92Vx4-Giy4?si=ZfO5VyQlaLM0gEu7", speakers: [{ name: "Ridhy Arora", role: "WE Scholar 2024", linkedin: "https://www.linkedin.com/in/ridhy-arora-097784258/" }, { name: "Kavya Choudhary", role: "WE Scholar 2024", linkedin: "https://www.linkedin.com/in/kavya1610/" }, { name: "Sravya Uppalapati", role: "WE Scholar 2024", linkedin: "https://www.linkedin.com/in/sravyauppalapati16/" }] },
   { title: "Google STEP Internship Mentorship Session", link: "https://youtu.be/N3iP6_oaum0?si=jXy-XsHsepa7VqxL", speakers: [{ name: "Jigisha Arora", role: "SWE Intern'25 at Google", linkedin: "https://www.linkedin.com/in/jigisha-arora-212ab5256/" }] },
