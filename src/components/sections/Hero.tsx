@@ -12,7 +12,7 @@ const SOCIALS = [
   { icon: Calendar, href: "https://calendly.com/manik_/discussion", label: "Calendly" },
 ];
 
-const HYPHENATES = ["Builder", "Creator", "Educator", "Podcaster", "Public Speaker", "Leader", "Writer", "Traveller"];
+const HYPHENATES = ["Builder", "Creator", "Educator", "Podcaster", "Public Speaker", "Leader", "Writer", "Traveller", "Engineer", "Mentor", "Changemaker"];
 
 const Hero = () => (
   <>
