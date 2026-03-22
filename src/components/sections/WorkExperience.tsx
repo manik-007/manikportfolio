@@ -1,8 +1,10 @@
 import SectionHeading from "./SectionHeading";
+import { ExternalLink } from "lucide-react";
 
 const EXPERIENCE = [
   {
     company: "BlockOn Ventures",
+    website: "https://www.blockon.biz/",
     role: "Business Development Manager",
     period: "Sept 2025 – Present",
     type: "Contract | Part-time | Remote | Malaysia",
@@ -13,6 +15,7 @@ const EXPERIENCE = [
   },
   {
     company: "ProPeers",
+    website: "https://www.propeers.in/",
     role: "Community Manager",
     period: "Sept 2024 – Oct 2024",
     type: "Internship | Remote | Delhi",
@@ -23,6 +26,7 @@ const EXPERIENCE = [
   },
   {
     company: "Association of Cyber Security",
+    website: "https://acssociety.com/",
     role: "Community Manager",
     period: "Dec 2023 – Aug 2024",
     type: "Internship | Remote | Chandigarh",
@@ -40,9 +44,16 @@ const WorkExperience = () => (
     <div className="space-y-10 mt-8">
       {EXPERIENCE.map((e) => (
         <div key={e.company}>
-          <h3 className="font-serif text-xl sm:text-2xl font-bold text-foreground">
-            {e.company}
-          </h3>
+          <div className="flex items-center gap-2">
+            <h3 className="font-serif text-xl sm:text-2xl font-bold text-foreground">
+              {e.company}
+            </h3>
+            {e.website && (
+              <a href={e.website} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                <ExternalLink size={14} />
+              </a>
+            )}
+          </div>
           <p className="text-sm text-muted-foreground mt-1">
             {e.role} | {e.period} | {e.type}
           </p>

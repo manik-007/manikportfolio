@@ -10,10 +10,10 @@ const About = () => (
       </h2>
       <div className="space-y-6 text-muted-foreground leading-relaxed mt-8 text-base md:text-lg text-left md:text-center">
         <p>
-          Hey, I'm Manik — a builder, community architect, and growth catalyst based in India. I believe the most powerful thing you can do is build things that matter and surround yourself with people who push you forward.
+          Hey, I'm <strong className="text-foreground">Manik</strong> — a <strong className="text-foreground">builder</strong>, <strong className="text-foreground">community architect</strong>, and <strong className="text-foreground">growth catalyst</strong> based in India. I believe the most powerful thing you can do is build things that matter and surround yourself with people who push you forward.
         </p>
         <p>
-          From organising grassroots events to hosting my own podcast, from writing on LinkedIn and Medium to building one of India's most vibrant communities for women in tech — everything I do comes from one place: genuine care for people and relentless drive to create impact.
+          From organising <strong className="text-foreground">grassroots events</strong> to hosting my own <strong className="text-foreground">podcast</strong>, from writing on <strong className="text-foreground">LinkedIn</strong> and <strong className="text-foreground">Medium</strong> to building one of India's most vibrant communities for <strong className="text-foreground">women in tech</strong> — everything I do comes from one place: genuine care for people and relentless drive to create <strong className="text-foreground">impact</strong>.
         </p>
       </div>
     </div>
