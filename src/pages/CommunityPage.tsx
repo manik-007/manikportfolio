@@ -368,6 +368,8 @@ const CommunityPage = () => {
             </div>
           </div>
 
+          <div className="mt-16">
+            <SectionHeading>Sessions Organised & Hosted</SectionHeading>
             <p className="text-sm text-muted-foreground text-center mb-8">{SESSIONS.length} sessions featuring speakers from Google, Amazon, Microsoft, Uber, Salesforce, and more.</p>
             <div>
               {visibleSessions.map((s) => (
