@@ -4,7 +4,7 @@ import Nav from "@/components/sections/Nav";
 import Footer from "@/components/sections/Footer";
 import SectionHeading from "@/components/sections/SectionHeading";
 
-const COMMUNITY_ROLES = [
+const COMMUNITIES_BUILT = [
   {
     org: "Girls Leading Tech",
     role: "Builder",
@@ -21,6 +21,25 @@ const COMMUNITY_ROLES = [
     ],
   },
   {
+    org: "Lamit Club",
+    role: "Founding Lead",
+    period: "Apr 2024 – Jan 2025",
+    bullets: [
+      "Built and scaled a 300-member Web3 community, organizing 5 speaker sessions, 8 interaction calls, 6 offline gatherings, and 1 seminar.",
+      "Led high-impact events including a 5-day bootcamp (296 registrations), orientation (230+ sign-ups, 130+ attendees), and a logo competition (103 entries, 60 submissions) for club rebranding.",
+      "Facilitated strategic growth by conducting regular team meetings to brainstorm and implement community initiatives.",
+    ],
+  },
+  {
+    org: "Letz Connect",
+    role: "Builder",
+    period: "",
+    bullets: [],
+  },
+];
+
+const VOLUNTEERING = [
+  {
     org: "CMX",
     role: "CMX Connect Host",
     period: "June 2024 – Present",
@@ -29,16 +48,6 @@ const COMMUNITY_ROLES = [
       "Grew the CMX chapter to 410+ members, with 2 global spotlight features in the CMX Newsletter among 75+ chapters worldwide.",
       "Led flagship events like EmpowerHer in collaboration with Girls Leading Tech, attracting 330+ registrations — one of the highest among CMX chapters.",
       "Recognized globally as Best CMX Director of the Month, Most Promising Debut, and Youngest CMX Director Worldwide for one consecutive year.",
-    ],
-  },
-  {
-    org: "Lamit Club",
-    role: "Founding Lead",
-    period: "Apr 2024 – Jan 2025",
-    bullets: [
-      "Built and scaled a 300-member Web3 community, organizing 5 speaker sessions, 8 interaction calls, 6 offline gatherings, and 1 seminar.",
-      "Led high-impact events including a 5-day bootcamp (296 registrations), orientation (230+ sign-ups, 130+ attendees), and a logo competition (103 entries, 60 submissions) for club rebranding.",
-      "Facilitated strategic growth by conducting regular team meetings to brainstorm and implement community initiatives.",
     ],
   },
   {
@@ -54,9 +63,6 @@ const COMMUNITY_ROLES = [
       "Managed attendee forms and community partnerships, onboarding 10+ partners and identifying city leads for Chennai, Bangalore, Lucknow, and Nagpur.",
     ],
   },
-];
-
-const VOLUNTEERING = [
   {
     org: "CNCF Jalandhar",
     role: "Organizer",
@@ -139,7 +145,7 @@ const VOLUNTEERING = [
 ];
 
 const TWITTER_SPACES = [
-  { title: "How Humanizing Tech Made Me a Conference Speaker", link: "https://x.com/GirlLeadingTech/status/1973776234237575178", speakers: [{ name: "Diana Soyster", role: "Developer Advocate at Vonage", twitter: "https://x.com/dianasoyster" }] },
+  { title: "How Humanizing Tech Made Me a Conference Speaker", link: "https://x.com/GirlLeadingTech/status/1973776234237575178", speakers: [{ name: "Diana Oyster", role: "Developer Advocate at Vonage", twitter: "https://x.com/dianasoyster" }] },
   { title: "Rust as a Programming Language", link: "https://x.com/GirlLeadingTech/status/1973346885651013877", speakers: [{ name: "Francesco Ciulla", role: "Developer Advocate at Daily.Dev", twitter: "https://x.com/FrancescoCiull4" }] },
   { title: "Role of Communities in Web3", link: "https://x.com/GirlLeadingTech/status/1973035390245409111", speakers: [{ name: "Matilde Silva", role: "Community Strategist Advisor at Her DAO", twitter: "https://x.com/WHTIFIGO" }] },
   { title: "Career, Jobs & Placements", link: "https://x.com/GirlLeadingTech/status/1970460131466129730", speakers: [{ name: "SVS", role: "Tech Recruiter", twitter: "https://x.com/_svs_" }] },
@@ -153,6 +159,8 @@ const TWITTER_SPACES = [
   { title: "Is AI the Only End Game?", link: "https://x.com/GirlLeadingTech/status/1967241530168774664", speakers: [{ name: "Unnati Chhabra", role: "Data Scientist at Grid Dynamics", twitter: "https://x.com/Unnati_twts" }] },
   { title: "How to Find Good Hackathons", link: "https://x.com/GirlLeadingTech/status/1966901850571239807", speakers: [{ name: "Manik", role: "Builder at Girls Leading Tech", twitter: "https://x.com/themanikdiaries" }] },
 ];
+
+const INITIAL_SPACES = 3;
 
 const SESSIONS = [
   { title: "A Panel Discussion on Google WE Scholarship", link: "https://youtu.be/T92Vx4-Giy4?si=ZfO5VyQlaLM0gEu7", speakers: [{ name: "Ridhy Arora", role: "WE Scholar 2024", linkedin: "https://www.linkedin.com/in/ridhy-arora-097784258/" }, { name: "Kavya Choudhary", role: "WE Scholar 2024", linkedin: "https://www.linkedin.com/in/kavya1610/" }, { name: "Sravya Uppalapati", role: "WE Scholar 2024", linkedin: "https://www.linkedin.com/in/sravyauppalapati16/" }] },
@@ -257,19 +265,21 @@ const CommunityCard = ({ org, role, period, bullets }: {
         <p className="text-xs text-muted-foreground mt-0.5">{role}{period ? ` · ${period}` : ""}</p>
       </div>
     </div>
-    <ul className="list-disc list-outside pl-5 space-y-1.5">
-      {bullets.map((b, i) => (
-        <li key={i} className="text-sm text-muted-foreground leading-relaxed">{b}</li>
-      ))}
-    </ul>
+    {bullets.length > 0 && (
+      <ul className="list-disc list-outside pl-5 space-y-1.5">
+        {bullets.map((b, i) => (
+          <li key={i} className="text-sm text-muted-foreground leading-relaxed">{b}</li>
+        ))}
+      </ul>
+    )}
   </div>
 );
 
-const VolunteerCard = ({ org, role, bullets }: { org: string; role: string; bullets: string[] }) => (
+const VolunteerCard = ({ org, role, period, bullets }: { org: string; role: string; period?: string; bullets: string[] }) => (
   <div className="border border-border rounded-lg p-4 sm:p-5 hover:border-foreground/20 transition-colors">
     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
       <h3 className="font-serif text-base font-semibold text-foreground">{org}</h3>
-      <span className="text-xs text-muted-foreground">{role}</span>
+      <span className="text-xs text-muted-foreground">{role}{period ? ` · ${period}` : ""}</span>
     </div>
     <ul className="list-disc list-outside pl-4 space-y-1">
       {bullets.map((b, i) => (
@@ -313,7 +323,9 @@ const SessionRow = ({ title, link, speakers }: {
 
 const CommunityPage = () => {
   const [showAllSessions, setShowAllSessions] = useState(false);
+  const [showAllSpaces, setShowAllSpaces] = useState(false);
   const visibleSessions = showAllSessions ? SESSIONS : SESSIONS.slice(0, INITIAL_SESSIONS);
+  const visibleSpaces = showAllSpaces ? TWITTER_SPACES : TWITTER_SPACES.slice(0, INITIAL_SPACES);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -325,26 +337,31 @@ const CommunityPage = () => {
       <div className="pt-24 pb-12 px-6">
         <div className="max-w-3xl mx-auto">
           <SectionHeading>Community Contributions</SectionHeading>
-          <div className="space-y-5 mt-8">
-            {COMMUNITY_ROLES.map((c) => (
+
+          {/* Communities I Built */}
+          <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground mt-12 mb-6 text-center">Communities I Built</h3>
+          <div className="space-y-5">
+            {COMMUNITIES_BUILT.map((c) => (
               <CommunityCard key={c.org} {...c} />
             ))}
           </div>
 
+          {/* Communities in Which I Volunteered */}
           <div className="mt-16">
-            <SectionHeading>Volunteering</SectionHeading>
-            <div className="space-y-4 mt-8">
+            <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground mb-6 text-center">Communities in Which I Volunteered</h3>
+            <div className="space-y-4">
               {VOLUNTEERING.map((v) => (
                 <VolunteerCard key={v.org} {...v} />
               ))}
             </div>
           </div>
 
+          {/* Twitter Spaces */}
           <div className="mt-16">
             <SectionHeading>Twitter Spaces — Hosted & Organised</SectionHeading>
             <p className="text-sm text-muted-foreground text-center mb-8">{TWITTER_SPACES.length} Twitter Spaces on tech, careers, Web3, community building, and more.</p>
             <div className="space-y-3">
-              {TWITTER_SPACES.map((space) => (
+              {visibleSpaces.map((space) => (
                 <a
                   key={space.link}
                   href={space.link}
@@ -366,8 +383,19 @@ const CommunityPage = () => {
                 </a>
               ))}
             </div>
+            {!showAllSpaces && TWITTER_SPACES.length > INITIAL_SPACES && (
+              <div className="text-center mt-8">
+                <button
+                  onClick={() => setShowAllSpaces(true)}
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors"
+                >
+                  See All {TWITTER_SPACES.length} Twitter Spaces
+                </button>
+              </div>
+            )}
           </div>
 
+          {/* Sessions */}
           <div className="mt-16">
             <SectionHeading>Sessions Organised & Hosted</SectionHeading>
             <p className="text-sm text-muted-foreground text-center mb-8">{SESSIONS.length} sessions featuring speakers from Google, Amazon, Microsoft, Uber, Salesforce, and more.</p>

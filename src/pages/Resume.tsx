@@ -5,6 +5,7 @@ import WorkExperience from "@/components/sections/WorkExperience";
 import Certifications from "@/components/sections/Certifications";
 import Recommendations from "@/components/sections/Recommendations";
 import Footer from "@/components/sections/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
 import { Printer } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
@@ -35,6 +36,7 @@ const Resume = () => {
         </div>
       </div>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };
