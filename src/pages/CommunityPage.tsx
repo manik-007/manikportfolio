@@ -341,7 +341,33 @@ const CommunityPage = () => {
           </div>
 
           <div className="mt-16">
-            <SectionHeading>Sessions Organised & Hosted</SectionHeading>
+            <SectionHeading>Twitter Spaces — Hosted & Organised</SectionHeading>
+            <p className="text-sm text-muted-foreground text-center mb-8">{TWITTER_SPACES.length} Twitter Spaces on tech, careers, Web3, community building, and more.</p>
+            <div className="space-y-3">
+              {TWITTER_SPACES.map((space) => (
+                <a
+                  key={space.link}
+                  href={space.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex items-start gap-4 p-4 rounded-lg border border-border hover:border-primary/40 hover:bg-accent/40 transition-colors group block"
+                >
+                  <Twitter className="w-5 h-5 text-primary mt-1 shrink-0" />
+                  <div className="flex-1 min-w-0">
+                    <p className="font-semibold text-foreground group-hover:text-primary transition-colors">{space.title}</p>
+                    <div className="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-sm text-muted-foreground">
+                      {space.speakers.map((sp) => (
+                        <span key={sp.name}>
+                          {sp.name}{sp.role ? ` · ${sp.role}` : ""}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+                </a>
+              ))}
+            </div>
+          </div>
+
             <p className="text-sm text-muted-foreground text-center mb-8">{SESSIONS.length} sessions featuring speakers from Google, Amazon, Microsoft, Uber, Salesforce, and more.</p>
             <div>
               {visibleSessions.map((s) => (
