@@ -1,3 +1,4 @@
+import { ExternalLink } from "lucide-react";
 import SectionHeading from "./SectionHeading";
 
 const EDUCATION = [
