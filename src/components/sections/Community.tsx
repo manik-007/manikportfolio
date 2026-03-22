@@ -10,13 +10,13 @@ const Community = () => (
   <section id="community" className="py-20 md:py-28 px-6 border-t border-border bg-background">
     <div className="max-w-4xl mx-auto text-center">
       <span className="text-xs font-sans font-medium tracking-widest text-muted-foreground uppercase">
-        the community i am building
+        The Community I Am Building
       </span>
       <h2 className="font-serif text-5xl md:text-6xl font-bold text-foreground mt-4 mb-6 leading-tight">
-        girls leading tech
+        Girls Leading Tech
       </h2>
       <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto mb-10">
-        a 4000-girl-strong movement across india, building a future where every girl in tech feels seen, supported, and unstoppable. glt is where ambition meets sisterhood.
+        A <strong className="text-foreground">4,000-girl-strong movement</strong> across India, building a future where every girl in tech feels seen, supported, and unstoppable. GLT is where <strong className="text-foreground">ambition meets sisterhood</strong>.
       </p>
       <div className="flex flex-wrap justify-center gap-8 sm:gap-12 mb-10">
         {STATS.map((s) => (
@@ -34,7 +34,7 @@ const Community = () => (
         rel="noopener noreferrer"
         className="inline-flex items-center px-6 py-3 rounded-full text-sm font-medium border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors"
       >
-        learn more
+        Learn More
       </a>
     </div>
   </section>
