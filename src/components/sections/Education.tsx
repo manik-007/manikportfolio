@@ -48,13 +48,17 @@ const Education = () => (
     <div className="space-y-8 mt-8">
       {EDUCATION.map((e) => (
         <div key={e.institution} className="border-b border-border pb-6 last:border-b-0 last:pb-0">
-          <h3 className="font-serif text-lg sm:text-xl font-semibold text-foreground">
-            {e.institution}
+          <h3 className="font-serif text-lg sm:text-xl font-semibold text-foreground inline-flex items-center gap-2">
+            {e.link ? (
+              <a href={e.link} target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors inline-flex items-center gap-2">
+                {e.institution} <ExternalLink size={14} />
+              </a>
+            ) : e.institution}
           </h3>
           <p className="text-sm text-muted-foreground mt-1">
             {e.program} | {e.period}
-            {e.detail ? ` | ${e.detail}` : ""}
           </p>
+          {e.detail && <p className="text-sm text-muted-foreground mt-1">{e.detail}</p>}
         </div>
       ))}
     </div>
