@@ -25,7 +25,7 @@ const Resume = () => {
           <div className="flex justify-end mb-6 print:hidden">
             <Button variant="outline" size="sm" onClick={handlePrint} className="gap-2">
               <Printer size={16} />
-              print / download pdf
+              Print / Download PDF
             </Button>
           </div>
           <WorkExperience />

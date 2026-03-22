@@ -3,40 +3,40 @@ import SectionHeading from "./SectionHeading";
 const EXPERIENCE = [
   {
     company: "BlockOn Ventures",
-    role: "business development manager",
-    period: "sept 2025 – present",
-    type: "contract | part-time | remote | malaysia",
+    role: "Business Development Manager",
+    period: "Sept 2025 – Present",
+    type: "Contract | Part-time | Remote | Malaysia",
     bullets: [
-      "handled the partnerships, sponsorships, and on-ground operations for 8 exclusive events happening under india blockchain month 2025 during eth global india week.",
-      "outreached to 300+ partners via social media.",
+      "Handled the partnerships, sponsorships, and on-ground operations for 8 exclusive events happening under India Blockchain Month 2025 during ETH Global India Week.",
+      "Outreached to 300+ partners via social media.",
     ],
   },
   {
     company: "ProPeers",
-    role: "community manager",
-    period: "sept 2024 – oct 2024",
-    type: "internship | remote | delhi",
+    role: "Community Manager",
+    period: "Sept 2024 – Oct 2024",
+    type: "Internship | Remote | Delhi",
     bullets: [
-      "spearheaded outreach to 20+ colleges, driving 2,000+ user growth.",
-      "designed the ProPeersX Lead Program structure to scale the community & user base.",
+      "Spearheaded outreach to 20+ colleges, driving 2,000+ user growth.",
+      "Designed the ProPeersX Lead Program structure to scale the community & user base.",
     ],
   },
   {
     company: "Association of Cyber Security",
-    role: "community manager",
-    period: "dec 2023 – aug 2024",
-    type: "internship | remote | chandigarh",
+    role: "Community Manager",
+    period: "Dec 2023 – Aug 2024",
+    type: "Internship | Remote | Chandigarh",
     bullets: [
-      "organized 10 security talks with an average attendance of 50+ participants each.",
-      "led email marketing campaigns, boosting event visibility and engagement.",
-      "recruited and managed a core team of 6, conducting interviews and onboarding.",
+      "Organized 10 security talks with an average attendance of 50+ participants each.",
+      "Led email marketing campaigns, boosting event visibility and engagement.",
+      "Recruited and managed a core team of 6, conducting interviews and onboarding.",
     ],
   },
 ];
 
 const WorkExperience = () => (
   <section id="experience" className="py-12 md:py-16">
-    <SectionHeading>work experience</SectionHeading>
+    <SectionHeading>Work Experience</SectionHeading>
     <div className="space-y-10 mt-8">
       {EXPERIENCE.map((e) => (
         <div key={e.company}>

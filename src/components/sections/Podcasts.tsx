@@ -4,100 +4,100 @@ import SectionHeading from "./SectionHeading";
 
 const PODCASTS = [
   {
-    title: "community building: fireside chat with shivam garg",
-    guest: "shivam garg",
-    guestRole: "devrel at outdefine",
+    title: "Community Building: Fireside Chat with Shivam Garg",
+    guest: "Shivam Garg",
+    guestRole: "DevRel at Outdefine",
     guestLinkedIn: "https://www.linkedin.com/in/meshivamgarg/",
     youtube: "https://youtu.be/V9zuwxcllvo?si=RbticcMyoTICUE8B",
   },
   {
-    title: "fireside chat with aditya oberai",
-    guest: "aditya oberai",
-    guestRole: "devrel at appwrite",
+    title: "Fireside Chat with Aditya Oberai",
+    guest: "Aditya Oberai",
+    guestRole: "DevRel at Appwrite",
     guestLinkedIn: "https://www.linkedin.com/in/adityaoberai1/",
     youtube: "https://youtu.be/gubnl5rnkIM?si=_XnYhSVFqXFwKcci",
   },
   {
-    title: "college, communities & web3",
-    guest: "khushi panwar",
-    guestRole: "women techmaker ambassador",
+    title: "College, Communities & Web3",
+    guest: "Khushi Panwar",
+    guestRole: "Women Techmaker Ambassador",
     guestLinkedIn: "https://www.linkedin.com/in/smilewithkhushi/",
     youtube: "https://youtu.be/jsWSU3ren3M?si=ZQyBjyv6NuaCeM8G",
   },
   {
-    title: "the state of community building careers in india, opportunities and challenges",
-    guest: "puja duseja",
-    guestRole: "meta certified community manager",
+    title: "The State of Community Building Careers in India, Opportunities and Challenges",
+    guest: "Puja Duseja",
+    guestRole: "Meta Certified Community Manager",
     guestLinkedIn: "https://www.linkedin.com/in/puja-duseja10/",
     youtube: "https://youtu.be/OM4pom2jkec?si=JnUSJo2no7Jc5e5x",
   },
   {
-    title: "the art of organising virtual hackathons",
-    guest: "pradeepto sarkar",
-    guestRole: "founder of namespace",
+    title: "The Art of Organising Virtual Hackathons",
+    guest: "Pradeepto Sarkar",
+    guestRole: "Founder of Namespace",
     guestLinkedIn: "https://www.linkedin.com/in/pradeeptosarkar/",
     youtube: "https://youtu.be/9hTkWEePXlc?si=HU9TYzE4qc79Mk7z",
   },
   {
-    title: "managing programs and scaling communities",
-    guest: "lakshit pant",
-    guestRole: "program manager at microsoft",
+    title: "Managing Programs and Scaling Communities",
+    guest: "Lakshit Pant",
+    guestRole: "Program Manager at Microsoft",
     guestLinkedIn: "https://www.linkedin.com/in/laxitpant/",
     youtube: "https://youtu.be/D_-4vUGppQ4?si=tHnFuMN8mzsnQDE_",
   },
   {
-    title: "ar, community & diversity",
-    guest: "chhavi garg",
-    guestRole: "founder, bharatxr",
+    title: "AR, Community & Diversity",
+    guest: "Chhavi Garg",
+    guestRole: "Founder, BharatXR",
     guestLinkedIn: "https://www.linkedin.com/in/chhavigg/",
     youtube: "https://youtu.be/asmVCEOZGzM?si=K9mqkhTybPPxQEI-",
   },
   {
-    title: "building tech communities",
-    guest: "bhawna chauhan",
-    guestRole: "founder, shebuilds",
+    title: "Building Tech Communities",
+    guest: "Bhawna Chauhan",
+    guestRole: "Founder, SheBuilds",
     guestLinkedIn: "https://www.linkedin.com/in/connectbhawna/",
     youtube: "https://youtu.be/LwLbsQ4UN1A?si=Qu1rFIVUM-of_aRw",
   },
   {
-    title: "she started coding at the age of 11",
-    guest: "aarushi chottani",
-    guestRole: "author",
+    title: "She Started Coding at the Age of 11",
+    guest: "Aarushi Chottani",
+    guestRole: "Author",
     guestLinkedIn: "https://www.linkedin.com/in/aarushi-chottani-80b861322/",
     youtube: "https://youtu.be/UQJ5XhurFbw?si=zB-tWfoEDyh3xF-m",
   },
   {
-    title: "from topper to amazon future engineer scholar",
-    guest: "siddhi gupta",
-    guestRole: "afe scholar",
+    title: "From Topper to Amazon Future Engineer Scholar",
+    guest: "Siddhi Gupta",
+    guestRole: "AFE Scholar",
     guestLinkedIn: "https://www.linkedin.com/in/siddhiguptas/",
     youtube: "https://youtu.be/l2ysqBR6yHI?si=2QSStVRDbZEzw7tC",
   },
   {
-    title: "from application to acceptance: naina's harvard wecode story",
-    guest: "naina modi",
-    guestRole: "harvard wecode scholar",
+    title: "From Application to Acceptance: Naina's Harvard WECode Story",
+    guest: "Naina Modi",
+    guestRole: "Harvard WECode Scholar",
     guestLinkedIn: "https://www.linkedin.com/in/naina-modi-145209322/",
     youtube: "https://youtu.be/fERcXjig4jM?si=AxpzPxAQHQDTLejt",
   },
   {
-    title: "from student to harvard hpair delegate",
-    guest: "samridhi gupta",
-    guestRole: "google we scholar",
+    title: "From Student to Harvard HPAIR Delegate",
+    guest: "Samridhi Gupta",
+    guestRole: "Google WE Scholar",
     guestLinkedIn: "https://www.linkedin.com/in/samridhi-gupta08/",
     youtube: "https://youtu.be/Yx5jibuU5hg?si=rAVCvBkizRqXj7Nd",
   },
   {
-    title: "3c's of devrel — content, code & community",
-    guest: "haimantika mitra",
-    guestRole: "devrel at digital ocean",
+    title: "3C's of DevRel — Content, Code & Community",
+    guest: "Haimantika Mitra",
+    guestRole: "DevRel at DigitalOcean",
     guestLinkedIn: "https://www.linkedin.com/in/haimantika-mitra/",
     youtube: "https://youtu.be/3w7z3bgiGN0?si=iGN1YmmHUmKTtHDC",
   },
   {
-    title: "how to build communities that matter",
-    guest: "deepak kumar",
-    guestRole: "founder c3 universe",
+    title: "How to Build Communities That Matter",
+    guest: "Deepak Kumar",
+    guestRole: "Founder, C3 Universe",
     guestLinkedIn: "https://www.linkedin.com/in/deepak910k/",
     youtube: "https://youtu.be/asmVCEOZGzM?si=Ev9xpo6R9uM8hBBb",
   },
@@ -110,7 +110,7 @@ const Podcasts = () => {
   return (
     <section id="podcasts" className="py-20 md:py-28 px-6 border-t border-border">
       <div className="max-w-4xl mx-auto text-center">
-        <SectionHeading>podcasts</SectionHeading>
+        <SectionHeading>Podcasts</SectionHeading>
         <div className="space-y-4">
           {visible.map((p) => (
             <div
@@ -142,7 +142,7 @@ const Podcasts = () => {
                 className="shrink-0 inline-flex items-center gap-2 text-sm font-medium text-foreground hover:text-muted-foreground transition-colors"
               >
                 <Youtube size={16} />
-                watch
+                Watch
               </a>
             </div>
           ))}
@@ -152,7 +152,7 @@ const Podcasts = () => {
             onClick={() => setShowAll(true)}
             className="mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors"
           >
-            see all
+            See All
             <ChevronDown size={16} />
           </button>
         )}

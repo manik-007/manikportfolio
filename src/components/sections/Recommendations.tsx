@@ -2,43 +2,43 @@ import SectionHeading from "./SectionHeading";
 
 const RECS = [
   {
-    name: "dr. aayushi gautam",
-    title: "assistant professor | phd | computer vision | deep learning | image processing",
+    name: "Dr. Aayushi Gautam",
+    title: "Assistant Professor | PhD | Computer Vision | Deep Learning | Image Processing",
     linkedin: "https://www.linkedin.com/in/dr-aayushi-gautam-7a2b25165/",
-    date: "november 24, 2025",
-    relation: "manik's teacher",
-    text: "i am pleased to recommend manik, one of my brightest and most dedicated students. from the very beginning, he has stood out for his strong technical skills, sharp problem-solving abilities, and an impressive curiosity for learning. over time, i have had the privilege of watching manik grow, mature, and gain remarkable confidence in his approach. his ability to understand complex concepts, apply them effectively, and continuously refine his work sets him apart from his peers. he is proactive, hardworking, and consistently pushes himself to deliver high-quality results. manik's professionalism, clarity of thought, and willingness to take on challenges make him an asset to any team. i am confident that he will continue to excel in every role he takes up.",
+    date: "November 24, 2025",
+    relation: "Manik's Teacher",
+    text: "I am pleased to recommend Manik, one of my brightest and most dedicated students. From the very beginning, he has stood out for his strong technical skills, sharp problem-solving abilities, and an impressive curiosity for learning. Over time, I have had the privilege of watching Manik grow, mature, and gain remarkable confidence in his approach. His ability to understand complex concepts, apply them effectively, and continuously refine his work sets him apart from his peers. He is proactive, hardworking, and consistently pushes himself to deliver high-quality results. Manik's professionalism, clarity of thought, and willingness to take on challenges make him an asset to any team. I am confident that he will continue to excel in every role he takes up.",
   },
   {
-    name: "bhawna chauhan",
-    title: "founder shebuilds | github campus expert",
+    name: "Bhawna Chauhan",
+    title: "Founder SheBuilds | GitHub Campus Expert",
     linkedin: "https://www.linkedin.com/in/connectbhawna/",
-    date: "december 19, 2025",
-    relation: "worked with manik on the same team",
-    text: "it was a pleasure working with manik across multiple initiatives, from hosting community meetups to organizing a full-scale hackathon. he brings a rare combination of hands-on execution and clear strategic thinking — always knowing what needs to be done and how to get it done. manik is exceptionally hardworking, dependable and proactive. he consistently takes ownership, handles complexity calmly, and ensures everything runs smoothly, even under tight timelines. his ability to coordinate teams, manage logistics, and keep momentum high makes him a strong asset to any ecosystem or community-led initiative.",
+    date: "December 19, 2025",
+    relation: "Worked with Manik on the same team",
+    text: "It was a pleasure working with Manik across multiple initiatives, from hosting community meetups to organizing a full-scale hackathon. He brings a rare combination of hands-on execution and clear strategic thinking — always knowing what needs to be done and how to get it done. Manik is exceptionally hardworking, dependable and proactive. He consistently takes ownership, handles complexity calmly, and ensures everything runs smoothly, even under tight timelines. His ability to coordinate teams, manage logistics, and keep momentum high makes him a strong asset to any ecosystem or community-led initiative.",
   },
   {
-    name: "dr. kapil mehta",
-    title: "professor & head — department of emerging technologies, ph.d (cse — cyber security)",
+    name: "Dr. Kapil Mehta",
+    title: "Professor & Head — Department of Emerging Technologies, Ph.D (CSE — Cyber Security)",
     linkedin: "https://www.linkedin.com/in/dr-kapil-mehta-72476089/",
-    date: "december 23, 2025",
-    relation: "managed manik directly",
-    text: "i've had the pleasure of knowing manik professionally and personally, and i can confidently say he brings dedication, creativity, and a strong growth mindset to every challenge he takes on. manik is proactive in learning, quick to adapt in complex environments, and consistently approaches projects with enthusiasm and integrity. i've seen manik contribute meaningfully to discussions and deliver work that reflects high standards — like he worked as an active coordinator for managing gdg events. any team would benefit from manik's positive attitude, continuous drive to improve, and commitment to excellence.",
+    date: "December 23, 2025",
+    relation: "Managed Manik directly",
+    text: "I've had the pleasure of knowing Manik professionally and personally, and I can confidently say he brings dedication, creativity, and a strong growth mindset to every challenge he takes on. Manik is proactive in learning, quick to adapt in complex environments, and consistently approaches projects with enthusiasm and integrity. I've seen Manik contribute meaningfully to discussions and deliver work that reflects high standards — like he worked as an active coordinator for managing GDG events. Any team would benefit from Manik's positive attitude, continuous drive to improve, and commitment to excellence.",
   },
   {
-    name: "harpreet kaur",
-    title: "soft skills & personality development trainer | campus to corporate coach",
+    name: "Harpreet Kaur",
+    title: "Soft Skills & Personality Development Trainer | Campus to Corporate Coach",
     linkedin: "https://www.linkedin.com/in/kaurharpreet191095/",
-    date: "february 26, 2026",
-    relation: "manik's teacher",
-    text: "i had the opportunity to teach manik during his b.tech, and he has consistently been one of the most diligent and proactive students in the cohort. i have seen his growth from the initial stages of consciously practicing his skills to achieving impressive heights, especially in communication. his transformation into a confident and articulate communicator reflects discipline, consistency, and a strong growth mindset. he is responsible, engaged, and always willing to put in the effort required to improve. i'm confident he will add value wherever he goes.",
+    date: "February 26, 2026",
+    relation: "Manik's Teacher",
+    text: "I had the opportunity to teach Manik during his B.Tech, and he has consistently been one of the most diligent and proactive students in the cohort. I have seen his growth from the initial stages of consciously practicing his skills to achieving impressive heights, especially in communication. His transformation into a confident and articulate communicator reflects discipline, consistency, and a strong growth mindset. He is responsible, engaged, and always willing to put in the effort required to improve. I'm confident he will add value wherever he goes.",
   },
 ];
 
 const Recommendations = () => (
   <section id="recommendations" className="py-12 md:py-16">
     <div className="text-center">
-      <SectionHeading>recommendations</SectionHeading>
+      <SectionHeading>Recommendations</SectionHeading>
       <div className="space-y-10 text-left">
         {RECS.map((r) => (
           <blockquote key={r.name} className="border border-border rounded-lg p-6 sm:p-8">

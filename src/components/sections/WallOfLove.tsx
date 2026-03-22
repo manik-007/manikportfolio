@@ -3,81 +3,81 @@ import SectionHeading from "./SectionHeading";
 
 const TESTIMONIALS = [
   {
-    text: "great to connect manik and to learn about all the good work you're doing in your community.",
-    person: "desmond john",
-    role: "founder of vibe guide ventures",
+    text: "Desmond appreciated connecting with Manik and learning about all the good work he's doing in his community.",
+    person: "Desmond John",
+    role: "Founder of Vibe Guide Ventures",
     linkedin: "https://www.linkedin.com/in/desmondjohn/",
   },
   {
-    text: "working with you is always a pleasure and a huge inspiration, manik!",
-    person: "aashi raghuvanshi",
-    role: "agentic ai & automation engineer",
+    text: "Aashi shared that working with Manik is always a pleasure and a huge inspiration.",
+    person: "Aashi Raghuvanshi",
+    role: "Agentic AI & Automation Engineer",
     linkedin: "https://www.linkedin.com/in/aashiraghuvanshi/",
   },
   {
-    text: "loved your enthusiasm throughout the event, from registrations to vlogging. an all rounder if i must say",
-    person: "shatakshi bhardwaj",
-    role: "ui/ux designer",
+    text: "Shatakshi praised Manik's enthusiasm throughout the event, from registrations to vlogging, calling him an all-rounder.",
+    person: "Shatakshi Bhardwaj",
+    role: "UI/UX Designer",
     linkedin: "https://www.linkedin.com/in/shatakshibhardwaj/",
   },
   {
-    text: "i love the work that you do",
-    person: "sakshi agarwal",
-    role: "aspiring data scientist",
+    text: "Sakshi expressed her admiration for the work Manik does.",
+    person: "Sakshi Agarwal",
+    role: "Aspiring Data Scientist",
     linkedin: "https://www.linkedin.com/in/sakshiagarwal/",
   },
   {
-    text: "you are the most amazing guy i have ever met.",
-    person: "vishal prakash maurya",
-    role: "full stack developer",
+    text: "Vishal described Manik as the most amazing person he has ever met.",
+    person: "Vishal Prakash Maurya",
+    role: "Full Stack Developer",
     linkedin: "https://www.linkedin.com/in/vishalprakashmaurya/",
   },
   {
-    text: "i loved learning more about girls in tech and all the amazing work you are doing to make opportunities more accessible to indian young women. i also loved all the cross-overs we have. i hope we can collaborate in the future!",
-    person: "lina orozco munera",
-    role: "vmc rac member",
+    text: "Lina loved learning about Girls in Tech and all the amazing work Manik is doing to make opportunities more accessible to young Indian women. She also appreciated the many cross-overs they share and hopes to collaborate in the future.",
+    person: "Lina Orozco Munera",
+    role: "VMC RAC Member",
     linkedin: "https://www.linkedin.com/in/linaorozco/",
   },
   {
-    text: "truly inspiring journey, manik bhaiya. stories like yours really motivate me to work harder and aim to be part of gdg someday. looking forward to learning, growing, and contributing to the amazing community just like you did.",
-    person: "shashank joshi",
-    role: "machine learning enthusiast",
+    text: "Shashank found Manik's journey truly inspiring and shared how stories like his motivate him to work harder and aim to be part of GDG someday.",
+    person: "Shashank Joshi",
+    role: "Machine Learning Enthusiast",
     linkedin: "https://www.linkedin.com/in/shashankjoshi/",
   },
   {
-    text: "pro multi-tasker for real! kudos to you and your vision towards empowering girls, manik! you are truly a gem of a person!",
-    person: "catherine infanta",
-    role: "harvard aspire leader",
+    text: "Catherine called Manik a pro multi-tasker and a truly gem of a person, giving kudos to his vision towards empowering girls.",
+    person: "Catherine Infanta",
+    role: "Harvard Aspire Leader",
     linkedin: "https://www.linkedin.com/in/catherineinfanta/",
   },
   {
-    text: "truly inspiring, manik! i've had the privilege of watching this community grow and thrive — a big shoutout to you for building something so impactful.",
-    person: "samridhi gupta",
-    role: "google we scholar",
+    text: "Samridhi found Manik's work truly inspiring and gave a big shoutout for building something so impactful, having had the privilege of watching the community grow and thrive.",
+    person: "Samridhi Gupta",
+    role: "Google WE Scholar",
     linkedin: "https://www.linkedin.com/in/samridhi-gupta08/",
   },
   {
-    text: "truly inspiring to see your dedication and passion in action!",
-    person: "simran nagekar",
-    role: "game experience designer",
+    text: "Simran praised Manik's dedication and passion, calling it truly inspiring to see them in action.",
+    person: "Simran Nagekar",
+    role: "Game Experience Designer",
     linkedin: "https://www.linkedin.com/in/simrannagekar/",
   },
   {
-    text: "you are doing fantastic work. whatever you are doing is praiseworthy",
-    person: "adyasha das",
-    role: "google we scholar",
+    text: "Adyasha commended Manik for doing fantastic and praiseworthy work.",
+    person: "Adyasha Das",
+    role: "Google WE Scholar",
     linkedin: "https://www.linkedin.com/in/adyashadas/",
   },
   {
-    text: "it was great meeting you at the bootcamp. your energy was inspiring, and i enjoyed our interaction. excited to see the amazing things you'll do next!!",
-    person: "shradha gurjar",
-    role: "aspiring project manager",
+    text: "Shradha shared that it was great meeting Manik at the bootcamp, finding his energy inspiring. She's excited to see the amazing things he'll do next.",
+    person: "Shradha Gurjar",
+    role: "Aspiring Project Manager",
     linkedin: "https://www.linkedin.com/in/shradhagurjar/",
   },
   {
-    text: "never seen such a human with such great enthusiasm. you're amazing, manik — it was great meeting you.",
-    person: "tanu singh",
-    role: "blockchain developer",
+    text: "Tanu described Manik as someone with the most amazing enthusiasm she has ever seen, and shared that it was great meeting him.",
+    person: "Tanu Singh",
+    role: "Blockchain Developer",
     linkedin: "https://www.linkedin.com/in/tanusingh/",
   },
 ];
@@ -91,7 +91,7 @@ const WallOfLove = () => {
   return (
     <section id="testimonials" className="py-20 md:py-28 px-6 border-t border-border">
       <div className="max-w-4xl mx-auto text-center">
-        <SectionHeading>wall of love</SectionHeading>
+        <SectionHeading>Wall of Love</SectionHeading>
         <div className="grid md:grid-cols-2 gap-6">
           {visible.map((t) => (
             <blockquote
@@ -121,7 +121,7 @@ const WallOfLove = () => {
             onClick={() => setShowAll(true)}
             className="mt-8 inline-flex items-center px-6 py-3 rounded-full text-sm font-medium border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors"
           >
-            see all testimonials
+            See All Testimonials
           </button>
         )}
       </div>

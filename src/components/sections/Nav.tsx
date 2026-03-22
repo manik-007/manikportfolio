@@ -3,13 +3,13 @@ import { useState } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const NAV_LINKS = [
-  { label: "about", href: "#about" },
-  { label: "articles", href: "#articles" },
-  { label: "podcasts", href: "#podcasts" },
-  { label: "community", href: "/community" },
-  { label: "wall of love", href: "#testimonials" },
-  { label: "resume", href: "/resume" },
-  { label: "connect", href: "#connect" },
+  { label: "About", href: "#about" },
+  { label: "Articles", href: "#articles" },
+  { label: "Podcasts", href: "#podcasts" },
+  { label: "Community", href: "/community" },
+  { label: "Wall of Love", href: "#testimonials" },
+  { label: "Resume", href: "/resume" },
+  { label: "Connect", href: "#connect" },
 ];
 
 const Nav = () => {

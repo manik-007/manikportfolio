@@ -5,50 +5,119 @@ import SectionHeading from "@/components/sections/SectionHeading";
 
 const COMMUNITY_ROLES = [
   {
-    org: "girls leading tech",
-    role: "builder",
-    period: "june 2024 – present",
-    highlight: "3300+ members across 900+ colleges and 25+ indian states",
-    stats: ["55+ mentorship sessions", "15k+ followers", "700+ hackers at global ai buildathon", "1700+ hackers at hackaura"],
-    description: "founded from a whatsapp group of 5 girls into a thriving pan-india women-in-tech movement. featured speakers from google, amazon, microsoft, uber, flipkart, and more.",
+    org: "Girls Leading Tech",
+    role: "Builder",
+    period: "June 2024 – Present",
+    highlight: "3,300+ members across 900+ colleges and 25+ Indian states",
+    stats: ["55+ Mentorship Sessions", "15K+ Followers", "700+ Hackers at Global AI Buildathon", "1,700+ Hackers at HackAura"],
+    description: "Founded from a WhatsApp group of 5 girls into a thriving pan-India women-in-tech movement. Featured speakers from Google, Amazon, Microsoft, Uber, Flipkart, and more.",
   },
   {
-    org: "cmx",
-    role: "cmx connect host",
-    period: "june 2024 – present",
-    highlight: "410+ members | 2 global spotlight features in cmx newsletter",
-    stats: ["10+ virtual events", "330+ registrations for empowerher", "best cmx director of the month"],
-    description: "hosted events featuring top community managers, devrels, and founders. recognized globally as youngest cmx director worldwide.",
+    org: "CMX",
+    role: "CMX Connect Host",
+    period: "June 2024 – Present",
+    highlight: "410+ members | 2 global spotlight features in CMX Newsletter",
+    stats: ["10+ Virtual Events", "330+ Registrations for EmpowerHer", "Best CMX Director of the Month"],
+    description: "Hosted events featuring top community managers, DevRels, and founders. Recognized globally as youngest CMX Director worldwide.",
   },
   {
-    org: "lamit club",
-    role: "founding lead",
-    period: "apr 2024 – jan 2025",
-    highlight: "300-member web3 community",
-    stats: ["5-day bootcamp (296 registrations)", "230+ orientation sign-ups", "5 speaker sessions"],
-    description: "built and scaled a web3 community with speaker sessions, interaction calls, offline gatherings, and a rebranding initiative.",
+    org: "Lamit Club",
+    role: "Founding Lead",
+    period: "Apr 2024 – Jan 2025",
+    highlight: "300-member Web3 community",
+    stats: ["5-Day Bootcamp (296 Registrations)", "230+ Orientation Sign-ups", "5 Speaker Sessions"],
+    description: "Built and scaled a Web3 community with speaker sessions, interaction calls, offline gatherings, and a rebranding initiative.",
   },
   {
-    org: "shebuilds",
-    role: "organizer",
-    period: "oct 2024 – apr 2025",
-    highlight: "hackemon — 36-hour pokémon-themed hackathon",
-    stats: ["55%+ sponsor response rate", "14 co-organizers", "10+ community partners"],
-    description: "spearheaded sponsorship and outreach for hackathons and code & connect meetups across delhi and noida.",
+    org: "SheBuilds",
+    role: "Organizer",
+    period: "Oct 2024 – Apr 2025",
+    highlight: "Hackemon — 36-hour Pokémon-themed hackathon",
+    stats: ["55%+ Sponsor Response Rate", "14 Co-organizers", "10+ Community Partners"],
+    description: "Spearheaded sponsorship and outreach for hackathons and Code & Connect meetups across Delhi and Noida.",
   },
 ];
 
 const VOLUNTEERING = [
-  { org: "cncf jalandhar", role: "organizer", highlight: "panel discussions & argo cd sessions" },
-  { org: "google cloud", role: "arcade facilitator", highlight: "1200+ members, 550+ participants" },
-  { org: "thm cgc", role: "marketing", highlight: "cyber security seminars & social strategy" },
-  { org: "tpg chandigarh", role: "community lead", highlight: "starknet roadshow & road to devcon (110+ registrations)" },
-  { org: "socrates global", role: "partnerships lead", highlight: "4,000+ users in 2 weeks" },
-  { org: "hack for bloom", role: "partnerships lead", highlight: "sponsor outreach & community growth" },
-  { org: "ibw", role: "volunteer", highlight: "brainstorming & community posts" },
-  { org: "web3 conf goa", role: "partnership team", highlight: "5+ sponsor outreach" },
-  { org: "hackarcode", role: "partnership lead", highlight: "10+ sponsor outreach" },
-  { org: "kotlinconf", role: "content writer", highlight: "social media content & on-site volunteering" },
+  {
+    org: "CNCF Jalandhar",
+    role: "Organizer",
+    bullets: [
+      "Organized 'Introduction to CNCF' online panel discussion and 'Introducing Argo CD + Getting Involved' featuring Christian, Head of Community at Akuity.",
+      "Designed promotional posters and digital assets for events and speaker sessions to drive engagement and participation.",
+    ],
+  },
+  {
+    org: "Google Cloud",
+    role: "Arcade Facilitator",
+    bullets: [
+      "Built and nurtured a community of 1,200+ members, enrolling 550+ participants into the Arcade Program.",
+      "Achieved the 2nd milestone and successfully completed the program, driving engagement and structured community growth.",
+    ],
+  },
+  {
+    org: "THM CGC",
+    role: "Marketing",
+    bullets: [
+      "Led event promotion, speaker outreach, and crafted effective social media strategies to grow chapter presence across platforms.",
+      "Contributed to organizing key seminars including the Inaugural Seminar on Cyber Threat Intelligence & Ethical Hacking and Cyber101.",
+    ],
+  },
+  {
+    org: "TPG Chandigarh",
+    role: "Community Lead",
+    bullets: [
+      "Organized the Starknet India Roadshow, a 2-day in-person event hosted at Antier Solutions.",
+      "Led end-to-end planning and execution of Road to Devcon at Chandigarh University, achieving 110+ registrations and 70+ attendees.",
+      "Managed the official Twitter account, driving online engagement and community visibility.",
+    ],
+  },
+  {
+    org: "Socrates Global",
+    role: "Partnerships Lead",
+    bullets: [
+      "Reached out to 60+ leads and pitched Socrates Global to potential partners and users.",
+      "Contributed to the acquisition of 4,000+ unique users within 2 weeks through strategic outreach efforts.",
+    ],
+  },
+  {
+    org: "Hack for Bloom",
+    role: "Partnerships Lead",
+    bullets: [
+      "Outreached to sponsors including Hive, GeeksforGeeks, Outdefine, and HackQuest for potential partnerships.",
+      "Provided practical growth strategies to organize, scale, and strengthen the community structure.",
+      "Curated a targeted list of sponsor leads to streamline outreach and partnership efforts.",
+    ],
+  },
+  {
+    org: "IBW",
+    role: "Volunteer",
+    bullets: [
+      "Actively participated in brainstorming and engaged in community & social posts.",
+    ],
+  },
+  {
+    org: "Web3 Conf Goa",
+    role: "Partnership Team",
+    bullets: [
+      "Outreached to 5+ potential sponsors to secure partnerships and support for community initiatives.",
+    ],
+  },
+  {
+    org: "HackArCode",
+    role: "Partnership Lead",
+    bullets: [
+      "Outreached to 10+ potential sponsors to secure partnerships and support for community initiatives.",
+    ],
+  },
+  {
+    org: "KotlinConf",
+    role: "Content Writer",
+    bullets: [
+      "Wrote social media content for KotlinConf, contributing to increased engagement and growth across platforms.",
+      "Volunteered on-site, managing crowd flow, handling the community lounge, maintaining discipline, unpacking swag, and assisting attendees with navigation during the conference.",
+    ],
+  },
 ];
 
 const CommunityCard = ({ org, role, period, highlight, stats, description }: {
@@ -78,13 +147,17 @@ const CommunityCard = ({ org, role, period, highlight, stats, description }: {
   </div>
 );
 
-const VolunteerItem = ({ org, role, highlight }: { org: string; role: string; highlight: string }) => (
-  <div className="border border-border rounded-lg p-4 hover:border-foreground/20 transition-colors">
-    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1">
+const VolunteerCard = ({ org, role, bullets }: { org: string; role: string; bullets: string[] }) => (
+  <div className="border border-border rounded-lg p-4 sm:p-5 hover:border-foreground/20 transition-colors">
+    <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
       <h3 className="font-serif text-base font-semibold text-foreground">{org}</h3>
       <span className="text-xs text-muted-foreground">{role}</span>
     </div>
-    <p className="text-sm text-muted-foreground mt-1">{highlight}</p>
+    <ul className="list-disc list-outside pl-4 space-y-1">
+      {bullets.map((b, i) => (
+        <li key={i} className="text-sm text-muted-foreground leading-relaxed">{b}</li>
+      ))}
+    </ul>
   </div>
 );
 
@@ -98,7 +171,7 @@ const CommunityPage = () => {
       <Nav />
       <div className="pt-24 pb-12 px-6">
         <div className="max-w-3xl mx-auto">
-          <SectionHeading>community contributions</SectionHeading>
+          <SectionHeading>Community Contributions</SectionHeading>
           <div className="space-y-5 mt-8">
             {COMMUNITY_ROLES.map((c) => (
               <CommunityCard key={c.org} {...c} />
@@ -106,10 +179,10 @@ const CommunityPage = () => {
           </div>
 
           <div className="mt-16">
-            <SectionHeading>volunteering</SectionHeading>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
+            <SectionHeading>Volunteering</SectionHeading>
+            <div className="space-y-4 mt-8">
               {VOLUNTEERING.map((v) => (
-                <VolunteerItem key={v.org} {...v} />
+                <VolunteerCard key={v.org} {...v} />
               ))}
             </div>
           </div>
