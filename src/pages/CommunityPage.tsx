@@ -214,6 +214,19 @@ const SESSIONS = [
   { title: "Empowering 1 Million Girls", link: "https://youtu.be/kKUN1YnvRSU", speakers: [{ name: "Jacintha Jayachandran", role: "Founder of HopeWorks Foundation", linkedin: "https://www.linkedin.com/in/jacintha-jayachandran-empowering1milliongirls/" }] },
   { title: "AI Engineering at LTIMindTree", link: "https://youtu.be/h5tUFMQNrAQ", speakers: [{ name: "Yashaswini Vismaya", role: "Artificial Intelligence Engineer at LTIMindTree", linkedin: "https://www.linkedin.com/in/yash-vis/" }] },
   { title: "Caregiver Saathi", link: "https://youtu.be/hTu4mLX3asc", speakers: [{ name: "Bhavana Issar", role: "Founder CEO of Caregiver Saathi", linkedin: "https://www.linkedin.com/in/bhavanaissar/" }] },
+  { title: "Tips to Crack Companies as an Entry-Level Blockchain Dev", link: "https://www.youtube.com/watch?v=kdfcaxUwW0U", speakers: [{ name: "Veer Pratap Singh", role: "Team Lead at Antier Solutions", linkedin: "" }] },
+  { title: "How to Become a Blockchain Developer", link: "https://www.youtube.com/watch?v=evZyrU0hFmk", speakers: [{ name: "Aditya Sahu", role: "Sr. Blockchain Developer at Wolfpacklabs", linkedin: "https://www.linkedin.com/in/aditya-sahu-477a69175/" }] },
+  { title: "Introducing Web3 & Its Opportunities", link: "https://www.youtube.com/watch?v=iHKBbaA46k4", speakers: [{ name: "Naga Padmini", role: "SDE at Amazon", linkedin: "https://www.linkedin.com/in/nagapadmini/" }] },
+  { title: "Build Your Network", link: "https://www.youtube.com/watch?v=9n8gfN89z34", speakers: [{ name: "Manik", role: "Founder Lamit Club", linkedin: "https://www.linkedin.com/in/mrmanik/" }] },
+  { title: "Benefits of Attending Events & Meetups", link: "https://www.youtube.com/watch?v=79dDFyT4wWw&t=253s", speakers: [{ name: "Manik", role: "Founder Lamit Club", linkedin: "https://www.linkedin.com/in/mrmanik/" }] },
+  { title: "How to Build Your Personal Brand", link: "https://www.youtube.com/watch?v=VB51QTLXFZM", speakers: [{ name: "Manik", role: "Founder Lamit Club", linkedin: "https://www.linkedin.com/in/mrmanik/" }] },
+  { title: "Hack the Hackathons", link: "https://www.youtube.com/watch?v=_cMVANraEvw", speakers: [{ name: "Manik", role: "Founder Lamit Club", linkedin: "https://www.linkedin.com/in/mrmanik/" }] },
+  { title: "LinkedIn Masterclass", link: "https://www.youtube.com/watch?v=GNn-QlQ8v3I&t=1s", speakers: [{ name: "Manik", role: "Founder Lamit Club", linkedin: "https://www.linkedin.com/in/mrmanik/" }] },
+  { title: "Explore Web3 & Outdefine CGC Benefits", link: "https://www.youtube.com/watch?v=y-U7dgCxCPw&t=4s", speakers: [{ name: "Manik", role: "Founder Lamit Club", linkedin: "https://www.linkedin.com/in/mrmanik/" }, { name: "Shivam Garg", role: "", linkedin: "https://www.linkedin.com/in/meshivamgarg/" }] },
+  { title: "Introductory Session of Outdefine CGC Club & Outdefine Community", link: "https://www.youtube.com/watch?v=AOAmKS8fUDw&t=1s", speakers: [{ name: "Manik", role: "Founder Lamit Club", linkedin: "https://www.linkedin.com/in/mrmanik/" }] },
+  { title: "A Beginner's Guide to Blockchain with Mohammad Mudassir", link: "https://www.youtube.com/watch?v=foYCjHZMt-s&t=1727s", speakers: [{ name: "Mohammad Mudassir", role: "Junior Support Engineer at Algorand Foundation", linkedin: "https://www.linkedin.com/in/mohammad-mudassir-b788a41ab/" }] },
+  { title: "Introduction to Open Source Intelligence (OSINT)", link: "https://www.youtube.com/watch?v=Xd5wwGBcdEQ&t=16s", speakers: [] },
+  { title: "Security Talks: Kickstart Your Career as a Highly Paid Ethical Hacker", link: "https://www.youtube.com/watch?v=tn5_3kXJCgg&t=81s", speakers: [] },
 ];
 
 const INITIAL_SESSIONS = 6;
