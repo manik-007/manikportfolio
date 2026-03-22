@@ -6,7 +6,7 @@ import { BookOpen, MapPin, Wrench, Heart, Music, Utensils, Gamepad2, Sparkles, M
 
 type DiarySection = {
   title: string;
-  icon: React.ComponentType<{ size?: number; className?: string }>;
+  icon: any;
   description: string;
   content: React.ReactNode;
 };
