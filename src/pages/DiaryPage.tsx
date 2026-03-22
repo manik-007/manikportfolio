@@ -18,9 +18,9 @@ const SECTIONS: DiarySection[] = [
     description: "Things that spark Manik's curiosity.",
     content: (
       <ul className="mt-4 space-y-1">
-        <li className="text-sm text-foreground">🌍 Travelling to new places</li>
-        <li className="text-sm text-foreground">🥾 Treks & Hiking</li>
-        <li className="text-sm text-foreground">🤝 Meeting new people</li>
+        <li className="text-sm text-foreground">Travelling to new places</li>
+        <li className="text-sm text-foreground">Treks & Hiking</li>
+        <li className="text-sm text-foreground">Meeting new people</li>
       </ul>
     ),
   },
@@ -30,12 +30,12 @@ const SECTIONS: DiarySection[] = [
     description: "What Manik enjoys doing in his free time.",
     content: (
       <ul className="mt-4 space-y-1">
-        <li className="text-sm text-foreground">📖 Reading</li>
-        <li className="text-sm text-foreground">✍️ Writing</li>
-        <li className="text-sm text-foreground">🎤 Speaking</li>
-        <li className="text-sm text-foreground">🎵 Listening to Music</li>
-        <li className="text-sm text-foreground">🌌 Star Gazing</li>
-        <li className="text-sm text-foreground">🌿 Walk in Nature</li>
+        <li className="text-sm text-foreground">Reading</li>
+        <li className="text-sm text-foreground">Writing</li>
+        <li className="text-sm text-foreground">Speaking</li>
+        <li className="text-sm text-foreground">Listening to Music</li>
+        <li className="text-sm text-foreground">Star Gazing</li>
+        <li className="text-sm text-foreground">Walk in Nature</li>
       </ul>
     ),
   },
@@ -48,20 +48,20 @@ const SECTIONS: DiarySection[] = [
         <div>
           <p className="text-xs font-semibold text-primary mb-1">States Covered</p>
           <p className="text-sm text-foreground leading-relaxed">
-            Punjab, Haryana, Uttarakhand, Uttar Pradesh, Chandigarh, Himachal Pradesh, Jammu & Kashmir, Gujarat, Rajasthan
+            Punjab, Haryana, Uttarakhand, Uttar Pradesh, Chandigarh, Himachal Pradesh, Jammu & Kashmir, Gujarat, Rajasthan, Delhi
           </p>
         </div>
         <div>
-          <p className="text-xs font-semibold text-primary mb-1">Treks & Trails 🏔️</p>
+          <p className="text-xs font-semibold text-primary mb-1">Treks & Trails</p>
           <ul className="space-y-1">
-            <li className="text-sm text-foreground">• Triund Trek</li>
-            <li className="text-sm text-foreground">• Karol Tibba Trek</li>
-            <li className="text-sm text-foreground">• Nature Trail</li>
-            <li className="text-sm text-foreground">• Sukhna Lake</li>
-            <li className="text-sm text-foreground">• Vaishno Devi Trek</li>
-            <li className="text-sm text-foreground">• Bhairo Nath Trek</li>
-            <li className="text-sm text-foreground">• Gilbert Trail</li>
-            <li className="text-sm text-foreground">• Jaku Temple Trek</li>
+            <li className="text-sm text-foreground">Triund Trek</li>
+            <li className="text-sm text-foreground">Karol Tibba Trek</li>
+            <li className="text-sm text-foreground">Nature Trail</li>
+            <li className="text-sm text-foreground">Sukhna Lake</li>
+            <li className="text-sm text-foreground">Vaishno Devi Trek</li>
+            <li className="text-sm text-foreground">Bhairo Nath Trek</li>
+            <li className="text-sm text-foreground">Gilbert Trail</li>
+            <li className="text-sm text-foreground">Jaku Temple Trek</li>
           </ul>
         </div>
       </div>
@@ -92,7 +92,7 @@ const SECTIONS: DiarySection[] = [
           "The Almanack of Naval Ravikant", "How to Enjoy Your Life and Your Job",
           "How to Read People Like a Book",
         ].map((b) => (
-          <li key={b} className="text-sm text-foreground">📚 {b}</li>
+          <li key={b} className="text-sm text-foreground">{b}</li>
         ))}
       </ul>
     ),
@@ -103,12 +103,12 @@ const SECTIONS: DiarySection[] = [
     description: "Software, apps, and tools that power Manik's everyday workflow.",
     content: (
       <ul className="mt-4 space-y-1">
-        <li className="text-sm text-foreground">🎨 Canva</li>
-        <li className="text-sm text-foreground">🤖 ChatGPT</li>
-        <li className="text-sm text-foreground">🚀 Antigravity</li>
-        <li className="text-sm text-foreground">💜 Lovable</li>
-        <li className="text-sm text-foreground">📅 Google Calendar</li>
-        <li className="text-sm text-foreground">📝 Google Keep</li>
+        <li className="text-sm text-foreground">Canva</li>
+        <li className="text-sm text-foreground">ChatGPT</li>
+        <li className="text-sm text-foreground">Antigravity</li>
+        <li className="text-sm text-foreground">Lovable</li>
+        <li className="text-sm text-foreground">Google Calendar</li>
+        <li className="text-sm text-foreground">Google Keep</li>
       </ul>
     ),
   },
@@ -119,10 +119,10 @@ const SECTIONS: DiarySection[] = [
     content: (
       <ul className="mt-4 space-y-2">
         <li className="text-sm text-foreground">
-          💌 <strong>Shruti</strong>, a junior in 1st year, wrote a poem for Manik.
+          <strong>Shruti</strong>, a junior in 1st year, wrote a poem for Manik.
         </li>
         <li className="text-sm text-foreground">
-          🎨 <strong>Gurvinder</strong>, a 1st year student, made a sketch of Manik and surprised him by showing it.
+          <strong>Gurvinder</strong>, a 1st year student, made a sketch of Manik and surprised him by showing it.
         </li>
       </ul>
     ),
@@ -133,8 +133,8 @@ const SECTIONS: DiarySection[] = [
     description: "Comfort food, go-to snacks, and favourite drinks.",
     content: (
       <ul className="mt-4 space-y-1">
-        <li className="text-sm text-foreground">🍛 Home-made food</li>
-        <li className="text-sm text-foreground">💧 Water</li>
+        <li className="text-sm text-foreground">Home-made food</li>
+        <li className="text-sm text-foreground">Water</li>
       </ul>
     ),
   },
@@ -145,11 +145,11 @@ const SECTIONS: DiarySection[] = [
     content: (
       <div className="mt-4 space-y-2">
         <div>
-          <p className="text-xs font-semibold text-primary mb-1">Music 🎶</p>
+          <p className="text-xs font-semibold text-primary mb-1">Music</p>
           <p className="text-sm text-foreground">Romantic & Indian Retro</p>
         </div>
         <div>
-          <p className="text-xs font-semibold text-primary mb-1">Podcasts 🎙️</p>
+          <p className="text-xs font-semibold text-primary mb-1">Podcasts</p>
           <p className="text-sm text-foreground">Raj Shamani</p>
         </div>
       </div>
@@ -167,13 +167,13 @@ const DiaryPage = () => (
           A personal corner of the internet — a living document of interests, travels, tools, and the little things that make life meaningful.
         </p>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
           {SECTIONS.map((s) => {
             const Icon = s.icon;
             return (
               <div
                 key={s.title}
-                className="border border-border rounded-lg p-6 bg-card hover:border-primary/40 transition-colors"
+                className="break-inside-avoid border border-border rounded-lg p-6 bg-card hover:border-primary/40 transition-colors"
               >
                 <div className="flex items-center gap-3 mb-3">
                   <Icon size={20} className="text-primary" />

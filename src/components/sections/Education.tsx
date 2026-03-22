@@ -2,9 +2,24 @@ import SectionHeading from "./SectionHeading";
 
 const EDUCATION = [
   {
+    institution: "McKinsey & Company",
+    period: "Oct 2025 – Dec 2025",
+    program: "McKinsey Forward Learning Programme — Fellow",
+    detail: "Learned frameworks like APR, EPIC, SMART and how to be more adaptable, resilient while communicating effectively for impact.",
+    link: "https://www.mckinsey.com/",
+  },
+  {
+    institution: "The Community Collective",
+    period: "2024 – 2025",
+    program: "Community Building & Leadership Programme",
+    detail: "Secured full scholarship of $6,000 to be a part of Cohort 6, Cohort 7 and Chaos Pilot Program among 100+ candidates worldwide.",
+    link: "https://thecommunitycollective.co/",
+  },
+  {
     institution: "Aspire Institute",
     period: "March 2025 – May 2025",
     program: "Leadership Development Program",
+    link: "https://www.aspireleaders.org/",
   },
   {
     institution: "Chandigarh Group of Colleges Landra, Punjab",
