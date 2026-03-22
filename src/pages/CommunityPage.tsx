@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Youtube, Twitter } from "lucide-react";
+import { Youtube, Twitter, ExternalLink } from "lucide-react";
 import Nav from "@/components/sections/Nav";
 import Footer from "@/components/sections/Footer";
 import SectionHeading from "@/components/sections/SectionHeading";
@@ -7,31 +7,34 @@ import SectionHeading from "@/components/sections/SectionHeading";
 const COMMUNITIES_BUILT = [
   {
     org: "Girls Leading Tech",
+    link: "https://www.linkedin.com/company/girlsleadingtech/",
     role: "Builder",
     period: "June 2024 – Present",
     bullets: [
-      "Founded Girls Leading Tech from a WhatsApp group of 5 girls into a thriving community of 3,300+ members across 900+ colleges and 25+ Indian states.",
-      "Built and managed a 15-member core team, driving operations, events, partnerships, and growth strategy.",
-      "Hosted 55+ mentorship sessions, 5 coffee chats, 4 GLT Spotlights, 20 Twitter spaces, and several unique initiatives including contests, \"How to Crack\" series, Valentine's Week, EmpowerHer on International Women's Day, and Yoga Day Special Session.",
-      "Collaborated with leading women-in-tech platforms like SheCanCode and featured speakers from Google, Amazon, Microsoft, Uber, Flipkart, Infosys, SAP, Salesforce, and more.",
-      "Grew digital presence to 15K+ followers, 3.5K+ Substack and 1.7K+ Luma subscribers, and 20K+ YouTube views with 1,300 subscribers.",
-      "Organised Global AI Buildathon, an 8-hour virtual hackathon with 57K+ impressions, 700+ hackers, and 81 AI projects addressing UN Sustainable Development Goals.",
-      "Organised ML Cohort 1.0, a month-long initiative to educate and provide mentorship to girls in AI. With daily challenges and project spotlights, over 1,100 applications from 7+ countries, 600+ mentees joined, and around 400 projects were created through learning from 8 mentors and attending 11 exclusive mentorship sessions.",
-      "Organised HackAura, a 24-hour virtual hackathon powered by 14 sponsors and supported by 45+ community partners. With 1,700+ hackers, 150+ projects were made across 3 tracks: AI, Web3 & Open Innovation. 20 podcasts, 4 quizzes, 3 workshops, and 1 gaming activity were conducted in a 24-hour livestream.",
+      "Founded Girls Leading Tech from a WhatsApp group of 5 girls into a thriving community of <strong>3,300+ members</strong> across <strong>900+ colleges</strong> and <strong>25+ Indian states</strong>.",
+      "Built and managed a <strong>15-member core team</strong>, driving operations, events, partnerships, and growth strategy.",
+      "Hosted <strong>55+ mentorship sessions</strong>, 5 coffee chats, 4 GLT Spotlights, 20 Twitter spaces, and several unique initiatives including contests, \"How to Crack\" series, Valentine's Week, EmpowerHer on International Women's Day, and Yoga Day Special Session.",
+      "Collaborated with leading women-in-tech platforms like <strong>SheCanCode</strong> and featured speakers from <strong>Google, Amazon, Microsoft, Uber, Flipkart, Infosys, SAP, Salesforce</strong>, and more.",
+      "Grew digital presence to <strong>15K+ followers</strong>, 3.5K+ Substack and 1.7K+ Luma subscribers, and 20K+ YouTube views with 1,300 subscribers.",
+      "Organised <strong>Global AI Buildathon</strong>, an 8-hour virtual hackathon with 57K+ impressions, <strong>700+ hackers</strong>, and 81 AI projects addressing UN Sustainable Development Goals.",
+      "Organised <strong>ML Cohort 1.0</strong>, a month-long initiative to educate and provide mentorship to girls in AI. With daily challenges and project spotlights, over <strong>1,100 applications</strong> from 7+ countries, 600+ mentees joined, and around 400 projects were created through learning from 8 mentors and attending 11 exclusive mentorship sessions.",
+      "Organised <strong>HackAura</strong>, a 24-hour virtual hackathon powered by 14 sponsors and supported by 45+ community partners. With <strong>1,700+ hackers</strong>, 150+ projects were made across 3 tracks: AI, Web3 & Open Innovation. 20 podcasts, 4 quizzes, 3 workshops, and 1 gaming activity were conducted in a 24-hour livestream.",
     ],
   },
   {
     org: "Lamit Club",
+    link: "https://www.linkedin.com/company/lamit-club/",
     role: "Founding Lead",
     period: "Apr 2024 – Jan 2025",
     bullets: [
-      "Built and scaled a 300-member Web3 community, organizing 5 speaker sessions, 8 interaction calls, 6 offline gatherings, and 1 seminar.",
-      "Led high-impact events including a 5-day bootcamp (296 registrations), orientation (230+ sign-ups, 130+ attendees), and a logo competition (103 entries, 60 submissions) for club rebranding.",
+      "Built and scaled a <strong>300-member Web3 community</strong>, organizing 5 speaker sessions, 8 interaction calls, 6 offline gatherings, and 1 seminar.",
+      "Led high-impact events including a <strong>5-day bootcamp</strong> (296 registrations), orientation (230+ sign-ups, 130+ attendees), and a logo competition (103 entries, 60 submissions) for club rebranding.",
       "Facilitated strategic growth by conducting regular team meetings to brainstorm and implement community initiatives.",
     ],
   },
   {
     org: "Letz Connect",
+    link: "https://www.letzconnect.xyz/",
     role: "Builder",
     period: "",
     bullets: [],
@@ -40,34 +43,37 @@ const COMMUNITIES_BUILT = [
 
 const VOLUNTEERING = [
   {
-    org: "CMX",
-    role: "CMX Connect Host",
-    period: "June 2024 – Present",
-    bullets: [
-      "Hosted 10+ virtual events on Bevy featuring top Community Managers, DevRels, and Founders; topics included Web3, DevRel, AR, Diversity, and Community Building.",
-      "Grew the CMX chapter to 410+ members, with 2 global spotlight features in the CMX Newsletter among 75+ chapters worldwide.",
-      "Led flagship events like EmpowerHer in collaboration with Girls Leading Tech, attracting 330+ registrations — one of the highest among CMX chapters.",
-      "Recognized globally as Best CMX Director of the Month, Most Promising Debut, and Youngest CMX Director Worldwide for one consecutive year.",
-    ],
-  },
-  {
     org: "SheBuilds",
+    link: "https://www.shebuildsecosystem.com/",
     role: "Organizer",
     period: "Oct 2024 – Apr 2025",
     bullets: [
-      "Spearheaded sponsorship efforts for Hackemon, a 36-hour Pokémon-themed hackathon; collaborated with 14 co-organizers and led 9 volunteers.",
-      "Designed the sponsorship deck and pitched to 15+ leads at BSCon (IIT Delhi), securing follow-up interest from all; initiated venue partnerships.",
-      "Conducted outreach to 40+ potential sponsors, achieving a 55%+ response rate.",
+      "Spearheaded sponsorship efforts for <strong>Hackemon</strong>, a 36-hour Pokémon-themed hackathon; collaborated with 14 co-organizers and led 9 volunteers.",
+      "Designed the sponsorship deck and pitched to <strong>15+ leads</strong> at BSCon (IIT Delhi), securing follow-up interest from all; initiated venue partnerships.",
+      "Conducted outreach to <strong>40+ potential sponsors</strong>, achieving a 55%+ response rate.",
       "Led outreach and sponsorship for Code & Connect Meetups (Delhi & Noida), managing a 10-member volunteer team.",
-      "Secured InterviewCake and JetBrains as in-kind sponsors, and onboarded HER DAO as the Title Sponsor.",
+      "Secured <strong>InterviewCake</strong> and <strong>JetBrains</strong> as in-kind sponsors, and onboarded <strong>HER DAO</strong> as the Title Sponsor.",
       "Managed attendee forms and community partnerships, onboarding 10+ partners and identifying city leads for Chennai, Bangalore, Lucknow, and Nagpur.",
     ],
   },
   {
+    org: "CMX",
+    link: "https://www.cmxhub.com/",
+    role: "CMX Connect Host",
+    period: "June 2024 – Present",
+    bullets: [
+      "Hosted <strong>10+ virtual events</strong> on Bevy featuring top Community Managers, DevRels, and Founders; topics included Web3, DevRel, AR, Diversity, and Community Building.",
+      "Grew the CMX chapter to <strong>410+ members</strong>, with 2 global spotlight features in the CMX Newsletter among 75+ chapters worldwide.",
+      "Led flagship events like <strong>EmpowerHer</strong> in collaboration with Girls Leading Tech, attracting 330+ registrations — one of the highest among CMX chapters.",
+      "Recognized globally as <strong>Best CMX Director of the Month</strong>, Most Promising Debut, and <strong>Youngest CMX Director Worldwide</strong> for one consecutive year.",
+    ],
+  },
+  {
     org: "CNCF Jalandhar",
+    link: "https://community.cncf.io/cloud-native-jalandhar/",
     role: "Organizer",
     bullets: [
-      "Organized 'Introduction to CNCF' online panel discussion and 'Introducing Argo CD + Getting Involved' featuring Christian, Head of Community at Akuity.",
+      "Organized <strong>'Introduction to CNCF'</strong> online panel discussion and 'Introducing Argo CD + Getting Involved' featuring Christian, Head of Community at Akuity.",
       "Designed promotional posters and digital assets for events and speaker sessions to drive engagement and participation.",
     ],
   },
@@ -75,33 +81,36 @@ const VOLUNTEERING = [
     org: "Google Cloud",
     role: "Arcade Facilitator",
     bullets: [
-      "Built and nurtured a community of 1,200+ members, enrolling 550+ participants into the Arcade Program.",
+      "Built and nurtured a community of <strong>1,200+ members</strong>, enrolling 550+ participants into the Arcade Program.",
       "Achieved the 2nd milestone and successfully completed the program, driving engagement and structured community growth.",
     ],
   },
   {
-    org: "THM CGC",
+    org: "THM Chandigarh",
+    link: "https://thehackersmeetup.org/",
     role: "Marketing",
     bullets: [
       "Led event promotion, speaker outreach, and crafted effective social media strategies to grow chapter presence across platforms.",
-      "Contributed to organizing key seminars including the Inaugural Seminar on Cyber Threat Intelligence & Ethical Hacking and Cyber101.",
+      "Contributed to organizing key seminars including the Inaugural Seminar on <strong>Cyber Threat Intelligence & Ethical Hacking</strong> and Cyber101.",
     ],
   },
   {
     org: "TPG Chandigarh",
+    link: "https://x.com/PhoenixGuildHQ",
     role: "Community Lead",
     bullets: [
-      "Organized the Starknet India Roadshow, a 2-day in-person event hosted at Antier Solutions.",
-      "Led end-to-end planning and execution of Road to Devcon at Chandigarh University, achieving 110+ registrations and 70+ attendees.",
+      "Organized the <strong>Starknet India Roadshow</strong>, a 2-day in-person event hosted at Antier Solutions.",
+      "Led end-to-end planning and execution of <strong>Road to Devcon</strong> at Chandigarh University, achieving 110+ registrations and 70+ attendees.",
       "Managed the official Twitter account, driving online engagement and community visibility.",
     ],
   },
   {
     org: "Socrates Global",
+    link: "https://www.socrates.com/en",
     role: "Partnerships Lead",
     bullets: [
-      "Reached out to 60+ leads and pitched Socrates Global to potential partners and users.",
-      "Contributed to the acquisition of 4,000+ unique users within 2 weeks through strategic outreach efforts.",
+      "Reached out to <strong>60+ leads</strong> and pitched Socrates Global to potential partners and users.",
+      "Contributed to the acquisition of <strong>4,000+ unique users</strong> within 2 weeks through strategic outreach efforts.",
     ],
   },
   {
@@ -115,6 +124,7 @@ const VOLUNTEERING = [
   },
   {
     org: "IBW",
+    link: "https://indiablockchainweek.com/",
     role: "Volunteer",
     bullets: [
       "Actively participated in brainstorming and engaged in community & social posts.",
@@ -122,6 +132,7 @@ const VOLUNTEERING = [
   },
   {
     org: "Web3 Conf Goa",
+    link: "https://www.web3confindia.xyz/",
     role: "Partnership Team",
     bullets: [
       "Outreached to 5+ potential sponsors to secure partnerships and support for community initiatives.",
@@ -129,6 +140,7 @@ const VOLUNTEERING = [
   },
   {
     org: "HackArCode",
+    link: "https://www.linkedin.com/company/hackarcode",
     role: "Partnership Lead",
     bullets: [
       "Outreached to 10+ potential sponsors to secure partnerships and support for community initiatives.",
@@ -136,6 +148,7 @@ const VOLUNTEERING = [
   },
   {
     org: "KotlinConf",
+    link: "https://kotlinconf.com/",
     role: "Content Writer",
     bullets: [
       "Wrote social media content for KotlinConf, contributing to increased engagement and growth across platforms.",
@@ -255,35 +268,49 @@ const SESSIONS = [
 
 const INITIAL_SESSIONS = 6;
 
-const CommunityCard = ({ org, role, period, bullets }: {
-  org: string; role: string; period?: string; bullets: string[];
+const CommunityCard = ({ org, link, role, period, bullets }: {
+  org: string; link?: string; role: string; period?: string; bullets: string[];
 }) => (
   <div className="border border-border rounded-lg p-5 sm:p-6 hover:border-foreground/20 transition-colors">
     <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
       <div>
-        <h3 className="font-serif text-lg sm:text-xl font-bold text-foreground">{org}</h3>
+        <div className="flex items-center gap-2">
+          <h3 className="font-serif text-lg sm:text-xl font-bold text-foreground">{org}</h3>
+          {link && (
+            <a href={link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+              <ExternalLink size={14} />
+            </a>
+          )}
+        </div>
         <p className="text-xs text-muted-foreground mt-0.5">{role}{period ? ` · ${period}` : ""}</p>
       </div>
     </div>
     {bullets.length > 0 && (
       <ul className="list-disc list-outside pl-5 space-y-1.5">
         {bullets.map((b, i) => (
-          <li key={i} className="text-sm text-muted-foreground leading-relaxed">{b}</li>
+          <li key={i} className="text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: b }} />
         ))}
       </ul>
     )}
   </div>
 );
 
-const VolunteerCard = ({ org, role, period, bullets }: { org: string; role: string; period?: string; bullets: string[] }) => (
+const VolunteerCard = ({ org, link, role, period, bullets }: { org: string; link?: string; role: string; period?: string; bullets: string[] }) => (
   <div className="border border-border rounded-lg p-4 sm:p-5 hover:border-foreground/20 transition-colors">
     <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-1 mb-2">
-      <h3 className="font-serif text-base font-semibold text-foreground">{org}</h3>
+      <div className="flex items-center gap-2">
+        <h3 className="font-serif text-base font-semibold text-foreground">{org}</h3>
+        {link && (
+          <a href={link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+            <ExternalLink size={14} />
+          </a>
+        )}
+      </div>
       <span className="text-xs text-muted-foreground">{role}{period ? ` · ${period}` : ""}</span>
     </div>
     <ul className="list-disc list-outside pl-4 space-y-1">
       {bullets.map((b, i) => (
-        <li key={i} className="text-sm text-muted-foreground leading-relaxed">{b}</li>
+        <li key={i} className="text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: b }} />
       ))}
     </ul>
   </div>
@@ -301,9 +328,13 @@ const SessionRow = ({ title, link, speakers }: {
         {speakers.map((s, i) => (
           <span key={i}>
             {i > 0 && ", "}
-            <a href={s.linkedin} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
-              {s.name}
-            </a>
+            {s.linkedin ? (
+              <a href={s.linkedin} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">
+                {s.name}
+              </a>
+            ) : (
+              <span>{s.name}</span>
+            )}
             <span className="text-xs"> ({s.role})</span>
           </span>
         ))}
@@ -398,7 +429,7 @@ const CommunityPage = () => {
           {/* Sessions */}
           <div className="mt-16">
             <SectionHeading>Sessions Organised & Hosted</SectionHeading>
-            <p className="text-sm text-muted-foreground text-center mb-8">{SESSIONS.length} sessions featuring speakers from Google, Amazon, Microsoft, Uber, Salesforce, and more.</p>
+            <p className="text-sm text-muted-foreground text-center mb-8">{SESSIONS.length} sessions featuring speakers from <strong className="text-foreground">Google, Amazon, Microsoft, Uber, Salesforce</strong>, and more.</p>
             <div>
               {visibleSessions.map((s) => (
                 <SessionRow key={s.link} {...s} />
