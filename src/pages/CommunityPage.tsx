@@ -164,7 +164,7 @@ const VOLUNTEERING = [
 ];
 
 const TWITTER_SPACES = [
-  { title: "How Humanizing Tech Made Me a Conference Speaker", link: "https://x.com/GirlLeadingTech/status/1973776234237575178", speakers: [{ name: "Diana Oyster", role: "Developer Advocate at Vonage", twitter: "https://x.com/dianasoyster" }] },
+  { title: "How Humanizing Tech Made Me a Conference Speaker", link: "https://x.com/GirlLeadingTech/status/1973776234237575178", speakers: [{ name: "Diana Soyster", role: "Developer Advocate at Vonage", twitter: "https://x.com/dianasoyster" }] },
   { title: "Rust as a Programming Language", link: "https://x.com/GirlLeadingTech/status/1973346885651013877", speakers: [{ name: "Francesco Ciulla", role: "Developer Advocate at Daily.Dev", twitter: "https://x.com/FrancescoCiull4" }] },
   { title: "Role of Communities in Web3", link: "https://x.com/GirlLeadingTech/status/1973035390245409111", speakers: [{ name: "Matilde Silva", role: "Community Strategist Advisor at Her DAO", twitter: "https://x.com/WHTIFIGO" }] },
   { title: "Career, Jobs & Placements", link: "https://x.com/GirlLeadingTech/status/1970460131466129730", speakers: [{ name: "SVS", role: "Tech Recruiter", twitter: "https://x.com/_svs_" }] },
