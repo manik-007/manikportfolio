@@ -1,99 +1,38 @@
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import SectionHeading from "./SectionHeading";
 
 const TESTIMONIALS = [
   {
-    text: "It was great connecting with Manik and learning about all the good work he's doing in his community.",
-    person: "Desmond John",
-    role: "Founder of Vibe Guide Ventures",
-    linkedin: "https://www.linkedin.com/in/desmond-john/",
+    text: "You are one of my favourite seniors and the one whom I admire the most. I love how you are so down to earth and humble even after achieving so much. You make sure that nobody is left out and I feel that's the best quality you have.",
+    person: "Divanshi Arora",
+    linkedin: "https://www.linkedin.com/in/divanshi-arora-541829373",
   },
   {
-    text: "Working with Manik is always a pleasure and a huge inspiration.",
-    person: "Aashi Raghuvanshi",
-    role: "Agentic AI & Automation Engineer",
-    linkedin: "https://www.linkedin.com/in/aashi-raghuwanshi/",
+    text: "Working with Manik Bhaiya has been one of the most defining parts of my college journey. More than just a community founder, he has been a mentor who genuinely pushes people to discover their potential.",
+    person: "Swagita Parida",
+    linkedin: "https://www.linkedin.com/in/swagita-parida-876b54303",
   },
   {
-    text: "Manik's enthusiasm throughout the event was incredible — from registrations to vlogging. He's truly an all-rounder!",
-    person: "Shatakshi Bhardwaj",
-    role: "UI/UX Designer",
-    linkedin: "https://www.linkedin.com/in/shatakshi-bhardwaj-445295281/",
+    text: "I have closely observed his work in building a global girls-in-tech community that actively addresses the gap in guidance and opportunities. His work is genuinely helping bridge the gap for many aspiring women in technology.",
+    person: "Gungun Goel",
+    linkedin: "https://www.linkedin.com/in/gungun-goel-05154426a",
   },
   {
-    text: "I truly admire the work Manik does. Keep it up!",
-    person: "Sakshi Agarwal",
-    role: "Aspiring Data Scientist",
-    linkedin: "https://www.linkedin.com/in/sakshi-agarwal-3900ba255/",
-  },
-  {
-    text: "Manik is the most amazing person I have ever met.",
-    person: "Vishal Prakash Maurya",
-    role: "Full Stack Developer",
-    linkedin: "https://www.linkedin.com/in/vishalprakash0202/",
-  },
-  {
-    text: "I loved learning about Girls in Tech and all the amazing work Manik is doing to make opportunities more accessible to young Indian women. We share so many cross-overs — I hope we can collaborate in the future!",
-    person: "Lina Orozco Munera",
-    role: "VMC RAC Member",
-    linkedin: "https://www.linkedin.com/in/linaorozcom/",
-  },
-  {
-    text: "Manik's journey is truly inspiring. Stories like his motivate me to work harder and aim to be part of GDG someday.",
-    person: "Shashank Joshi",
-    role: "Machine Learning Enthusiast",
-    linkedin: "https://www.linkedin.com/in/shashankjoshi/",
-  },
-  {
-    text: "Manik is a pro multi-tasker and a truly gem of a person. Kudos to his vision towards empowering girls!",
-    person: "Catherine Infanta",
-    role: "Harvard Aspire Leader",
-    linkedin: "https://www.linkedin.com/in/catherine-infanta-/",
-  },
-  {
-    text: "Manik's work is truly inspiring! Big shoutout for building something so impactful. I've had the privilege of watching the community grow and thrive.",
-    person: "Samridhi Gupta",
-    role: "Google WE Scholar",
-    linkedin: "https://www.linkedin.com/in/samridhi-gupta08/",
-  },
-  {
-    text: "Manik's dedication and passion are truly inspiring. It's amazing to see them in action!",
-    person: "Simran Nagekar",
-    role: "Game Experience Designer",
-    linkedin: "https://www.linkedin.com/in/simransn/",
-  },
-  {
-    text: "Manik is doing fantastic and praiseworthy work!",
-    person: "Adyasha Das",
-    role: "Google WE Scholar",
-    linkedin: "https://www.linkedin.com/in/adyashadas04/",
-  },
-  {
-    text: "It was great meeting Manik at the bootcamp. His energy is truly inspiring — I'm excited to see the amazing things he'll do next!",
-    person: "Shradha Gurjar",
-    role: "Aspiring Project Manager",
-    linkedin: "https://www.linkedin.com/in/shradha-gurjar/",
-  },
-  {
-    text: "Manik has the most amazing enthusiasm I have ever seen. It was great meeting him!",
-    person: "Tanu Singh",
-    role: "Blockchain Developer",
-    linkedin: "https://www.linkedin.com/in/tanusingh/",
+    text: "It is rare to find a senior who balances intellectual depth with such genuine kindness. As the founder of Letz Connect community, Manik bhaiya has been the best guide I could have asked for.",
+    person: "Shruti Sharma",
+    linkedin: "https://www.linkedin.com/in/shruti-sharma-81a079369",
   },
 ];
 
-const INITIAL_COUNT = 4;
-
 const WallOfLove = () => {
-  const [showAll, setShowAll] = useState(false);
-  const visible = showAll ? TESTIMONIALS : TESTIMONIALS.slice(0, INITIAL_COUNT);
+  const navigate = useNavigate();
 
   return (
     <section id="testimonials" className="py-20 md:py-28 px-6 border-t border-border">
       <div className="max-w-4xl mx-auto text-center">
         <SectionHeading>Wall of Love</SectionHeading>
         <div className="grid md:grid-cols-2 gap-6">
-          {visible.map((t) => (
+          {TESTIMONIALS.map((t) => (
             <blockquote
               key={t.person}
               className="border border-border rounded-lg p-8 bg-card text-left"
@@ -105,7 +44,6 @@ const WallOfLove = () => {
               <footer className="flex items-center justify-between">
                 <div>
                   <p className="font-sans text-sm font-semibold text-foreground">{t.person}</p>
-                  <p className="font-sans text-xs text-muted-foreground">{t.role}</p>
                 </div>
                 {t.linkedin && (
                   <a href={t.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
@@ -116,14 +54,12 @@ const WallOfLove = () => {
             </blockquote>
           ))}
         </div>
-        {!showAll && TESTIMONIALS.length > INITIAL_COUNT && (
-          <button
-            onClick={() => setShowAll(true)}
-            className="mt-8 inline-flex items-center px-6 py-3 rounded-full text-sm font-medium border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors"
-          >
-            See All Testimonials
-          </button>
-        )}
+        <button
+          onClick={() => navigate("/wall-of-love")}
+          className="mt-8 inline-flex items-center px-6 py-3 rounded-full text-sm font-medium border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors"
+        >
+          See All Testimonials
+        </button>
       </div>
     </section>
   );
