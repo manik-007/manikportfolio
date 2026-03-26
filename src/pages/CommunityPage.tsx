@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Youtube, Twitter, ExternalLink } from "lucide-react";
+import { Youtube, Twitter, ExternalLink, ChevronDown } from "lucide-react";
 import Nav from "@/components/sections/Nav";
 import Footer from "@/components/sections/Footer";
 import SectionHeading from "@/components/sections/SectionHeading";
