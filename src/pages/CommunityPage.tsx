@@ -36,8 +36,14 @@ const COMMUNITIES_BUILT = [
     org: "Letz Connect",
     link: "https://www.letzconnect.xyz/",
     role: "Builder",
-    period: "",
-    bullets: [],
+    period: "2024 – Present",
+    bullets: [
+      "Built a community to <strong>bridge the gap between seniors and juniors</strong> and to build a growth culture at the campus.",
+      "In 5 months the community grew from <strong>0 to 125 members</strong>.",
+      "Organised <strong>30+ meetups</strong>, 1 out-station trip and visits to regional events and hackathons in groups.",
+      "<strong>100+ messages daily</strong> on an average.",
+      "3 meetups every week on <strong>public speaking, women empowerment and networking</strong>.",
+    ],
   },
 ];
 

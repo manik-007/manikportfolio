@@ -119,10 +119,10 @@ const SECTIONS: DiarySection[] = [
     content: (
       <ul className="mt-4 space-y-2">
         <li className="text-sm text-foreground">
-          <strong>Shruti</strong>, a junior in 1st year, wrote a poem for Manik.
+          <strong>Shruti</strong>, my junior in 1st year, wrote a poem for me.
         </li>
         <li className="text-sm text-foreground">
-          <strong>Gurvinder</strong>, a 1st year student, made a sketch of Manik and surprised him by showing it.
+          <strong>Gurvinder</strong>, a 1st year student, made a sketch of me and surprised me by showing it.
         </li>
       </ul>
     ),

@@ -22,10 +22,13 @@ const Hero = () => (
   <>
     <section className="min-h-screen flex items-center justify-center px-4 sm:px-6">
       <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
+        <p className="font-sans text-sm sm:text-base tracking-widest text-muted-foreground uppercase mb-2">
+          Hi, I am
+        </p>
         <h1 className="font-serif text-5xl sm:text-7xl md:text-9xl font-bold tracking-tight text-foreground mb-4 sm:mb-6">
           Manik
         </h1>
-        <p className="font-serif text-xl sm:text-2xl md:text-3xl italic text-muted-foreground mb-6 sm:mb-8 max-w-2xl px-2">
+        <p className="font-serif text-lg sm:text-xl md:text-2xl italic text-muted-foreground mb-6 sm:mb-8">
           "I build for impact and bring people together."
         </p>
         <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 px-2 max-w-xl">
