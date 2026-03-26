@@ -22,17 +22,6 @@ const COMMUNITIES_BUILT = [
     ],
   },
   {
-    org: "Lamit Club",
-    link: "https://www.linkedin.com/company/lamit-club/",
-    role: "Founding Lead",
-    period: "Apr 2024 – Jan 2025",
-    bullets: [
-      "Built and scaled a <strong>300-member Web3 community</strong>, organizing 5 speaker sessions, 8 interaction calls, 6 offline gatherings, and 1 seminar.",
-      "Led high-impact events including a <strong>5-day bootcamp</strong> (296 registrations), orientation (230+ sign-ups, 130+ attendees), and a logo competition (103 entries, 60 submissions) for club rebranding.",
-      "Facilitated strategic growth by conducting regular team meetings to brainstorm and implement community initiatives.",
-    ],
-  },
-  {
     org: "Letz Connect",
     link: "https://www.letzconnect.xyz/",
     role: "Builder",
@@ -43,6 +32,17 @@ const COMMUNITIES_BUILT = [
       "Organised <strong>30+ meetups</strong>, 1 out-station trip and visits to regional events and hackathons in groups.",
       "<strong>100+ messages daily</strong> on an average.",
       "3 meetups every week on <strong>public speaking, women empowerment and networking</strong>.",
+    ],
+  },
+  {
+    org: "Lamit Club",
+    link: "https://www.linkedin.com/company/lamit-club/",
+    role: "Founding Lead",
+    period: "Apr 2024 – Jan 2025",
+    bullets: [
+      "Built and scaled a <strong>300-member Web3 community</strong>, organizing 5 speaker sessions, 8 interaction calls, 6 offline gatherings, and 1 seminar.",
+      "Led high-impact events including a <strong>5-day bootcamp</strong> (296 registrations), orientation (230+ sign-ups, 130+ attendees), and a logo competition (103 entries, 60 submissions) for club rebranding.",
+      "Facilitated strategic growth by conducting regular team meetings to brainstorm and implement community initiatives.",
     ],
   },
 ];
