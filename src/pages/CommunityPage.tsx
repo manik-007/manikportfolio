@@ -270,30 +270,38 @@ const INITIAL_SESSIONS = 6;
 
 const CommunityCard = ({ org, link, role, period, bullets }: {
   org: string; link?: string; role: string; period?: string; bullets: string[];
-}) => (
-  <div className="border border-border rounded-lg p-5 sm:p-6 hover:border-foreground/20 transition-colors">
-    <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
-      <div>
-        <div className="flex items-center gap-2">
-          <h3 className="font-serif text-lg sm:text-xl font-bold text-foreground">{org}</h3>
-          {link && (
-            <a href={link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-              <ExternalLink size={14} />
-            </a>
-          )}
+}) => {
+  const [expanded, setExpanded] = useState(false);
+  return (
+    <div className="border border-border rounded-lg p-5 sm:p-6 hover:border-foreground/20 transition-colors">
+      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-1 mb-3">
+        <div className="flex-1">
+          <div className="flex items-center gap-2">
+            <h3 className="font-serif text-lg sm:text-xl font-bold text-foreground">{org}</h3>
+            {link && (
+              <a href={link} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                <ExternalLink size={14} />
+              </a>
+            )}
+          </div>
+          <p className="text-xs text-muted-foreground mt-0.5">{role}{period ? `, ${period}` : ""}</p>
         </div>
-        <p className="text-xs text-muted-foreground mt-0.5">{role}{period ? ` · ${period}` : ""}</p>
+        {bullets.length > 0 && (
+          <button onClick={() => setExpanded(!expanded)} className="text-muted-foreground hover:text-foreground transition-colors self-start mt-1">
+            <ChevronDown size={18} className={`transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
+          </button>
+        )}
       </div>
+      {expanded && bullets.length > 0 && (
+        <ul className="list-disc list-outside pl-5 space-y-1.5 animate-fade-in">
+          {bullets.map((b, i) => (
+            <li key={i} className="text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: b }} />
+          ))}
+        </ul>
+      )}
     </div>
-    {bullets.length > 0 && (
-      <ul className="list-disc list-outside pl-5 space-y-1.5">
-        {bullets.map((b, i) => (
-          <li key={i} className="text-sm text-muted-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: b }} />
-        ))}
-      </ul>
-    )}
-  </div>
-);
+  );
+};
 
 const VolunteerCard = ({ org, link, role, period, bullets }: { org: string; link?: string; role: string; period?: string; bullets: string[] }) => (
   <div className="border border-border rounded-lg p-4 sm:p-5 hover:border-foreground/20 transition-colors">
