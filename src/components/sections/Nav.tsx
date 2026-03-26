@@ -78,9 +78,12 @@ const Nav = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
-        <span className="hidden md:inline-block text-xs font-mono text-muted-foreground tracking-wide">
-          {istTime} IST
-        </span>
+        <div className="hidden md:flex items-center gap-3">
+          <VisitorCounter />
+          <span className="text-xs font-mono text-muted-foreground tracking-wide ml-2">
+            {istTime} IST
+          </span>
+        </div>
         <div className="hidden md:flex items-center gap-6">
           {NAV_LINKS.map((l) => (
             <a
