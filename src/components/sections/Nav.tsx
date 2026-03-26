@@ -6,9 +6,9 @@ import VisitorCounter from "./VisitorCounter";
 const NAV_LINKS = [
   { label: "About", href: "#about" },
   { label: "Articles", href: "#articles" },
-  { label: "Podcasts", href: "#podcasts" },
+  { label: "Podcasts", href: "/podcasts" },
   { label: "Community", href: "/community" },
-  { label: "Wall of Love", href: "#testimonials" },
+  { label: "Wall of Love", href: "/wall-of-love" },
   { label: "Diary", href: "/diary" },
   { label: "Resume", href: "/resume" },
   { label: "Connect", href: "#connect" },

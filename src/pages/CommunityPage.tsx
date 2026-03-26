@@ -22,17 +22,6 @@ const COMMUNITIES_BUILT = [
     ],
   },
   {
-    org: "Lamit Club",
-    link: "https://www.linkedin.com/company/lamit-club/",
-    role: "Founding Lead",
-    period: "Apr 2024 – Jan 2025",
-    bullets: [
-      "Built and scaled a <strong>300-member Web3 community</strong>, organizing 5 speaker sessions, 8 interaction calls, 6 offline gatherings, and 1 seminar.",
-      "Led high-impact events including a <strong>5-day bootcamp</strong> (296 registrations), orientation (230+ sign-ups, 130+ attendees), and a logo competition (103 entries, 60 submissions) for club rebranding.",
-      "Facilitated strategic growth by conducting regular team meetings to brainstorm and implement community initiatives.",
-    ],
-  },
-  {
     org: "Letz Connect",
     link: "https://www.letzconnect.xyz/",
     role: "Builder",
@@ -43,6 +32,17 @@ const COMMUNITIES_BUILT = [
       "Organised <strong>30+ meetups</strong>, 1 out-station trip and visits to regional events and hackathons in groups.",
       "<strong>100+ messages daily</strong> on an average.",
       "3 meetups every week on <strong>public speaking, women empowerment and networking</strong>.",
+    ],
+  },
+  {
+    org: "Lamit Club",
+    link: "https://www.linkedin.com/company/lamit-club/",
+    role: "Founding Lead",
+    period: "Apr 2024 – Jan 2025",
+    bullets: [
+      "Built and scaled a <strong>300-member Web3 community</strong>, organizing 5 speaker sessions, 8 interaction calls, 6 offline gatherings, and 1 seminar.",
+      "Led high-impact events including a <strong>5-day bootcamp</strong> (296 registrations), orientation (230+ sign-ups, 130+ attendees), and a logo competition (103 entries, 60 submissions) for club rebranding.",
+      "Facilitated strategic growth by conducting regular team meetings to brainstorm and implement community initiatives.",
     ],
   },
 ];
@@ -164,7 +164,7 @@ const VOLUNTEERING = [
 ];
 
 const TWITTER_SPACES = [
-  { title: "How Humanizing Tech Made Me a Conference Speaker", link: "https://x.com/GirlLeadingTech/status/1973776234237575178", speakers: [{ name: "Diana Oyster", role: "Developer Advocate at Vonage", twitter: "https://x.com/dianasoyster" }] },
+  { title: "How Humanizing Tech Made Me a Conference Speaker", link: "https://x.com/GirlLeadingTech/status/1973776234237575178", speakers: [{ name: "Diana Soyster", role: "Developer Advocate at Vonage", twitter: "https://x.com/dianasoyster" }] },
   { title: "Rust as a Programming Language", link: "https://x.com/GirlLeadingTech/status/1973346885651013877", speakers: [{ name: "Francesco Ciulla", role: "Developer Advocate at Daily.Dev", twitter: "https://x.com/FrancescoCiull4" }] },
   { title: "Role of Communities in Web3", link: "https://x.com/GirlLeadingTech/status/1973035390245409111", speakers: [{ name: "Matilde Silva", role: "Community Strategist Advisor at Her DAO", twitter: "https://x.com/WHTIFIGO" }] },
   { title: "Career, Jobs & Placements", link: "https://x.com/GirlLeadingTech/status/1970460131466129730", speakers: [{ name: "SVS", role: "Tech Recruiter", twitter: "https://x.com/_svs_" }] },
@@ -419,25 +419,29 @@ const CommunityPage = () => {
             <p className="text-sm text-muted-foreground text-center mb-8">{TWITTER_SPACES.length} Twitter Spaces on tech, careers, Web3, community building, and more.</p>
             <div className="space-y-3">
               {visibleSpaces.map((space) => (
-                <a
+                <div
                   key={space.link}
-                  href={space.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-4 rounded-lg border border-border hover:border-primary/40 hover:bg-accent/40 transition-colors group block"
+                  className="flex items-start gap-4 p-4 rounded-lg border border-border hover:border-primary/40 hover:bg-accent/40 transition-colors"
                 >
-                  <Twitter className="w-5 h-5 text-primary mt-1 shrink-0" />
+                  <a href={space.link} target="_blank" rel="noopener noreferrer" className="mt-1 shrink-0">
+                    <Twitter className="w-5 h-5 text-primary" />
+                  </a>
                   <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-foreground group-hover:text-primary transition-colors">{space.title}</p>
+                    <a href={space.link} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-primary transition-colors">
+                      {space.title}
+                    </a>
                     <div className="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-sm text-muted-foreground">
                       {space.speakers.map((sp) => (
                         <span key={sp.name}>
-                          {sp.name}{sp.role ? ` · ${sp.role}` : ""}
+                          {sp.twitter ? (
+                            <a href={sp.twitter} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">{sp.name}</a>
+                          ) : sp.name}
+                          {sp.role ? ` · ${sp.role}` : ""}
                         </span>
                       ))}
                     </div>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
             {!showAllSpaces && TWITTER_SPACES.length > INITIAL_SPACES && (
