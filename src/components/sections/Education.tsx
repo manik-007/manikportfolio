@@ -57,7 +57,7 @@ const Education = () => (
             ) : e.institution}
           </h3>
           <p className="text-sm text-muted-foreground mt-1">
-            {e.program} | {e.period}
+            {e.program}, {e.period}
           </p>
           {e.detail && <p className="text-sm text-muted-foreground mt-1">{e.detail}</p>}
         </div>

@@ -135,7 +135,7 @@ const Podcasts = () => {
                   >
                     {p.guest}
                   </a>
-                  <span className="mx-2">·</span>
+                  <span className="mx-2">,</span>
                   {p.guestRole}
                 </p>
               </div>
