@@ -78,6 +78,16 @@ const Recommendations = () => (
           <RecCard key={r.name} r={r} />
         ))}
       </div>
+      <div className="mt-8">
+        <a
+          href="https://forms.gle/4HmEmcESEF1eFqyi6"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center px-6 py-3 rounded-full text-sm font-medium border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors"
+        >
+          Recommend Me
+        </a>
+      </div>
     </div>
   </section>
 );
