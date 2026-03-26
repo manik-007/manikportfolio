@@ -1,5 +1,6 @@
+import { useState } from "react";
 import SectionHeading from "./SectionHeading";
-import { ExternalLink } from "lucide-react";
+import { ExternalLink, ChevronDown } from "lucide-react";
 
 const EXPERIENCE = [
   {
@@ -7,7 +8,7 @@ const EXPERIENCE = [
     website: "https://www.blockon.biz/",
     role: "Business Development Manager",
     period: "Sept 2025 – Present",
-    type: "Contract | Part-time | Remote | Malaysia",
+    type: "Contract, Part-time, Remote, Malaysia",
     bullets: [
       "Handled the partnerships, sponsorships, and on-ground operations for 8 exclusive events happening under India Blockchain Month 2025 during ETH Global India Week.",
       "Outreached to 300+ partners via social media.",
@@ -18,7 +19,7 @@ const EXPERIENCE = [
     website: "https://www.propeers.in/",
     role: "Community Manager",
     period: "Sept 2024 – Oct 2024",
-    type: "Internship | Remote | Delhi",
+    type: "Internship, Remote, Delhi",
     bullets: [
       "Spearheaded outreach to 20+ colleges, driving 2,000+ user growth.",
       "Designed the ProPeersX Lead Program structure to scale the community & user base.",
@@ -29,7 +30,7 @@ const EXPERIENCE = [
     website: "https://acssociety.com/",
     role: "Community Manager",
     period: "Dec 2023 – Aug 2024",
-    type: "Internship | Remote | Chandigarh",
+    type: "Internship, Remote, Chandigarh",
     bullets: [
       "Organized 10 security talks with an average attendance of 50+ participants each.",
       "Led email marketing campaigns, boosting event visibility and engagement.",
@@ -38,36 +39,56 @@ const EXPERIENCE = [
   },
 ];
 
-const WorkExperience = () => (
-  <section id="experience" className="py-12 md:py-16">
-    <SectionHeading>Work Experience</SectionHeading>
-    <div className="space-y-10 mt-8">
-      {EXPERIENCE.map((e) => (
-        <div key={e.company}>
-          <div className="flex items-center gap-2">
-            <h3 className="font-serif text-xl sm:text-2xl font-bold text-foreground">
-              {e.company}
-            </h3>
-            {e.website && (
-              <a href={e.website} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-                <ExternalLink size={14} />
-              </a>
+const WorkExperience = () => {
+  const [expanded, setExpanded] = useState<Record<string, boolean>>({});
+
+  const toggle = (company: string) => {
+    setExpanded((prev) => ({ ...prev, [company]: !prev[company] }));
+  };
+
+  return (
+    <section id="experience" className="py-12 md:py-16">
+      <SectionHeading>Work Experience</SectionHeading>
+      <div className="space-y-6 mt-8">
+        {EXPERIENCE.map((e) => (
+          <div key={e.company} className="border border-border rounded-lg p-5 sm:p-6 hover:border-foreground/20 transition-colors">
+            <div className="flex items-start justify-between gap-2">
+              <div className="flex-1">
+                <div className="flex items-center gap-2">
+                  <h3 className="font-serif text-xl sm:text-2xl font-bold text-foreground">
+                    {e.company}
+                  </h3>
+                  {e.website && (
+                    <a href={e.website} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+                      <ExternalLink size={14} />
+                    </a>
+                  )}
+                </div>
+                <p className="text-sm text-muted-foreground mt-1">
+                  {e.role}, {e.period}, {e.type}
+                </p>
+              </div>
+              <button
+                onClick={() => toggle(e.company)}
+                className="text-muted-foreground hover:text-foreground transition-colors shrink-0 mt-1"
+              >
+                <ChevronDown size={18} className={`transition-transform duration-200 ${expanded[e.company] ? "rotate-180" : ""}`} />
+              </button>
+            </div>
+            {expanded[e.company] && (
+              <ul className="mt-4 space-y-2 list-disc list-outside pl-5 animate-fade-in">
+                {e.bullets.map((b, i) => (
+                  <li key={i} className="text-sm text-foreground leading-relaxed">
+                    {b}
+                  </li>
+                ))}
+              </ul>
             )}
           </div>
-          <p className="text-sm text-muted-foreground mt-1">
-            {e.role}, {e.period}, {e.type}
-          </p>
-          <ul className="mt-4 space-y-2 list-disc list-outside pl-5">
-            {e.bullets.map((b, i) => (
-              <li key={i} className="text-sm text-foreground leading-relaxed">
-                {b}
-              </li>
-            ))}
-          </ul>
-        </div>
-      ))}
-    </div>
-  </section>
-);
+        ))}
+      </div>
+    </section>
+  );
+};
 
 export default WorkExperience;
