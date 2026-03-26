@@ -30,7 +30,7 @@ const Connect = () => (
         <Mail size={16} />
         manik.officialwork@gmail.com
       </a>
-      <div className="flex items-center justify-center gap-5 mt-10">
+      <div className="flex flex-wrap items-center justify-center gap-4 sm:gap-5 mt-10 px-2">
         {SOCIALS.map((s) => (
           <a
             key={s.label}
@@ -40,7 +40,7 @@ const Connect = () => (
             className="text-muted-foreground hover:text-foreground transition-colors"
             aria-label={s.label}
           >
-            <s.icon size={20} />
+            <s.icon size={18} />
           </a>
         ))}
       </div>

@@ -59,13 +59,13 @@ const Reactions = () => {
         <p className="text-sm text-muted-foreground mb-10 max-w-xl mx-auto">
           Thank you for visiting my little corner of the internet. Click a reaction to let me know how you feel!
         </p>
-        <div className="flex flex-wrap justify-center gap-4">
+        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
           {REACTIONS.map((r) => (
             <button
               key={r.key}
               onClick={() => handleClick(r.key)}
               disabled={!!voted}
-              className={`flex flex-col items-center gap-2 border rounded-xl px-6 py-5 transition-all min-w-[100px] ${
+              className={`flex flex-col items-center gap-1.5 sm:gap-2 border rounded-xl px-4 sm:px-6 py-3 sm:py-5 transition-all min-w-[80px] sm:min-w-[100px] ${
                 voted === r.key
                   ? "border-foreground bg-accent/50"
                   : voted

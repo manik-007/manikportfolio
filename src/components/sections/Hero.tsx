@@ -41,7 +41,7 @@ const Hero = () => (
             </span>
           ))}
         </div>
-        <div className="flex items-center justify-center gap-4 sm:gap-6">
+        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 px-2">
           {SOCIALS.map((s) => (
             <a
               key={s.label}
@@ -49,7 +49,7 @@ const Hero = () => (
               className="text-muted-foreground hover:text-foreground transition-colors"
               aria-label={s.label}
             >
-              <s.icon size={20} className="sm:w-6 sm:h-6" />
+              <s.icon size={18} className="sm:w-6 sm:h-6" />
             </a>
           ))}
         </div>
