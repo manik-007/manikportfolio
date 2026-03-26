@@ -55,7 +55,7 @@ const WorkExperience = () => (
             )}
           </div>
           <p className="text-sm text-muted-foreground mt-1">
-            {e.role} | {e.period} | {e.type}
+            {e.role}, {e.period}, {e.type}
           </p>
           <ul className="mt-4 space-y-2 list-disc list-outside pl-5">
             {e.bullets.map((b, i) => (

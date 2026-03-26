@@ -105,7 +105,11 @@ const PODCASTS = [
 
 const Podcasts = () => {
   const [showAll, setShowAll] = useState(false);
-  const visible = showAll ? PODCASTS : PODCASTS.slice(0, 3);
+  // Show Chhavi Garg, Bhawna Chauhan, Deepak Kumar by default
+  const defaultVisible = PODCASTS.filter((p) =>
+    ["Chhavi Garg", "Bhawna Chauhan", "Deepak Kumar"].includes(p.guest)
+  );
+  const visible = showAll ? PODCASTS : defaultVisible;
 
   return (
     <section id="podcasts" className="py-20 md:py-28 px-6 border-t border-border">
@@ -131,7 +135,7 @@ const Podcasts = () => {
                   >
                     {p.guest}
                   </a>
-                  <span className="mx-2">·</span>
+                  <span className="mx-2">,</span>
                   {p.guestRole}
                 </p>
               </div>
