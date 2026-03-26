@@ -23,7 +23,8 @@ const EDUCATION = [
     link: "https://www.aspireleaders.org/",
   },
   {
-    institution: "Chandigarh Group of Colleges Landra, Punjab",
+    institution: "Chandigarh Group of Colleges Landran, Punjab",
+    link: "https://www.cgc.edu.in/",
     period: "2023 – 2027",
     program: "B.Tech Computer Science Engineering",
     detail: "CGPA — 7.83",

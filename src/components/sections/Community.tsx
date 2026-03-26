@@ -10,7 +10,7 @@ const Community = () => (
   <section id="community" className="py-20 md:py-28 px-6 border-t border-border bg-background">
     <div className="max-w-4xl mx-auto text-center">
       <span className="text-xs font-sans font-medium tracking-widest text-muted-foreground uppercase">
-        The Community I Am Building
+        the community i am building
       </span>
       <h2 className="font-serif text-5xl md:text-6xl font-bold text-foreground mt-4 mb-6 leading-tight">
         Girls Leading Tech
