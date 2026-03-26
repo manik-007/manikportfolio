@@ -1,6 +1,7 @@
 import { Menu, X, Sun, Moon } from "lucide-react";
 import { useState, useEffect } from "react";
 import { useLocation, useNavigate } from "react-router-dom";
+import VisitorCounter from "./VisitorCounter";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
