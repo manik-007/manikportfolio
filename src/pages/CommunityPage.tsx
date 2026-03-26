@@ -419,25 +419,29 @@ const CommunityPage = () => {
             <p className="text-sm text-muted-foreground text-center mb-8">{TWITTER_SPACES.length} Twitter Spaces on tech, careers, Web3, community building, and more.</p>
             <div className="space-y-3">
               {visibleSpaces.map((space) => (
-                <a
+                <div
                   key={space.link}
-                  href={space.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-start gap-4 p-4 rounded-lg border border-border hover:border-primary/40 hover:bg-accent/40 transition-colors group block"
+                  className="flex items-start gap-4 p-4 rounded-lg border border-border hover:border-primary/40 hover:bg-accent/40 transition-colors"
                 >
-                  <Twitter className="w-5 h-5 text-primary mt-1 shrink-0" />
+                  <a href={space.link} target="_blank" rel="noopener noreferrer" className="mt-1 shrink-0">
+                    <Twitter className="w-5 h-5 text-primary" />
+                  </a>
                   <div className="flex-1 min-w-0">
-                    <p className="font-semibold text-foreground group-hover:text-primary transition-colors">{space.title}</p>
+                    <a href={space.link} target="_blank" rel="noopener noreferrer" className="font-semibold text-foreground hover:text-primary transition-colors">
+                      {space.title}
+                    </a>
                     <div className="flex flex-wrap gap-x-4 gap-y-1 mt-1 text-sm text-muted-foreground">
                       {space.speakers.map((sp) => (
                         <span key={sp.name}>
-                          {sp.name}{sp.role ? ` · ${sp.role}` : ""}
+                          {sp.twitter ? (
+                            <a href={sp.twitter} target="_blank" rel="noopener noreferrer" className="underline underline-offset-4 hover:text-foreground transition-colors">{sp.name}</a>
+                          ) : sp.name}
+                          {sp.role ? ` · ${sp.role}` : ""}
                         </span>
                       ))}
                     </div>
                   </div>
-                </a>
+                </div>
               ))}
             </div>
             {!showAllSpaces && TWITTER_SPACES.length > INITIAL_SPACES && (
