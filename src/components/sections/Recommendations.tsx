@@ -42,28 +42,26 @@ const RecCard = ({ r }: { r: typeof RECS[0] }) => {
   const preview = r.text.slice(0, 120) + "...";
 
   return (
-    <blockquote className="border border-border rounded-lg p-6 sm:p-8">
-      <p className="font-serif text-sm sm:text-base italic text-foreground leading-relaxed mb-4">
+    <blockquote className="border border-border rounded-lg p-4 sm:p-6">
+      <p className="font-serif text-sm italic text-foreground leading-relaxed mb-3">
         "{expanded ? r.text : preview}"
       </p>
       <button
         onClick={() => setExpanded(!expanded)}
-        className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors mb-4"
+        className="inline-flex items-center gap-1 text-xs text-muted-foreground hover:text-foreground transition-colors mb-3"
       >
         {expanded ? "Show less" : "Read more"}
         <ChevronDown size={14} className={`transition-transform duration-200 ${expanded ? "rotate-180" : ""}`} />
       </button>
-      <footer className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-2">
-        <div>
-          <div className="flex items-center gap-2">
-            <p className="font-sans text-sm font-semibold text-foreground">{r.name}</p>
-            <a href={r.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
-              <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
-            </a>
-          </div>
-          <p className="font-sans text-xs text-muted-foreground">{r.title}</p>
-          <p className="font-sans text-xs text-muted-foreground mt-0.5">{r.relation}, {r.date}</p>
+      <footer>
+        <div className="flex items-center gap-2 flex-wrap">
+          <p className="font-sans text-sm font-semibold text-foreground">{r.name}</p>
+          <a href={r.linkedin} target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-foreground transition-colors">
+            <svg className="w-4 h-4" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          </a>
         </div>
+        <p className="font-sans text-xs text-muted-foreground break-words">{r.title}</p>
+        <p className="font-sans text-xs text-muted-foreground mt-0.5">{r.relation}, {r.date}</p>
       </footer>
     </blockquote>
   );
@@ -73,7 +71,7 @@ const Recommendations = () => (
   <section id="recommendations" className="py-12 md:py-16">
     <div className="text-center">
       <SectionHeading>Recommendations</SectionHeading>
-      <div className="space-y-10 text-left">
+      <div className="space-y-6 text-left">
         {RECS.map((r) => (
           <RecCard key={r.name} r={r} />
         ))}

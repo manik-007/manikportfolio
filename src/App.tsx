@@ -11,6 +11,7 @@ import CommunityPage from "./pages/CommunityPage.tsx";
 import DiaryPage from "./pages/DiaryPage.tsx";
 import WallOfLovePage from "./pages/WallOfLovePage.tsx";
 import PodcastsPage from "./pages/PodcastsPage.tsx";
+import ContentPage from "./pages/ContentPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -40,6 +41,7 @@ const App = () => {
             <Route path="/diary" element={<DiaryPage />} />
             <Route path="/wall-of-love" element={<WallOfLovePage />} />
             <Route path="/podcasts" element={<PodcastsPage />} />
+            <Route path="/content" element={<ContentPage />} />
             {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
             <Route path="*" element={<NotFound />} />
           </Routes>

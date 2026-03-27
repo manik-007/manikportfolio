@@ -5,8 +5,7 @@ import VisitorCounter from "./VisitorCounter";
 
 const NAV_LINKS = [
   { label: "About", href: "#about" },
-  { label: "Articles", href: "#articles" },
-  { label: "Podcasts", href: "/podcasts" },
+  { label: "Content", href: "/content" },
   { label: "Community", href: "/community" },
   { label: "Wall of Love", href: "/wall-of-love" },
   { label: "Diary", href: "/diary" },
@@ -80,9 +79,6 @@ const Nav = () => {
       <div className="max-w-6xl mx-auto flex items-center justify-between px-6 py-4">
         <div className="hidden md:flex items-center gap-3">
           <VisitorCounter />
-          <span className="text-xs font-mono text-muted-foreground tracking-wide ml-2">
-            {istTime} IST
-          </span>
         </div>
         <div className="hidden md:flex items-center gap-6">
           {NAV_LINKS.map((l) => (
@@ -95,6 +91,9 @@ const Nav = () => {
               {l.label}
             </a>
           ))}
+          <span className="text-xs font-mono text-muted-foreground tracking-wide">
+            {istTime} IST
+          </span>
           <button
             onClick={() => setDark(!dark)}
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -103,10 +102,10 @@ const Nav = () => {
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
         </div>
-        <div className="flex items-center gap-4 md:hidden w-full justify-between">
-          <span className="text-xs font-mono text-muted-foreground tracking-wide">
-            {istTime} IST
-          </span>
+        <div className="flex items-center gap-3 md:hidden w-full justify-between">
+          <div className="flex items-center gap-3">
+            <VisitorCounter />
+          </div>
           <div className="flex items-center gap-4">
             <button
               onClick={() => setDark(!dark)}
