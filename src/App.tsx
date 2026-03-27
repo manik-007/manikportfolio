@@ -11,6 +11,7 @@ import CommunityPage from "./pages/CommunityPage.tsx";
 import DiaryPage from "./pages/DiaryPage.tsx";
 import WallOfLovePage from "./pages/WallOfLovePage.tsx";
 import PodcastsPage from "./pages/PodcastsPage.tsx";
+import ContentPage from "./pages/ContentPage.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
