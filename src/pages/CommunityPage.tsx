@@ -49,6 +49,35 @@ const COMMUNITIES_BUILT = [
 
 const VOLUNTEERING = [
   {
+    org: "GDG on Campus, CGC Landran",
+    role: "Mentor",
+    period: "Oct 2025 – Present",
+    bullets: [
+      "Mentoring the core team of <strong>Google Developer Group on Campus</strong>, Chandigarh College of Engineering, CGC Landran for the tenure 2025–2026.",
+      "With extensive experience in community building, leadership, and organising nationwide large-scale events and programs, guiding the <strong>community relations team</strong> of the esteemed club.",
+    ],
+  },
+  {
+    org: "GDG on Campus, CGC Landran",
+    role: "Community Relations Head",
+    period: "Sep 2024 – Sep 2025",
+    bullets: [
+      "Organised and coordinated the <strong>Google Solution Challenge Bootcamp Chandigarh Edition</strong>. Ensured a smooth experience for speakers and overall management of the event, hosting <strong>400+ students from 30+ colleges</strong>.",
+      "Organised and hosted <strong>\"Startup Seed\"</strong>, a 7-hour event focused on raising awareness about startups, incubation, accelerators and grants. Hosted 1 quiz, 1 fun activity and speakers including Dhaval Kaku (Program Manager at Innovation Mission Punjab) and Harshita Mahajan (Founder of Co Founds). Engaged <strong>170+ attendees</strong>.",
+      "Organised and anchored <strong>Blockchain Breakthrough</strong>, a full-day offline event featuring Harman Puri (Founder of Blymo and a Blockchain Consultant).",
+      "Moderator for <strong>Google AI Study Jams</strong> (1 Oct 2024 – 1 Nov 2024).",
+    ],
+  },
+  {
+    org: "GDG on Campus, CGC Landran",
+    role: "Member",
+    period: "Aug 2023 – Aug 2024",
+    bullets: [
+      "Attended events like <strong>Full Stack Fiesta</strong> and <strong>Date with Dev</strong> organised by GDSC.",
+      "Successfully completed and contributed in <strong>Google Cloud Study Jam</strong>.",
+    ],
+  },
+  {
     org: "SheBuilds",
     link: "https://www.shebuildsecosystem.com/",
     role: "Organizer",
