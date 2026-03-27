@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import SectionHeading from "./SectionHeading";
 
 const REACTIONS = [
   { key: "grateful", label: "Grateful", symbol: "♡" },
@@ -27,19 +26,6 @@ const Reactions = () => {
       initial[r.key] = getCount(r.key);
     });
     setCounts(initial);
-
-    // Clear all old counts
-    const hasCleared = localStorage.getItem("reactions_cleared_v2");
-    if (!hasCleared) {
-      REACTIONS.forEach((r) => localStorage.removeItem(`reaction_${r.key}`));
-      localStorage.removeItem("reaction_voted");
-      localStorage.setItem("reactions_cleared_v2", "1");
-      REACTIONS.forEach((r) => {
-        initial[r.key] = 0;
-      });
-      setCounts({ ...initial });
-    }
-
     setVoted(localStorage.getItem("reaction_voted"));
   }, []);
 
@@ -53,19 +39,19 @@ const Reactions = () => {
   };
 
   return (
-    <section className="py-20 md:py-28 px-6 border-t border-border">
+    <div className="border-t border-border bg-accent/30 py-8 px-4 sm:px-6">
       <div className="max-w-3xl mx-auto text-center">
-        <SectionHeading>How Does My Space Make You Feel?</SectionHeading>
-        <p className="text-sm text-muted-foreground mb-10 max-w-xl mx-auto">
-          Thank you for visiting my little corner of the internet. Click a reaction to let me know how you feel!
+        <p className="text-sm font-medium text-foreground mb-1">How Does My Space Make You Feel?</p>
+        <p className="text-xs text-muted-foreground mb-5">
+          Click a reaction to let me know!
         </p>
-        <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+        <div className="flex flex-wrap justify-center gap-2 sm:gap-3">
           {REACTIONS.map((r) => (
             <button
               key={r.key}
               onClick={() => handleClick(r.key)}
               disabled={!!voted}
-              className={`flex flex-col items-center gap-1.5 sm:gap-2 border rounded-xl px-4 sm:px-6 py-3 sm:py-5 transition-all min-w-[80px] sm:min-w-[100px] ${
+              className={`flex items-center gap-1.5 border rounded-full px-3 py-1.5 sm:px-4 sm:py-2 transition-all text-sm ${
                 voted === r.key
                   ? "border-foreground bg-accent/50"
                   : voted
@@ -73,17 +59,17 @@ const Reactions = () => {
                   : "border-border hover:border-foreground/30 hover:bg-accent/50 active:scale-95"
               }`}
             >
-              <span className="text-3xl font-serif text-foreground">{r.symbol}</span>
+              <span className="text-base font-serif text-foreground">{r.symbol}</span>
               <span className="text-xs font-medium text-foreground">{r.label}</span>
-              <span className="text-lg font-bold font-serif text-foreground">{counts[r.key] || 0}</span>
+              <span className="text-xs font-bold font-serif text-foreground ml-0.5">{counts[r.key] || 0}</span>
             </button>
           ))}
         </div>
         {voted && (
-          <p className="text-xs text-muted-foreground mt-6">Thank you for your reaction!</p>
+          <p className="text-xs text-muted-foreground mt-3">Thank you for your reaction!</p>
         )}
       </div>
-    </section>
+    </div>
   );
 };
 

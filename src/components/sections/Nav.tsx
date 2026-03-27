@@ -91,6 +91,9 @@ const Nav = () => {
               {l.label}
             </a>
           ))}
+          <span className="text-xs font-mono text-muted-foreground tracking-wide">
+            {istTime} IST
+          </span>
           <button
             onClick={() => setDark(!dark)}
             className="text-muted-foreground hover:text-foreground transition-colors"
@@ -99,10 +102,10 @@ const Nav = () => {
             {dark ? <Sun size={18} /> : <Moon size={18} />}
           </button>
         </div>
-        <div className="flex items-center gap-4 md:hidden w-full justify-between">
-          <span className="text-xs font-mono text-muted-foreground tracking-wide">
-            {istTime} IST
-          </span>
+        <div className="flex items-center gap-3 md:hidden w-full justify-between">
+          <div className="flex items-center gap-3">
+            <VisitorCounter />
+          </div>
           <div className="flex items-center gap-4">
             <button
               onClick={() => setDark(!dark)}

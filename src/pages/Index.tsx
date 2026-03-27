@@ -31,8 +31,6 @@ const Index = () => {
       <Hero />
       <About />
       <WhatIDo />
-      <Articles />
-      <Podcasts />
       <Awards />
       <WallOfLove />
       <Connect />
