@@ -35,6 +35,30 @@ const RECS = [
     relation: "Manik's Teacher",
     text: "I had the opportunity to teach Manik during his B.Tech, and he has consistently been one of the most diligent and proactive students in the cohort. I have seen his growth from the initial stages of consciously practicing his skills to achieving impressive heights, especially in communication. His transformation into a confident and articulate communicator reflects discipline, consistency, and a strong growth mindset. He is responsible, engaged, and always willing to put in the effort required to improve. I'm confident he will add value wherever he goes.",
   },
+  {
+    name: "Nandika Gupta",
+    title: "Scholar, SheFi",
+    linkedin: "https://www.linkedin.com/in/nandika-gupta/",
+    date: "",
+    relation: "Member of Girls Leading Tech",
+    text: "I have been part of the community initiatives led by him, especially Girls Leading Tech, and have attended multiple sessions and events. His work in building and scaling communities is genuinely impactful — from hosting high-quality sessions to organizing hackathons and providing guidance sessions for internships, creating real opportunities for students to learn, network, and grow. Personally, it helped me discover internships, programs, and connect with many people in tech. I strongly recommend him for his leadership, consistency, and ability to create meaningful impact through community building. His work truly empowers students and makes a difference.",
+  },
+  {
+    name: "Hirva Jobanputra",
+    title: "Barista, BrewyTales",
+    linkedin: "https://www.linkedin.com/in/hirva-jobanputra-607b78310",
+    date: "",
+    relation: "Member of Girls Leading Tech",
+    text: "He is a genuinely kind and supportive person who always encourages others to do better. What stands out the most is not just his helpful nature, but also the depth of knowledge he has in the tech field. He explains things with clarity and patience, making even difficult concepts feel approachable. It is rare to find someone who is both highly skilled and so willing to uplift others at the same time. I truly appreciate his constant support and encouragement. Anyone who gets a chance to learn from or work with him is genuinely lucky.",
+  },
+  {
+    name: "Shruti Sharma",
+    title: "Creative Writer, Youth Ki Awaaz",
+    linkedin: "https://www.linkedin.com/in/shruti-sharma-81a079369",
+    date: "",
+    relation: "Member of Letz Connect",
+    text: "Manik is an exceptional leader who possesses a rare blend of intellectual depth and inclusive mentorship. Being a part of the Letz Connect community, I have seen firsthand his ability to navigate complex challenges with a strategic yet empathetic approach. He doesn't just manage projects; he builds ecosystems where every team member feels empowered to contribute. His commitment to professional excellence, paired with a genuine heart of gold for supporting his peers, makes him an invaluable asset to any high-performing team. Manik is a visionary professional who brings both technical insight and a human-centric leadership style to the table. I highly recommend him for any role that requires strategic community building and high-level project management.",
+  },
 ];
 
 const RecCard = ({ r }: { r: typeof RECS[0] }) => {
@@ -42,8 +66,8 @@ const RecCard = ({ r }: { r: typeof RECS[0] }) => {
   const preview = r.text.slice(0, 120) + "...";
 
   return (
-    <blockquote className="border border-border rounded-lg p-4 sm:p-6">
-      <p className="font-serif text-sm italic text-foreground leading-relaxed mb-3">
+    <blockquote className="border border-border rounded-lg p-4 sm:p-6 overflow-hidden">
+      <p className="font-serif text-sm italic text-foreground leading-relaxed mb-3 break-words">
         "{expanded ? r.text : preview}"
       </p>
       <button
@@ -61,14 +85,14 @@ const RecCard = ({ r }: { r: typeof RECS[0] }) => {
           </a>
         </div>
         <p className="font-sans text-xs text-muted-foreground break-words">{r.title}</p>
-        <p className="font-sans text-xs text-muted-foreground mt-0.5">{r.relation}, {r.date}</p>
+        {r.relation && <p className="font-sans text-xs text-muted-foreground mt-0.5">{r.relation}{r.date ? `, ${r.date}` : ""}</p>}
       </footer>
     </blockquote>
   );
 };
 
 const Recommendations = () => (
-  <section id="recommendations" className="py-12 md:py-16">
+  <section id="recommendations" className="py-12 md:py-16 overflow-hidden">
     <div className="text-center">
       <SectionHeading>Recommendations</SectionHeading>
       <div className="space-y-6 text-left">

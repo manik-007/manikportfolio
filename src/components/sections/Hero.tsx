@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import { Youtube, Instagram, Github, Linkedin, Twitter, MessageCircle, Send, Calendar } from "lucide-react";
 import profileImg from "@/assets/profile-bw.jpg";
 
@@ -16,53 +17,107 @@ const SOCIALS = [
   { icon: () => <svg className="w-5 h-5 sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="currentColor"><path d="M22.351 8.019l-6.37-6.37a5.63 5.63 0 00-7.962 0l-6.37 6.37a5.63 5.63 0 000 7.962l6.37 6.37a5.63 5.63 0 007.962 0l6.37-6.37a5.63 5.63 0 000-7.962zM12 15.953a3.953 3.953 0 110-7.906 3.953 3.953 0 010 7.906z"/></svg>, href: "https://manik007.hashnode.dev/", label: "Hashnode" },
 ];
 
-const HYPHENATES = ["Builder", "Creator", "Educator", "Podcaster", "Public Speaker", "Leader", "Writer", "Traveller", "Engineer", "Mentor", "Changemaker"];
+const ROLES = ["Builder", "Creator", "Educator", "Podcaster", "Public Speaker", "Leader", "Writer", "Traveller", "Engineer", "Mentor", "Changemaker"];
 
-const Hero = () => (
-  <>
-    <section className="min-h-screen flex items-center justify-center px-4 sm:px-6">
-      <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
-        <p className="font-sans text-sm sm:text-base tracking-widest text-muted-foreground uppercase mb-2">
-          Hi, I am
-        </p>
-        <h1 className="font-serif text-5xl sm:text-7xl md:text-9xl font-bold tracking-tight text-foreground mb-4 sm:mb-6">
-          Manik
-        </h1>
-        <p className="font-serif text-lg sm:text-xl md:text-2xl italic text-muted-foreground mb-6 sm:mb-8">
-          "I build for impact and bring people together."
-        </p>
-        <div className="flex flex-wrap justify-center gap-2 sm:gap-3 mb-8 sm:mb-10 px-2 max-w-xl">
-          {HYPHENATES.map((h, i) => (
-            <span
-              key={h}
-              className="text-xs sm:text-sm font-sans font-medium tracking-widest text-muted-foreground"
-            >
-              {h}{i < HYPHENATES.length - 1 && <span className="ml-2 sm:ml-3 text-border">·</span>}
+const MILESTONES = [
+  "Started YouTube at the age of 14.",
+  "Scaled a YouTube channel from 0 to 148K at the age of 16.",
+  "Built a non-profit community of 4K girls in tech at the age of 20.",
+  "Met 5,000+ people at the age of 21.",
+  "Currently learning AI & upskilling myself to get a good job at Bangalore.",
+];
+
+const useTypingAnimation = (words: string[], typingSpeed = 100, deletingSpeed = 60, pauseDuration = 1500) => {
+  const [displayText, setDisplayText] = useState("");
+  const [wordIndex, setWordIndex] = useState(0);
+  const [isDeleting, setIsDeleting] = useState(false);
+
+  useEffect(() => {
+    const currentWord = words[wordIndex];
+    let timeout: ReturnType<typeof setTimeout>;
+
+    if (!isDeleting && displayText === currentWord) {
+      timeout = setTimeout(() => setIsDeleting(true), pauseDuration);
+    } else if (isDeleting && displayText === "") {
+      setIsDeleting(false);
+      setWordIndex((prev) => (prev + 1) % words.length);
+    } else {
+      timeout = setTimeout(() => {
+        setDisplayText(
+          isDeleting
+            ? currentWord.substring(0, displayText.length - 1)
+            : currentWord.substring(0, displayText.length + 1)
+        );
+      }, isDeleting ? deletingSpeed : typingSpeed);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [displayText, isDeleting, wordIndex, words, typingSpeed, deletingSpeed, pauseDuration]);
+
+  return displayText;
+};
+
+const Hero = () => {
+  const typedRole = useTypingAnimation(ROLES);
+
+  return (
+    <>
+      <section className="min-h-screen flex items-center justify-center px-4 sm:px-6">
+        <div className="max-w-5xl mx-auto flex flex-col items-center text-center">
+          <p className="font-sans text-sm sm:text-base tracking-widest text-muted-foreground uppercase mb-2">
+            Hi, I am
+          </p>
+          <h1 className="font-serif text-5xl sm:text-7xl md:text-9xl font-bold tracking-tight text-foreground mb-4 sm:mb-6">
+            Manik
+          </h1>
+          <p className="font-serif text-lg sm:text-xl md:text-2xl italic text-muted-foreground mb-6 sm:mb-8">
+            "I build for impact and bring people together."
+          </p>
+          <div className="h-8 sm:h-10 flex items-center justify-center mb-8 sm:mb-10">
+            <span className="font-sans text-base sm:text-lg font-medium tracking-widest text-foreground">
+              I am a <span className="text-primary">{typedRole}</span>
+              <span className="animate-pulse">|</span>
             </span>
-          ))}
+          </div>
+          <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 px-2">
+            {SOCIALS.map((s) => (
+              <a
+                key={s.label}
+                href={s.href}
+                className="text-muted-foreground hover:text-foreground transition-colors"
+                aria-label={s.label}
+              >
+                <s.icon size={18} className="sm:w-6 sm:h-6" />
+              </a>
+            ))}
+          </div>
         </div>
-        <div className="flex flex-wrap items-center justify-center gap-3 sm:gap-6 px-2">
-          {SOCIALS.map((s) => (
-            <a
-              key={s.label}
-              href={s.href}
-              className="text-muted-foreground hover:text-foreground transition-colors"
-              aria-label={s.label}
-            >
-              <s.icon size={18} className="sm:w-6 sm:h-6" />
-            </a>
-          ))}
+      </section>
+
+      {/* Milestones */}
+      <section className="px-4 sm:px-6 pb-10 sm:pb-16">
+        <div className="max-w-2xl mx-auto">
+          <ul className="space-y-2">
+            {MILESTONES.map((m, i) => (
+              <li key={i} className="flex items-start gap-3 text-sm sm:text-base text-muted-foreground">
+                <span className="text-foreground mt-1.5 shrink-0">&#8226;</span>
+                <span>{m}</span>
+              </li>
+            ))}
+          </ul>
         </div>
-      </div>
-    </section>
-    <section className="px-4 sm:px-6 pb-16 sm:pb-24 md:pb-32">
-      <div className="max-w-5xl mx-auto flex justify-center">
-        <div className="w-[18rem] h-[18rem] sm:w-[22rem] sm:h-[22rem] md:w-[36rem] md:h-[36rem] overflow-hidden border border-border shadow-lg">
-          <img src={profileImg} alt="Manik" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+      </section>
+
+      {/* Photo */}
+      <section className="px-4 sm:px-6 pb-16 sm:pb-24 md:pb-32">
+        <div className="max-w-5xl mx-auto flex justify-center">
+          <div className="w-[18rem] h-[18rem] sm:w-[22rem] sm:h-[22rem] md:w-[36rem] md:h-[36rem] overflow-hidden border border-border shadow-lg">
+            <img src={profileImg} alt="Manik" className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500" />
+          </div>
         </div>
-      </div>
-    </section>
-  </>
-);
+      </section>
+    </>
+  );
+};
 
 export default Hero;

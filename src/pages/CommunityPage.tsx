@@ -303,6 +303,18 @@ const SESSIONS = [
 
 const INITIAL_SESSIONS = 6;
 
+const EVENTS_ATTENDED = [
+  "Date with Dev", "Devfest Jalandhar 2023", "Devfest Chandigarh 2023", "Devfest Noida 2023", "MUN", "CNCF Chandigarh 2023", "WOW Delhi", "D2D Chandigarh Conf", "GitHub Field Day", "IO Dehradun", "GCCD Chandigarh 2024", "InBM 2024", "Devfest 2024", "BSCon", "Build with AI at CGC University", "E Summit IIT Delhi", "Union Labs Meetup", "Chandigarh Meetup", "IWD: Redefine Possible", "AI Workshop", "Founders & Funders", "Aethir Event", "Tech Talk 1.0", "Nova Meetup", "Metamorphosis", "ETH Global Pragma", "AR Workshop", "E-Cell Event", "Water Day", "Conclave on Skill Development for MSME Sector 2025", "DPG Dialogue", "Devfest Noida 2025", "GenAI Hackathon", "Haryana Manufacturing Conclave", "Arise Summit", "Techsprint Screening", "Techsprint Finale", "Floral Fest", "MUG Chandigarh Meetup", "Tech Talk 2.0", "AI for Atmanirbhar Bharat", "AI for Impact Summit", "Gitinfinity", "Progressive Punjab Summit", "Hack N Win 3.0", "Entrepreneurship Awareness Session", "IOT Convergence", "Builder's Lab Mentorship Session",
+];
+
+const EVENTS_ORGANISED = [
+  "Cybersecurity Workshop (2023)", "Ethical Hacking Workshop", "Cyber Security Roadmap", "Road to Blockchain", "Kotlin Conf", "EmpowerHer", "ML Cohort", "Hack Aura", "Code at Christmas", "EmpowerHer 2.0", "Blockmeet", "Hack Fest", "Google Solution Challenge", "Road to Devcon", "Code & Connect Noida", "Code & Connect Delhi", "Code & Connect Chennai", "Code & Connect Bangalore", "Hackemon", "Starknet Roadshow", "Bitcoin Pizza Party", "HackArCode", "Chandigarh Meetup", "GCCD 2025", "Devfest Chandigarh 2025", "25x Meetups at Letz Connect",
+];
+
+const HACKATHONS_ATTENDED = [
+  "Hack This Fall", "SIH 2023", "SIH 2024", "SIH 2025", "0 to 1 Hackathon", "Vibe-a-thon", "Figma Make-a-thon",
+];
+
 const CommunityCard = ({ org, link, role, period, bullets }: {
   org: string; link?: string; role: string; period?: string; bullets: string[];
 }) => {
@@ -390,7 +402,7 @@ const SessionRow = ({ title, link, speakers }: {
             ) : (
               <span>{s.name}</span>
             )}
-            <span className="text-xs"> ({s.role})</span>
+            {s.role && <span className="text-xs"> ({s.role})</span>}
           </span>
         ))}
       </p>
@@ -410,6 +422,9 @@ const SessionRow = ({ title, link, speakers }: {
 const CommunityPage = () => {
   const [showAllSessions, setShowAllSessions] = useState(false);
   const [showAllSpaces, setShowAllSpaces] = useState(false);
+  const [showEventsAttended, setShowEventsAttended] = useState(false);
+  const [showEventsOrganised, setShowEventsOrganised] = useState(false);
+  const [showHackathons, setShowHackathons] = useState(false);
   const visibleSessions = showAllSessions ? SESSIONS : SESSIONS.slice(0, INITIAL_SESSIONS);
   const visibleSpaces = showAllSpaces ? TWITTER_SPACES : TWITTER_SPACES.slice(0, INITIAL_SPACES);
 
@@ -420,7 +435,7 @@ const CommunityPage = () => {
   return (
     <div className="min-h-screen bg-background text-foreground">
       <Nav />
-      <div className="pt-24 pb-12 px-6">
+      <div className="pt-24 pb-12 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
           <SectionHeading>Community Contributions</SectionHeading>
 
@@ -436,9 +451,65 @@ const CommunityPage = () => {
           <div className="mt-16">
             <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground mb-6 text-center">Communities in Which I Volunteered</h3>
             <div className="space-y-4">
-              {VOLUNTEERING.map((v) => (
-                <VolunteerCard key={v.org} {...v} />
+              {VOLUNTEERING.map((v, i) => (
+                <VolunteerCard key={`${v.org}-${v.role}-${i}`} {...v} />
               ))}
+            </div>
+          </div>
+
+          {/* Events — Organised & Attended */}
+          <div className="mt-16">
+            <SectionHeading>Events — Organised & Attended</SectionHeading>
+
+            {/* Attended */}
+            <div className="border border-border rounded-lg p-5 sm:p-6 mt-8">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-serif text-lg font-semibold text-foreground">Events Attended ({EVENTS_ATTENDED.length})</h4>
+                <button onClick={() => setShowEventsAttended(!showEventsAttended)} className="text-muted-foreground hover:text-foreground transition-colors">
+                  <ChevronDown size={18} className={`transition-transform duration-200 ${showEventsAttended ? "rotate-180" : ""}`} />
+                </button>
+              </div>
+              {showEventsAttended && (
+                <div className="flex flex-wrap gap-2 animate-fade-in">
+                  {EVENTS_ATTENDED.map((e, i) => (
+                    <span key={i} className="text-xs px-3 py-1.5 rounded-full border border-border text-muted-foreground">{e}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Organised */}
+            <div className="border border-border rounded-lg p-5 sm:p-6 mt-4">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-serif text-lg font-semibold text-foreground">Events Organised ({EVENTS_ORGANISED.length})</h4>
+                <button onClick={() => setShowEventsOrganised(!showEventsOrganised)} className="text-muted-foreground hover:text-foreground transition-colors">
+                  <ChevronDown size={18} className={`transition-transform duration-200 ${showEventsOrganised ? "rotate-180" : ""}`} />
+                </button>
+              </div>
+              {showEventsOrganised && (
+                <div className="flex flex-wrap gap-2 animate-fade-in">
+                  {EVENTS_ORGANISED.map((e, i) => (
+                    <span key={i} className="text-xs px-3 py-1.5 rounded-full border border-border text-muted-foreground">{e}</span>
+                  ))}
+                </div>
+              )}
+            </div>
+
+            {/* Hackathons */}
+            <div className="border border-border rounded-lg p-5 sm:p-6 mt-4">
+              <div className="flex items-center justify-between mb-3">
+                <h4 className="font-serif text-lg font-semibold text-foreground">Hackathons Attended ({HACKATHONS_ATTENDED.length})</h4>
+                <button onClick={() => setShowHackathons(!showHackathons)} className="text-muted-foreground hover:text-foreground transition-colors">
+                  <ChevronDown size={18} className={`transition-transform duration-200 ${showHackathons ? "rotate-180" : ""}`} />
+                </button>
+              </div>
+              {showHackathons && (
+                <div className="flex flex-wrap gap-2 animate-fade-in">
+                  {HACKATHONS_ATTENDED.map((h, i) => (
+                    <span key={i} className="text-xs px-3 py-1.5 rounded-full border border-border text-muted-foreground">{h}</span>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
