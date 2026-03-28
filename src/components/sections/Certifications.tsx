@@ -5,10 +5,10 @@ const CERTS = [
   {
     category: "Community",
     items: [
-      { name: "Community Building & Management by The Community Collective", link: "" },
+      { name: "Community Building & Management by The Community Collective", link: "https://media.licdn.com/dms/image/v2/D562DAQG4DdTpbBNawA/profile-treasury-image-shrink_160_160/B56ZbTYzo0H4Ak-/0/1747303219328?e=1775278800&v=beta&t=BTfPkTS9G2VrtbS5YTbWsTtKb-ynnyXb1K3PMpbBaI8" },
       { name: "Community Automation Course by The Community Collective", link: "" },
-      { name: "The Community Playbook by CMX", link: "" },
-      { name: "Anyone Can Build a Community by The Community Man", link: "" },
+      { name: "The Community Led Event Program Playbook", link: "https://www.linkedin.com/in/mrmanik/overlay/Certifications/1660443723/treasury/" },
+      { name: "Basic Zero to One: Course on Building Meaningful Communities", link: "https://gumroad.com/d/a7ffd6d02db6a8faf2d314da16bd6204" },
     ],
   },
   {

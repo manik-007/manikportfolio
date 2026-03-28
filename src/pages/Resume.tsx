@@ -4,6 +4,7 @@ import Education from "@/components/sections/Education";
 import WorkExperience from "@/components/sections/WorkExperience";
 import Certifications from "@/components/sections/Certifications";
 import Recommendations from "@/components/sections/Recommendations";
+import Extracurriculars from "@/components/sections/Extracurriculars";
 import Footer from "@/components/sections/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Printer } from "lucide-react";
@@ -21,8 +22,8 @@ const Resume = () => {
   return (
     <div className="min-h-screen bg-background text-foreground print:bg-white print:text-black">
       <Nav />
-      <div className="pt-24 pb-12 px-6 print:pt-0 print:pb-0 print:px-0">
-        <div className="max-w-3xl mx-auto">
+      <div className="pt-24 pb-12 px-4 sm:px-6 print:pt-0 print:pb-0 print:px-0">
+        <div className="max-w-3xl mx-auto overflow-hidden">
           <div className="flex justify-end mb-6 print:hidden">
             <Button variant="outline" size="sm" onClick={handlePrint} className="gap-2">
               <Printer size={16} />
@@ -32,6 +33,7 @@ const Resume = () => {
           <WorkExperience />
           <Education />
           <Certifications />
+          <Extracurriculars />
           <Recommendations />
         </div>
       </div>
