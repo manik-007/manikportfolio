@@ -6,6 +6,7 @@ const VisitorCounter = () => {
 
   useEffect(() => {
     const key = "visitor_count";
+    const BASE_COUNT = 150;
     const visited = sessionStorage.getItem("has_visited");
     let current = parseInt(localStorage.getItem(key) || "0", 10);
     if (!visited) {
@@ -13,7 +14,7 @@ const VisitorCounter = () => {
       localStorage.setItem(key, String(current));
       sessionStorage.setItem("has_visited", "1");
     }
-    setCount(current);
+    setCount(BASE_COUNT + current);
   }, []);
 
   return (

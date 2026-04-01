@@ -505,7 +505,7 @@ const CommunityPage = () => {
               <div key={rowIdx} className="overflow-hidden mb-3 last:mb-0">
                 <div className={`flex gap-3 w-max ${rowIdx === 0 ? "slideshow-row-left" : "slideshow-row-right"}`}>
                   {[...row, ...row].map((src, i) => (
-                    <img key={i} src={src} alt="" className="h-32 sm:h-40 w-auto rounded-lg object-cover flex-shrink-0" loading="lazy" />
+                    <img key={i} src={src} alt="" className="h-32 sm:h-40 w-auto rounded-lg object-cover flex-shrink-0" loading="eager" decoding="async" />
                   ))}
                 </div>
               </div>
@@ -617,13 +617,13 @@ const CommunityPage = () => {
                 </div>
               ))}
             </div>
-            {!showAllSpaces && TWITTER_SPACES.length > INITIAL_SPACES && (
+            {TWITTER_SPACES.length > INITIAL_SPACES && (
               <div className="text-center mt-8">
                 <button
-                  onClick={() => setShowAllSpaces(true)}
+                  onClick={() => setShowAllSpaces(!showAllSpaces)}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors"
                 >
-                  See All {TWITTER_SPACES.length} Twitter Spaces
+                  {showAllSpaces ? "Show Less" : `See All ${TWITTER_SPACES.length} Twitter Spaces`}
                 </button>
               </div>
             )}
@@ -638,13 +638,13 @@ const CommunityPage = () => {
                 <SessionRow key={s.link} {...s} />
               ))}
             </div>
-            {!showAllSessions && SESSIONS.length > INITIAL_SESSIONS && (
+            {SESSIONS.length > INITIAL_SESSIONS && (
               <div className="text-center mt-8">
                 <button
-                  onClick={() => setShowAllSessions(true)}
+                  onClick={() => setShowAllSessions(!showAllSessions)}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors"
                 >
-                  See All {SESSIONS.length} Sessions
+                  {showAllSessions ? "Show Less" : `See All ${SESSIONS.length} Sessions`}
                 </button>
               </div>
             )}

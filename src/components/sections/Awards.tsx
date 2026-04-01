@@ -101,13 +101,13 @@ const Awards = () => {
             </div>
           ))}
         </div>
-        {!showAll && AWARDS.length > INITIAL_COUNT && (
+        {AWARDS.length > INITIAL_COUNT && (
           <div className="text-center mt-8">
             <button
-              onClick={() => setShowAll(true)}
+              onClick={() => setShowAll(!showAll)}
               className="inline-flex items-center px-6 py-3 rounded-full text-sm font-medium border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors"
             >
-              See All {AWARDS.length} Awards
+              {showAll ? "Show Less" : `See All ${AWARDS.length} Awards`}
             </button>
           </div>
         )}
