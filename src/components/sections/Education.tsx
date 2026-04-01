@@ -86,11 +86,6 @@ const EducationItem = ({ e }: { e: typeof EDUCATION[0] }) => {
             {e.program}, {e.period}
           </p>
           {e.detail && <p className="text-sm text-muted-foreground mt-1">{e.detail}</p>}
-          {"certificateImage" in e && (e as any).certificateImage && (
-            <a href={(e as any).certificateImage} target="_blank" rel="noopener noreferrer" className="inline-block mt-2">
-              <img src={(e as any).certificateImage} alt="Certificate" className="w-32 h-auto rounded border border-border hover:opacity-80 transition-opacity" />
-            </a>
-          )}
         </div>
         {hasExpandable && (
           <button onClick={() => setExpanded(!expanded)} className="text-muted-foreground hover:text-foreground transition-colors shrink-0 mt-1">
