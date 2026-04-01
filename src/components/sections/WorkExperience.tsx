@@ -32,9 +32,9 @@ const EXPERIENCE = [
     period: "Dec 2023 – Aug 2024",
     type: "Internship, Remote, Chandigarh",
     bullets: [
-      "Organized 10 security talks with an average attendance of 50+ participants each.",
-      "Led email marketing campaigns, boosting event visibility and engagement.",
-      "Recruited and managed a core team of 6, conducting interviews and onboarding.",
+      "Organized <strong>10 security talks</strong> with an average attendance of <strong>50+ participants</strong> each.",
+      "Led <strong>email marketing campaigns</strong>, boosting event visibility and engagement.",
+      "Recruited and managed a <strong>core team of 6</strong>, conducting interviews and onboarding.",
     ],
   },
 ];
