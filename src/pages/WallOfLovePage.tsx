@@ -221,11 +221,11 @@ const WallOfLovePage = () => {
       <div className="pt-24 pb-12 px-4 sm:px-6">
         <div className="max-w-4xl mx-auto">
           <SectionHeading>Wall of Love</SectionHeading>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 mt-8">
+          <div className="columns-1 md:columns-2 gap-4 sm:gap-6 mt-8">
             {TESTIMONIALS.map((t) => (
               <blockquote
                 key={t.person}
-                className="border border-border rounded-lg p-5 sm:p-8 bg-card text-left"
+                className="border border-border rounded-lg p-5 sm:p-8 bg-card text-left break-inside-avoid mb-4 sm:mb-6"
               >
                 <span className="font-serif text-3xl sm:text-4xl text-border leading-none select-none">"</span>
                 <p className="font-serif text-sm sm:text-base italic text-foreground leading-relaxed -mt-2 mb-4 sm:mb-5">

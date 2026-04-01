@@ -638,13 +638,13 @@ const CommunityPage = () => {
                 <SessionRow key={s.link} {...s} />
               ))}
             </div>
-            {!showAllSessions && SESSIONS.length > INITIAL_SESSIONS && (
+            {SESSIONS.length > INITIAL_SESSIONS && (
               <div className="text-center mt-8">
                 <button
-                  onClick={() => setShowAllSessions(true)}
+                  onClick={() => setShowAllSessions(!showAllSessions)}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors"
                 >
-                  See All {SESSIONS.length} Sessions
+                  {showAllSessions ? "Show Less" : `See All ${SESSIONS.length} Sessions`}
                 </button>
               </div>
             )}
