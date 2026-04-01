@@ -10,8 +10,8 @@ const EXPERIENCE = [
     period: "Sept 2025 – Present",
     type: "Contract, Part-time, Remote, Malaysia",
     bullets: [
-      "Handled the partnerships, sponsorships, and on-ground operations for 8 exclusive events happening under India Blockchain Month 2025 during ETH Global India Week.",
-      "Outreached to 300+ partners via social media.",
+      "Handled the partnerships, sponsorships, and on-ground operations for <strong>8 exclusive events</strong> happening under <a href='https://indiablockchainweek.com/' target='_blank' rel='noopener noreferrer' class='underline underline-offset-4 hover:opacity-70'>India Blockchain Month 2025</a> during <a href='https://ethglobal.com/' target='_blank' rel='noopener noreferrer' class='underline underline-offset-4 hover:opacity-70'>ETH Global</a> India Week.",
+      "Outreached to <strong>300+ partners</strong> via social media.",
     ],
   },
   {
