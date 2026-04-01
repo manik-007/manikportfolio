@@ -4,6 +4,14 @@ import SectionHeading from "./SectionHeading";
 
 const EDUCATION = [
   {
+    institution: "CMX Academy",
+    link: "https://www.cmxhub.com/",
+    period: "June 2024 – March 2026",
+    program: "MBA in Community Building",
+    detail: "",
+    certificateImage: "https://media.licdn.com/dms/image/v2/D5622AQE7qEN8-uGB8A/feedshare-shrink_480/B56Z0375LSG8Ak-/0/1774759941072?e=1776902400&v=beta&t=vQGqfogFBhSSfGNEgEfpMOVAG9uC80MZJ2aertQbRXg",
+  },
+  {
     institution: "McKinsey & Company",
     period: "Oct 2025 – Dec 2025",
     program: "McKinsey Forward Learning Programme — Fellow",
