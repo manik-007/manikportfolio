@@ -505,7 +505,7 @@ const CommunityPage = () => {
               <div key={rowIdx} className="overflow-hidden mb-3 last:mb-0">
                 <div className={`flex gap-3 w-max ${rowIdx === 0 ? "slideshow-row-left" : "slideshow-row-right"}`}>
                   {[...row, ...row].map((src, i) => (
-                    <img key={i} src={src} alt="" className="h-32 sm:h-40 w-auto rounded-lg object-cover flex-shrink-0" loading="lazy" />
+                    <img key={i} src={src} alt="" className="h-32 sm:h-40 w-auto rounded-lg object-cover flex-shrink-0" loading="eager" decoding="async" />
                   ))}
                 </div>
               </div>
