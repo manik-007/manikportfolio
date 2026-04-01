@@ -78,9 +78,7 @@ const WorkExperience = () => {
             {expanded[e.company] && (
               <ul className="mt-4 space-y-2 list-disc list-outside pl-5 animate-fade-in">
                 {e.bullets.map((b, i) => (
-                  <li key={i} className="text-sm text-foreground leading-relaxed">
-                    {b}
-                  </li>
+                  <li key={i} className="text-sm text-foreground leading-relaxed" dangerouslySetInnerHTML={{ __html: b }} />
                 ))}
               </ul>
             )}
