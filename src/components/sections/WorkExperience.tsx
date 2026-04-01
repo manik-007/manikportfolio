@@ -21,8 +21,8 @@ const EXPERIENCE = [
     period: "Sept 2024 – Oct 2024",
     type: "Internship, Remote, Delhi",
     bullets: [
-      "Spearheaded outreach to 20+ colleges, driving 2,000+ user growth.",
-      "Designed the ProPeersX Lead Program structure to scale the community & user base.",
+      "Spearheaded outreach to <strong>20+ colleges</strong>, driving <strong>2,000+ user growth</strong>.",
+      "Designed the <strong>ProPeersX Lead Program</strong> structure to scale the community & user base.",
     ],
   },
   {
