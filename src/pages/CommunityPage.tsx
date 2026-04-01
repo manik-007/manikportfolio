@@ -617,13 +617,13 @@ const CommunityPage = () => {
                 </div>
               ))}
             </div>
-            {!showAllSpaces && TWITTER_SPACES.length > INITIAL_SPACES && (
+            {TWITTER_SPACES.length > INITIAL_SPACES && (
               <div className="text-center mt-8">
                 <button
-                  onClick={() => setShowAllSpaces(true)}
+                  onClick={() => setShowAllSpaces(!showAllSpaces)}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full text-sm font-medium border border-foreground text-foreground hover:bg-foreground hover:text-background transition-colors"
                 >
-                  See All {TWITTER_SPACES.length} Twitter Spaces
+                  {showAllSpaces ? "Show Less" : `See All ${TWITTER_SPACES.length} Twitter Spaces`}
                 </button>
               </div>
             )}
