@@ -19,14 +19,13 @@ const ROLES = [
 ];
 
 const HACKATHONS = [
-  "Hack This Fall",
+  "Hack This Fall 2024 at Karnavati University, Gujarat",
   "SIH 2023",
   "SIH 2024",
   "SIH 2025",
   "0 to 1 Hackathon at Chandigarh University",
   "Vibe-a-thon",
   "Figma Make-a-thon",
-  "Hack This Fall 2024 at Karnavati University, Gujarat",
 ];
 
 const Extracurriculars = () => (
