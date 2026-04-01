@@ -433,11 +433,37 @@ const CommunityPage = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-background text-foreground overflow-x-hidden">
       <Nav />
       <div className="pt-24 pb-12 px-4 sm:px-6">
         <div className="max-w-3xl mx-auto">
           <SectionHeading>Community Contributions</SectionHeading>
+
+          {/* Image Slideshow */}
+          <div className="mt-10 mb-16 overflow-hidden">
+            <style>{`
+              @keyframes scroll-left {
+                0% { transform: translateX(0); }
+                100% { transform: translateX(-50%); }
+              }
+              @keyframes scroll-right {
+                0% { transform: translateX(-50%); }
+                100% { transform: translateX(0); }
+              }
+              .slideshow-row-left { animation: scroll-left 60s linear infinite; }
+              .slideshow-row-right { animation: scroll-right 60s linear infinite; }
+              .slideshow-row-left:hover, .slideshow-row-right:hover { animation-play-state: paused; }
+            `}</style>
+            {[SLIDESHOW_ROW1, SLIDESHOW_ROW2].map((row, rowIdx) => (
+              <div key={rowIdx} className="overflow-hidden mb-3 last:mb-0">
+                <div className={`flex gap-3 w-max ${rowIdx === 0 ? "slideshow-row-left" : "slideshow-row-right"}`}>
+                  {[...row, ...row].map((src, i) => (
+                    <img key={i} src={src} alt="" className="h-32 sm:h-40 w-auto rounded-lg object-cover flex-shrink-0" loading="lazy" />
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
 
           {/* Communities I Built */}
           <h3 className="font-serif text-2xl sm:text-3xl font-semibold text-foreground mt-12 mb-6 text-center">Communities I Built</h3>
