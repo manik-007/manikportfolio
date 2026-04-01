@@ -194,19 +194,19 @@ const TESTIMONIALS = [
   {
     text: "I really appreciate the way you manage and engage the community. Your communication is clear, supportive, and always makes people feel heard and valued. You create a positive and welcoming environment, which makes a big difference. Your consistency and dedication truly stand out — great work!",
     person: "Shravani Kasurde",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/shravani-dasari-803703259/",
   },
   {
     text: "Good guy, very humble and very charismatic.",
     person: "Jay Koranga",
     role: "React Intern, ChicMic Studios",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/jay-koranga-68ba71257/",
   },
   {
     text: "You are cool asf",
     person: "Sampark Sharma",
     role: "Partnerships Head, GDG",
-    linkedin: "",
+    linkedin: "https://www.linkedin.com/in/sampark-sharma-9b0923335/",
   },
 ];
 
