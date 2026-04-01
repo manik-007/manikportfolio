@@ -5,6 +5,7 @@ import WorkExperience from "@/components/sections/WorkExperience";
 import Certifications from "@/components/sections/Certifications";
 import Recommendations from "@/components/sections/Recommendations";
 import Extracurriculars from "@/components/sections/Extracurriculars";
+import Skills from "@/components/sections/Skills";
 import Footer from "@/components/sections/Footer";
 import ScrollToTop from "@/components/ScrollToTop";
 import { Printer } from "lucide-react";
@@ -32,6 +33,7 @@ const Resume = () => {
           </div>
           <WorkExperience />
           <Education />
+          <Skills />
           <Certifications />
           <Extracurriculars />
           <Recommendations />
